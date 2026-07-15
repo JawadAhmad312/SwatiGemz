@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@plugin "daisyui";
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+body{
+  overflow-x: hidden ;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 5s linear infinite;
+}
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+h1, h2, h3 {
+font-family: 'DM Serif Display', serif;
+}
+ p {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@media screen and (max-width: 640px) {
+  /* styles for mobile */
+  h2{
+    font-size: 14px !important;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%) }
+  100% { transform: translateX(-100%) }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
