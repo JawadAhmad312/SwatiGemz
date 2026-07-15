@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import CollectionGrid from "../collection/CollectionGrid";
+import CollectionGrid from "../Collection/CollectionGrid";
 
 const CollectionsPage = () => {
 
