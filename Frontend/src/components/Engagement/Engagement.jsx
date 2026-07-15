@@ -9,7 +9,7 @@ function Engagement() {
                     {/* Left Image */}
                     <div className="flex justify-start p-0">
                         <img
-                            src="./public/images/engagment_ring.jpg"
+                            src="/images/engagment_ring.jpg"
                             alt="Engagement Rings"
                             className="w-full md:max-w-[420px] rounded-xl h-[500px] p-0"
                         />
