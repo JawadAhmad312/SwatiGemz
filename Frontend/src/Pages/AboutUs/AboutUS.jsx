@@ -24,7 +24,7 @@ const AboutUs = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
         <img
-          src="/public/images/AboutUs_banner.png"
+          src="/images/AboutUs_banner.png"
           alt="Luxury Gemstones"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -118,7 +118,7 @@ const AboutUs = () => {
           >
 
             <img
-              src="/public/images/Discovery_Luxury.png"
+              src="/images/Discovery_Luxury.png"
               alt="Brand Story"
               className="
                 rounded-[40px]
