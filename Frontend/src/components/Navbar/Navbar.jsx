@@ -689,7 +689,7 @@ const cartKey = `cart_${userId}`;
             <NavLink to="/AboutUs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">About</NavLink>
             <NavLink to="/ContactUs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">Contact Us</NavLink>
             <NavLink to="/Faqs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">FAQ's</NavLink>
-            <div className="text-lg text-green-700 ">
+            <div  to="/admin/dashboard" className="text-lg text-green-700 ">
     Admin Dashboard
   </div>
           </ul>
