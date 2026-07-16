@@ -377,7 +377,7 @@ const cartKey = `cart_${userId}`;
               )}
             </NavLink>
          {user?.role?.trim()?.toLowerCase() === "admin" && user?.status === "Active" && (
- <div className="relative group hidden lg:flex">
+ <div className="relative group  lg:flex">
    <Link
     to="/admin/dashboard"
     title="Admin Dashboard"
