@@ -629,7 +629,7 @@ const cartKey = `cart_${userId}`;
 
           {/* Close Button */}
           <button
-            className="text-3xl absolute right-4 top-4"
+            className="text-2xl absolute right-4 top-4"
             onClick={() => setIsOpen(false)}
           >
             ✕
@@ -689,6 +689,9 @@ const cartKey = `cart_${userId}`;
             <NavLink to="/AboutUs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">About</NavLink>
             <NavLink to="/ContactUs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">Contact Us</NavLink>
             <NavLink to="/Faqs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">FAQ's</NavLink>
+            <div className="text-lg text-green-700 ">
+    Admin Dashboard
+  </div>
           </ul>
 
           <div className="absolute bottom-8 left-6 w-[calc(100%-3rem)] flex flex-col items-start">
