@@ -1149,42 +1149,7 @@ Delete User
 <FiTrash2/>
 
 </button>
-<button
 
-onClick={() => {
-
-setSelectedUser(user);
-
-setRoleForm({
-
-role: user.role,
-
-status: user.status,
-
-});
-
-setShowRoleModal(true);
-
-}}
-
-className="
-w-full
-mt-4
-bg-gray-400
-text-black
-py-2
-rounded-lg
-flex
-justify-center
-items-center
-gap-2
-"
-
->
-
-Manage Role
-
-</button>
 </div>
 
 )
