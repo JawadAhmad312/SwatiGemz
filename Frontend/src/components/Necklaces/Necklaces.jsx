@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import DesktopFilter from "../filters/DesktopFilter";
 import MobileFilter from "../filters/MobileFilter";
+import { assetUrl } from "../../lib/api";
 
 const Necklaces = () => {
   const [necklaces, setNecklaces] = useState([]);
@@ -183,7 +184,7 @@ const Necklaces = () => {
                     src={
                       necklace.image?.startsWith("http")
                         ? necklace.image
-                        : `http://localhost:8080${necklace.image}`
+                        : assetUrl(necklace.image)
                     }
                     alt={necklace.name}
                     className="w-[70px] h-[70px] md:w-[160px] md:h-[160px] object-contain group-hover:scale-110 transition-all duration-300"

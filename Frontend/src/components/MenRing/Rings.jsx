@@ -3,6 +3,7 @@ import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import DesktopFilter from "../filters/DesktopFilter";
 import MobileFilter from "../filters/MobileFilter";
+import { assetUrl } from "../../lib/api";
 
 
 const Rings = () => {
@@ -218,12 +219,12 @@ md:h-[240px]
         overflow-hidden
       "
               >
-                <img
-                  src={
-                    ring.image?.startsWith("http")
-                      ? ring.image
-                      : `http://localhost:8080${ring.image}`
-                  }
+                    <img
+                      src={
+                        ring.image?.startsWith("http")
+                          ? ring.image
+                          : assetUrl(ring.image)
+                      }
                   alt={ring.name}
                   className="
          w-[70px]

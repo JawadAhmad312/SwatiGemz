@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { apiUrl } from "../../lib/api";
+import { apiUrl, assetUrl } from "../../lib/api";
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
@@ -159,11 +159,11 @@ localStorage.setItem(
               key={item._id}
               className="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex gap-1 sm:gap-6 w-full overflow-hidden"
             >
-              <img
-                src={
-                  item.image?.startsWith("http")
-                    ? item.image
-                    : `http://localhost:8080${item.image}`
+                <img
+                  src={
+                    item.image?.startsWith("http")
+                      ? item.image
+                    : assetUrl(item.image)
                 }
                 className="w-20 h-20 sm:w-28 sm:h-28 object-cover rounded-xl flex-shrink-0"
               />

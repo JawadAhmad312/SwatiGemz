@@ -76,6 +76,36 @@ const SESSION_SAME_SITE =
   process.env.SESSION_COOKIE_SAME_SITE ||
   (USE_SECURE_COOKIES ? "none" : "lax");
 
+const normalizeOrigin = (origin) => {
+  if (!origin || origin === "*") {
+    return null;
+  }
+
+  const trimmed = origin.trim().replace(/\/$/, "");
+
+  if (/^https?:\/\//i.test(trimmed)) {
+    return trimmed;
+  }
+
+  return `https://${trimmed}`;
+};
+
+const allowedOrigins = [
+  process.env.CLIENT_ORIGIN,
+  process.env.FRONTEND_URL,
+  "http://localhost:5173",
+  "http://127.0.0.1:5173",
+  "http://localhost:4173",
+  "http://127.0.0.1:4173",
+]
+  .flatMap((value) =>
+    String(value || "")
+      .split(",")
+      .map(normalizeOrigin)
+      .filter(Boolean)
+  )
+  .filter((origin, index, list) => list.indexOf(origin) === index);
+
 const buildMongoUri = (rawUri, dbName) => {
   const trimmedUri = rawUri.trim();
   const [baseUri, queryString] = trimmedUri.split("?");
@@ -135,7 +165,13 @@ app.set("trust proxy", 1);
 
 app.use(
   cors({
-    origin: CLIENT_ORIGIN,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error(`CORS blocked for origin: ${origin}`));
+    },
     credentials: true,
   })
 );
@@ -176,7 +212,7 @@ const sessionOptions = {
 const sessionMiddleware = session(sessionOptions);
 
 connectSocket(server, {
-  corsOrigin: CLIENT_ORIGIN,
+  corsOrigin: allowedOrigins,
   sessionMiddleware,
 });
 

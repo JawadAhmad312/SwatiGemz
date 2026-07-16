@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import DesktopFilter from "../filters/DesktopFilter";
 import MobileFilter from "../filters/MobileFilter";
+import { assetUrl } from "../../lib/api";
 
 /* ---------------- SKELETON ---------------- */
 const SkeletonCard = () => (
@@ -239,12 +240,12 @@ md:h-[240px]
         overflow-hidden
       ">
                     
-                  <img
-                    src={
-                      earring.image?.startsWith("http")
-                      ? earring.image
-                      : `http://localhost:8080${earring.image}`
-                    }
+                    <img
+                      src={
+                        earring.image?.startsWith("http")
+                          ? earring.image
+                          : assetUrl(earring.image)
+                      }
                     className="
          w-[70px]
 h-[70px]

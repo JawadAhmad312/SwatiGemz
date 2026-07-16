@@ -5,6 +5,7 @@ import { io }
 from "socket.io-client";
 import toast
 from "react-hot-toast";
+import { API_BASE_URL } from "../../lib/api";
 import Navbar from '../componets/Navbar.jsx'
 import { FiEye, FiEdit2, FiTrash2 , FiBell } from "react-icons/fi";
 import StatsCards from '../componets/Dashboard/StatsCards.jsx'
@@ -107,11 +108,12 @@ useEffect(() => {
 
   const socket = io(
 
-    "http://localhost:8080",
+    API_BASE_URL,
 
     {
 
-      transports: ["websocket"]
+      transports: ["websocket"],
+      withCredentials: true
     }
   );
 

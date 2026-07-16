@@ -5,6 +5,7 @@ import axios from 'axios'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Toaster }
 from "react-hot-toast";
+import { API_BASE_URL, rewriteBackendUrl } from "./lib/api"
 import Layout from '../Layout.jsx'
 import Home from './components/Home/Home.jsx'
 import Card from './components/Card/Card.jsx'
@@ -56,6 +57,54 @@ import MyOrders from './Pages/MyOrders/MyOrders.jsx';
 import TrackOrder from './Pages/MyOrders/TrackOrder.jsx';
 
 axios.defaults.withCredentials = true;
+axios.defaults.baseURL = API_BASE_URL;
+
+axios.interceptors.request.use((config) => {
+  if (config?.url) {
+    config.url = rewriteBackendUrl(config.url);
+  }
+
+  config.withCredentials = true;
+
+  if (!config.baseURL) {
+    config.baseURL = API_BASE_URL;
+  }
+
+  return config;
+});
+
+const originalFetch = window.fetch.bind(window);
+
+window.fetch = (input, init = {}) => {
+  const requestUrl =
+    typeof input === "string"
+      ? input
+      : input instanceof Request
+        ? input.url
+        : "";
+
+  const rewrittenUrl = rewriteBackendUrl(requestUrl);
+  const nextInput =
+    typeof input === "string"
+      ? rewrittenUrl
+      : input instanceof Request && rewrittenUrl !== requestUrl
+        ? new Request(rewrittenUrl, input)
+        : input;
+
+  const isBackendRequest =
+    rewrittenUrl.startsWith("/") ||
+    rewrittenUrl.startsWith(API_BASE_URL) ||
+    /^https?:\/\/(localhost|127\.0\.0\.1):8080/i.test(rewrittenUrl);
+
+  const nextInit = isBackendRequest
+    ? {
+        ...init,
+        credentials: init.credentials ?? "include",
+      }
+    : init;
+
+  return originalFetch(nextInput, nextInit);
+};
 
 
 
