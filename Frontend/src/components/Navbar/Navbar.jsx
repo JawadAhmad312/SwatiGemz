@@ -314,7 +314,8 @@ const cartKey = `cart_${userId}`;
               font-semibold
             "
           >
-            <i className="fa-solid fa-shield-halved mr-2"></i>
+            <i className=" hidden
+              md:block fa-solid fa-shield-halved mr-2"></i>
             Admin Dashboard
           </Link>
         )}
