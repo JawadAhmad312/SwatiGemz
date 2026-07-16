@@ -690,7 +690,35 @@ const cartKey = `cart_${userId}`;
             <NavLink to="/ContactUs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">Contact Us</NavLink>
             <NavLink to="/Faqs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">FAQ's</NavLink>
           </ul>
-
+  {user?.role?.trim()?.toLowerCase() === "admin" && user?.status === "Active" && (
+ <div className="relative group  lg:flex">
+   <Link
+    to="/admin/dashboard"
+    title="Admin Dashboard"
+     target="_blank"
+    className="
+      w-11
+      h-11
+      rounded-full
+      border-2
+      border-green-600
+      flex
+      items-center
+      justify-center
+      hover:bg-green-50
+      transition-all
+      duration-200
+      text-green-700
+      font-bold
+    "
+  >
+    <i className="fa-solid fa-shield-halved text-lg"></i>
+  </Link>
+  <div className="absolute right-0 top-full mt-2 bg-gray-800 text-white text-xs px-3 py-2 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+    Admin Dashboard
+  </div>
+ </div>
+)}
           <div className="absolute bottom-8 left-6 w-[calc(100%-3rem)] flex flex-col items-start">
 
             {user ? (
@@ -726,16 +754,7 @@ const cartKey = `cart_${userId}`;
                   <span className="text-sm">My Orders</span>
                 </NavLink>
 
-                {user?.role?.trim()?.toLowerCase() === "admin" && user?.status === "Active" && (
-                  <NavLink
-                    to="/admin/dashboard"
-                    onClick={() => setIsOpen(false)}
-                    className="hover:text-[#386855] transition flex items-center gap-2 text-green-700 font-semibold"
-                  >
-                    <i className="fa-solid fa-shield-halved"></i>
-                    <span className="text-sm">Admin Dashboard</span>
-                  </NavLink>
-                )}
+               
 
                 <button
                   onClick={async () => {
