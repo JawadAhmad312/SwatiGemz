@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, NavLink , useNavigate} from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "/src/context/AuthContext";
+import { apiUrl } from "../../lib/api";
 import './Navbar.css'
 import { MdOutlineQrCodeScanner } from "react-icons/md";
 import AnnouncementBar from './Announcements';
@@ -89,7 +90,7 @@ const cartKey = `cart_${userId}`;
     const fetchSearch = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8080/api/search?q=${debouncedSearch}`
+          apiUrl(`/api/search?q=${debouncedSearch}`)
         );
         const data = await res.json();
         setResults(data);
@@ -376,7 +377,7 @@ const cartKey = `cart_${userId}`;
               )}
             </NavLink>
          {user?.role?.trim()?.toLowerCase() === "admin" && user?.status === "Active" && (
- <div className="relative group">
+ <div className="relative group hidden lg:flex">
    <Link
     to="/admin/dashboard"
     title="Admin Dashboard"
@@ -688,50 +689,67 @@ const cartKey = `cart_${userId}`;
             <NavLink to="/AboutUs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">About</NavLink>
             <NavLink to="/ContactUs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">Contact Us</NavLink>
             <NavLink to="/Faqs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">FAQ's</NavLink>
-            {user?.role?.trim()?.toLowerCase() === "admin" && user?.status === "Active" && (
-              <NavLink
-                to="/admin/dashboard"
-                onClick={() => setIsOpen(false)}
-                className="text-lg text-green-700 font-semibold"
-              >
-                Admin Dashboard
-              </NavLink>
-            )}
           </ul>
 
-          <div className="absolute bottom-8 left-6 w-full flex flex-col items-start">
+          <div className="absolute bottom-8 left-6 w-[calc(100%-3rem)] flex flex-col items-start">
 
-            {/* Login */}
-            <div className="flex items-center gap-3 mb-5 text-gray-700">
+            {user ? (
+              <div className="w-full space-y-4 text-gray-700">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#224225] text-white flex items-center justify-center text-sm font-semibold overflow-hidden">
+                    {user?.picture ? (
+                      <img
+                        src={user.picture}
+                        alt="Profile"
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      user?.email?.substring(0, 2)?.toUpperCase()
+                    )}
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold truncate">
+                      {user?.name || user?.email}
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      Signed in
+                    </p>
+                  </div>
+                </div>
 
-              <NavLink
-                to="/login" onClick={() => setIsOpen(false)}
-                className="hover:text-[#386855] transition flex items-center gap-2"
-              >
-                <i className="fa-solid fa-user"></i>
+                <NavLink
+                  to="/my-orders"
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-[#386855] transition flex items-center gap-2"
+                >
+                  <i className="fa-solid fa-bag-shopping"></i>
+                  <span className="text-sm">My Orders</span>
+                </NavLink>
 
-                <span className="text-sm">
-                  Log in
-                </span>
-              </NavLink>
-
-            </div>
-            {/* Wishlist */}
-            <div className="flex items-center gap-3 mb-5 text-gray-700">
-
-              <NavLink
-                to="/wishlist"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-red-500 transition flex items-center gap-2"
-              >
-                <i className="fa-regular fa-heart text-[15px]"></i>
-
-                <span className="text-sm">
-                  Wishlist ({wishlist.length})
-                </span>
-              </NavLink>
-
-            </div>
+                <button
+                  onClick={async () => {
+                    await handleLogout();
+                    setIsOpen(false);
+                  }}
+                  className="hover:text-[#386855] transition flex items-center gap-2"
+                >
+                  <i className="fa-solid fa-right-from-bracket"></i>
+                  <span className="text-sm">Logout</span>
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-3 mb-5 text-gray-700">
+                <NavLink
+                  to="/login"
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-[#386855] transition flex items-center gap-2"
+                >
+                  <i className="fa-solid fa-user"></i>
+                  <span className="text-sm">Log in</span>
+                </NavLink>
+              </div>
+            )}
+            
             {/* Currency */}
             <div className="flex items-center gap-2 text-sm text-gray-700 mb-6">
               <span>Pakistan | PKR Rs</span>

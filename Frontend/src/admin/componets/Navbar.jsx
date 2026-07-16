@@ -40,23 +40,23 @@ const Navbar = ({
 
   return (
 
-    <div className="w-full bg-white shadow-sm px-6 py-3 flex items-center justify-between">
+    <div className="w-full max-w-full overflow-x-hidden bg-white shadow-sm px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
 <button
   onClick={toggleSidebar}
   className="
     md:hidden
     text-2xl
     text-gray-700
-    mr-2
+    shrink-0
   "
 >
   <FiMenu />
 </button>
       {/* SEARCH */}
 
-      <div className="flex items-center gap-3">
+      <div className="hidden md:flex items-center gap-3 flex-1 min-w-0">
 
-        <div className="relative">
+        <div className="relative w-full max-w-md min-w-0">
 
           <input
             type="text"
@@ -69,7 +69,8 @@ const Navbar = ({
               py-2
               text-sm
               focus:outline-none
-              w-62
+              w-full
+              min-w-0
             "
           />
 
@@ -83,7 +84,7 @@ const Navbar = ({
 
       {/* RIGHT */}
 
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-3 sm:gap-5 shrink-0">
 
         {/* NOTIFICATIONS */}
 
@@ -139,7 +140,8 @@ const Navbar = ({
                 absolute
                 right-0
                 mt-4
-                w-96
+                w-[calc(100vw-2rem)]
+                max-w-sm
                 bg-white
                 shadow-2xl
                 rounded-2xl

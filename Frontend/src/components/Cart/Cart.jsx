@@ -157,7 +157,7 @@ localStorage.setItem(
           {cart.map((item) => (
             <div
               key={item._id}
-              className="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex gap-1 sm:gap-6 w-full overflow-hidden"
+              className="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex flex-col sm:flex-row gap-4 sm:gap-6 w-full overflow-hidden"
             >
                 <img
                   src={
@@ -165,19 +165,20 @@ localStorage.setItem(
                       ? item.image
                     : assetUrl(item.image)
                 }
-                className="w-20 h-20 sm:w-28 sm:h-28 object-cover rounded-xl flex-shrink-0"
+                alt={item.name}
+                className="w-20 h-20 sm:w-28 sm:h-28 object-cover rounded-xl flex-shrink-0 self-center sm:self-start"
               />
 
-              <div className="flex-1">
-                <h3 className="font-semibold text-sm sm:text-lg mb-1 line-clamp-1">
+              <div className="flex-1 min-w-0">
+                <h3 className="font-semibold text-sm sm:text-lg mb-1 break-words line-clamp-2">
                   {item.name}
                 </h3>
 
-                <p className="text-gray-500 mb-4">
+                <p className="text-gray-500 mb-4 break-words">
                 Rs.{Number(item.price || 0).toLocaleString()}
                 </p>
 
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                   <button
                     onClick={() => updateQty(item._id, "dec")}
                     className="w-8 h-8 border rounded"
@@ -205,7 +206,7 @@ localStorage.setItem(
                 </div>
               </div>
 
-              <div className="font-semibold text-sm sm:text-base whitespace-nowrap">
+              <div className="font-semibold text-sm sm:text-base break-words sm:text-right sm:whitespace-nowrap sm:self-center">
                 Rs.{
   Number(
     (item.price || 0) *

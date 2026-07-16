@@ -261,8 +261,33 @@ mongoose
     serverSelectionTimeoutMS: 10000,
     connectTimeoutMS: 10000,
   })
-  .then(() => {
+  .then(async () => {
     console.log("Connected to DB");
+
+    const legacyMenRingUrl =
+      "https://55crt.com/cdn/shop/products/101_7173201e-7d26-429a-9a94-03a7641112d2_600x.jpg?v=1663396464";
+    const replacementMenRingUrl =
+      "https://images.diamondere.com/new_images/products/benton/benton_wg_bt_0.jpg";
+
+    await MenRing.updateMany(
+      {
+        $or: [
+          { image: legacyMenRingUrl },
+          { images: legacyMenRingUrl },
+        ],
+      },
+      {
+        $set: {
+          image: replacementMenRingUrl,
+          "images.$[legacy]": replacementMenRingUrl,
+        },
+      },
+      {
+        arrayFilters: [{ legacy: legacyMenRingUrl }],
+      }
+    ).catch((err) => {
+      console.warn("MenRing image cleanup skipped:", err.message);
+    });
   })
   .catch((err) => console.log(err));
 

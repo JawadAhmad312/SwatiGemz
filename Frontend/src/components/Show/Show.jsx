@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useParams, Link, useNavigate } from "react-router-dom";
+import { apiUrl } from "../../lib/api";
 
 
 
@@ -11,6 +12,7 @@ function Show() {
   const { state } = useLocation();
   const { id, type } = useParams();
   const [item, setItem] = useState(state?.item || {});
+  const [resolvedType, setResolvedType] = useState(type || state?.item?.type || "");
   const [listings, setListings] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [counter, setCounter] = useState(1);
@@ -19,6 +21,8 @@ function Show() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [relatedProducts, setRelatedProducts] = useState([]);
   const navigate = useNavigate();
+  const currentType = resolvedType || type || state?.item?.type || "";
+  const displayType = currentType;
   const images = [
   item?.image || item?.mainimages,
   ...(item?.images || item?.otherImages || [])
@@ -94,6 +98,7 @@ alert("Added to cart 🛒");
   useEffect(() => {
     if (state?.item) {
       setItem(state.item);
+      setResolvedType(state.item.type || type || "");
       setActiveIndex(0);
     }
   }, [id, state]);
@@ -104,12 +109,12 @@ alert("Added to cart 🛒");
       try {
 
         // GEMSTONE RELATED PRODUCTS
-        if (type === "gemstone") {
+        if (currentType === "gemstone") {
 
           if (!item?.gemCollection?.slug) return;
 
           const res = await fetch(
-            `http://localhost:8080/api/gemstones/collection/${item.gemCollection.slug}`
+            apiUrl(`/api/gemstones/collection/${item.gemCollection.slug}`)
           );
 
           const data = await res.json();
@@ -129,7 +134,7 @@ alert("Added to cart 🛒");
         };
 
         const res = await fetch(
-          `http://localhost:8080/api/${apiMap[type]}`
+          apiUrl(`/api/${apiMap[currentType]}`)
         );
 
         const data = await res.json();
@@ -148,7 +153,7 @@ alert("Added to cart 🛒");
 
     fetchListings();
 
-  }, [type, item]);
+  }, [type, item, resolvedType]);
 
 
 
@@ -171,10 +176,10 @@ alert("Added to cart 🛒");
     const fetchListing = async () => {
       try {
         // GEMSTONE API
-        if (type === "gemstone") {
+    if (currentType === "gemstone") {
 
           const res = await fetch(
-            `http://localhost:8080/api/gemstones/${id}`
+            apiUrl(`/api/gemstones/${id}`)
           );
 
           const data = await res.json();
@@ -183,18 +188,62 @@ alert("Added to cart 🛒");
 
           return;
         }
-        const res = await fetch(
-          `http://localhost:8080/api/${apiMap[type]}/${id}`
-        );
+        const res = await fetch(apiUrl(`/api/${apiMap[currentType]}/${id}`));
         const data = await res.json();
         setItem(data);
+        setResolvedType(currentType);
       } catch (err) {
         console.log(err);
       }
     };
 
-    fetchListing();
-  }, [id, type, state]);
+    if (currentType) {
+      fetchListing();
+      return;
+    }
+
+    const fetchByIdOnly = async () => {
+      const lookupOrder = [
+        "stone",
+        "menrings",
+        "womenrings",
+        "necklace",
+        "earrings",
+        "gemstone",
+      ];
+
+      for (const candidateType of lookupOrder) {
+        try {
+          if (candidateType === "gemstone") {
+            const res = await fetch(apiUrl(`/api/gemstones/${id}`));
+            if (!res.ok) continue;
+
+            const data = await res.json();
+            if (data?.gemstone?._id) {
+              setItem(data.gemstone);
+              setResolvedType("gemstone");
+              return;
+            }
+            continue;
+          }
+
+          const res = await fetch(apiUrl(`/api/${candidateType}/${id}`));
+          if (!res.ok) continue;
+
+          const data = await res.json();
+          if (data?._id || data?.id) {
+            setItem(data);
+            setResolvedType(candidateType);
+            return;
+          }
+        } catch (error) {
+          continue;
+        }
+      }
+    };
+
+    fetchByIdOnly();
+  }, [id, currentType, state?.item, resolvedType, type]);
 
   //collection show route code 
 
@@ -240,12 +289,12 @@ alert("Added to cart 🛒");
           <p className="text-sm text-gray-500 tracking-wide">SWATI GEMZ</p>
           <h1 className="text-4xl font-mediumbold mt-1 leading-tight abril-fatface-regular">
             {item.name || item.title}
-            {type === "stone" && ` - ${item.weight} crt`}
-            {type === "necklace" && ` - ${item.stoneWeight} ${item.weightUnit}`}
+            {displayType === "stone" && ` - ${item.weight} crt`}
+            {displayType === "necklace" && ` - ${item.stoneWeight} ${item.weightUnit}`}
           </h1>
           <p className="mt-6 text-sm md:text-[22px] font-semibold">
             Rs.{new Intl.NumberFormat("en-PK").format(
-              type === "gemstone"
+              displayType === "gemstone"
                 ? item.price
                 : item.price
             )}
@@ -316,11 +365,11 @@ alert("Added to cart 🛒");
           {/* Description */}
           <div className="mt-7 leading-relaxed text-gray-700">
             <h1 className="font-bold text-[18px]">Details:</h1>
-            {type === "stone" && (
+            {displayType === "stone" && (
               <p><b>Shape:</b> {item.shape}</p>
             )}
 
-            {type === "menrings" && (
+            {displayType === "menrings" && (
               <>
                 <div className=" ">
                   <ul className="list-disc pl-10">
@@ -331,7 +380,7 @@ alert("Added to cart 🛒");
                 </div>
               </>
             )}
-            {type === "womenrings" && (
+            {displayType === "womenrings" && (
               <>
                 <div className=" ">
                   <ul className="list-disc pl-10">
@@ -342,7 +391,7 @@ alert("Added to cart 🛒");
                 </div>
               </>
             )}
-            {type === "necklace" && (
+            {displayType === "necklace" && (
               <>
                 <div className=" ">
                   <ul className="list-disc pl-10">
@@ -353,7 +402,7 @@ alert("Added to cart 🛒");
                 </div>
               </>
             )}
-            {type === "earrings" && (
+            {displayType === "earrings" && (
               <>
                 <div className=" ">
                   <ul className="list-disc pl-10">
@@ -365,7 +414,7 @@ alert("Added to cart 🛒");
               </>
             )}
             
-            {type === "gemstone" && (
+            {displayType === "gemstone" && (
               <>
                 <div>
                   <ul className="list-disc pl-10">
@@ -420,7 +469,7 @@ alert("Added to cart 🛒");
           {relatedProducts.map((product) => (
             <Link
               to={
-                type === "gemstone"
+                displayType === "gemstone"
                   ? `/product/gemstone/${product.slug}`
                   : `/product/${type}/${product._id}`
               }
@@ -490,7 +539,7 @@ alert("Added to cart 🛒");
                 <p className="mt-2 text-gray-600 text-[13px] sm:text-[15px]">
                   Rs.
                   {new Intl.NumberFormat("en-PK").format(
-                    type === "gemstone"
+                    displayType === "gemstone"
                       ? product.price
                       : product.price
                   )}

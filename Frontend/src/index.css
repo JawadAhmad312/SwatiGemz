@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import "tailwindcss";
 @plugin "daisyui";
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }

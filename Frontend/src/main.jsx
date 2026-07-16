@@ -121,97 +121,121 @@ const router = createBrowserRouter(
       ),
       children: [
         {
-          path: "/",
+          index: true,
           element: <Home />
         },
         {
-          path: "/product/:type/:id",
-          element: <Show />,
-        },
-        {
-          path: "/gemstone/:slug",
+          path: "product/:id",
           element: <Show />
         },
         {
-          path: "/collections/:slug",
+          path: "product/:type/:id",
+          element: <Show />,
+        },
+        {
+          path: "gemstone/:slug",
+          element: <Show />
+        },
+        {
+          path: "collections",
+          element: <CollectionsPage />
+        },
+        {
+          path: "collections/:slug",
           element: <CollectionProductsPage />
         },
         {
-          path: "/collection/:id",
+          path: "collection/:id",
           element: <Show />  // your Show.jsx
         }, {
-          path: "/Stone",
+          path: "Stone",
           element: <Stone />
         },
         {
-          path: "/collections/menrings",
+          path: "collections/menrings",
           element: <MenRing />
         },
         {
-          path: "/collections/womenrings",
+          path: "collections/womenrings",
           element: <WomenRing />
         },
         {
-          path: "/collections/necklaces",
+          path: "collections/necklaces",
           element: <Necklace />
         }, {
-          path: "/collections/earrings",
+          path: "collections/earrings",
           element: <Earrings />
         },
         {
-          path: "/cart",
+          path: "cart",
           element: <Cart />
         },
         {
-          path: "/Services",
+          path: "Services",
           element: <Services />
         },
         {
-          path: "/AboutUS",
+          path: "AboutUS",
           element: <About />
         },
         {
-          path: "/ContactUs",
+          path: "about",
+          element: <About />
+        },
+        {
+          path: "ContactUs",
           element: <ContactUs />
         },
         {
-          path:"/my-orders",
+          path: "contact",
+          element: <ContactUs />
+        },
+        {
+          path:"my-orders",
           element:<MyOrders/>
         },
         {
-        path:"/track-order/:id",
+          path:"orders",
+          element:<MyOrders/>
+        },
+        {
+          path:"profile",
+          element:<MyOrders/>
+        },
+        {
+        path:"track-order/:id",
         element:<TrackOrder/>
         },
         {
-          path: "/Faqs",
+          path: "Faqs",
           element: <FAQ />
         },
         {
-          path: "/pages/privacy-policy",
+          path: "pages/privacy-policy",
           element: <PrivacyPolicy />
         },
         {
-          path: "/checkout",
+          path: "checkout",
           element: <Checkout />
         },
         {
-          path: "/order-success",
+          path: "order-success",
           element: <OrderSuccess />
         },
         {
-          path: "/signup",
+          path: "signup",
           element: <Signup />
         },
         {
-          path: "/login",
+          path: "login",
           element: <Login />
         },
         {
-          path: "/admin",
+          path: "admin",
           element: <AdminLogin />
         },
         {
-          path: "/admin/dashboard",
+          path: "admin/dashboard",
           element: (
             <ProtectedRoute>
               <Dashboard />
@@ -219,7 +243,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/dashboard/addstone",
+          path: "admin/dashboard/addstone",
           element: (
             <ProtectedRoute>
               <AddStone />
@@ -227,7 +251,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/dashboard/edit-stone/:id",
+          path: "admin/dashboard/edit-stone/:id",
           element: (
             <ProtectedRoute>
               <EditStone />
@@ -235,7 +259,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/dashboard/addring",
+          path: "admin/dashboard/addring",
           element: (
             <ProtectedRoute>
               <AddRing />
@@ -243,7 +267,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/dashboard/edit/:id",
+          path: "admin/dashboard/edit/:id",
           element: (
             <ProtectedRoute>
               <EditRing />
@@ -251,7 +275,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/dashboard/addwomenring",
+          path: "admin/dashboard/addwomenring",
           element: (
             <ProtectedRoute>
               <AddWomenRing />
@@ -259,7 +283,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/dashboard/edit-women/:id",
+          path: "admin/dashboard/edit-women/:id",
           element: (
             <ProtectedRoute>
               <EditWomenRing />
@@ -267,14 +291,14 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/dashboard/addnecklace",
+          path: "admin/dashboard/addnecklace",
           element: (
             <ProtectedRoute>
               <AddNecklace />
             </ProtectedRoute>
           )
         }, {
-          path: "/admin/dashboard/edit-necklace/:id",
+          path: "admin/dashboard/edit-necklace/:id",
           element: (
             <ProtectedRoute>
               <EditNecklace />
@@ -282,14 +306,14 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/dashboard/addearring",
+          path: "admin/dashboard/addearring",
           element: (
             <ProtectedRoute>
               <AddEarring />
             </ProtectedRoute>
           )
         }, {
-          path: "/admin/dashboard/edit-earring/:id",
+          path: "admin/dashboard/edit-earring/:id",
           element: (
             <ProtectedRoute>
               <EditEarring />
@@ -297,7 +321,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/add-collection",
+          path: "admin/add-collection",
           element: (
             <ProtectedRoute>
               <AddCollection />
@@ -305,7 +329,7 @@ const router = createBrowserRouter(
           ),
         },
         {
-          path: "/admin/edit-collection/:id",
+          path: "admin/edit-collection/:id",
           element: (
             <ProtectedRoute>
               <EditCollection />
@@ -313,7 +337,7 @@ const router = createBrowserRouter(
           ),
         },
         {
-          path:"/admin/gemstones",
+          path:"admin/gemstones",
           element: (
             <ProtectedRoute>
               <Gemstone />
@@ -321,7 +345,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/add-gemstone",
+          path: "admin/add-gemstone",
           element: (
             <ProtectedRoute>
               <AddGemstone />
@@ -329,7 +353,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path: "/admin/edit-gemstone/:slug",
+          path: "admin/edit-gemstone/:slug",
           element: (
             <ProtectedRoute>
               <EditGemstone />
@@ -337,7 +361,7 @@ const router = createBrowserRouter(
           )
         },
         {
-           path:"/admin/dashboard/addmencategory",
+           path:"admin/dashboard/addmencategory",
            element:(
             <ProtectedRoute>
               <AddMenCategory/>
@@ -345,7 +369,7 @@ const router = createBrowserRouter(
            )
         },
         {
-          path:"/admin/dashboard/editmencategory/:id",
+          path:"admin/dashboard/editmencategory/:id",
           element:(
             <ProtectedRoute>
               <EditMenCategory/>
@@ -354,7 +378,7 @@ const router = createBrowserRouter(
         },
          /* ================= WOMEN CATEGORY ================= */
         {
-          path:"/admin/addwomencategory",
+          path:"admin/addwomencategory",
           element:(
             <ProtectedRoute>
               <AddWomenCategory/>
@@ -362,7 +386,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path:"/admin/editwomencategory/:id",
+          path:"admin/editwomencategory/:id",
           element:(
             <ProtectedRoute>
               <EditWomenCategory/>
@@ -370,7 +394,7 @@ const router = createBrowserRouter(
           )
         },
         {
-          path:"/admin/orders",
+          path:"admin/orders",
           element:(
             <ProtectedRoute>
               <Orders/>

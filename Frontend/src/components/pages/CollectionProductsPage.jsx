@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
 import SidebarFilter from "../gemstones/SidebarFilter";
 import GemstoneCard from "../gemstones/GemstoneCard";
 import SortBar from "../gemstones/SortBar";
+import ProductPagination from "../common/ProductPagination";
 
 const CollectionProductsPage = () => {
 
@@ -21,11 +22,12 @@ const CollectionProductsPage = () => {
 
   const [showFilters, setShowFilters] =
     useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;
 
   useEffect(() => {
-
+    setCurrentPage(1);
     fetchProducts();
-
   }, [slug, availability, sort]);
 
   const fetchProducts = async () => {
@@ -59,8 +61,14 @@ const CollectionProductsPage = () => {
     }
   };
 
-  if (loading) {
+  const currentProducts = useMemo(() => {
+    const start = (currentPage - 1) * itemsPerPage;
+    return products.slice(start, start + itemsPerPage);
+  }, [products, currentPage]);
 
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+
+  if (loading) {
     return (
       <div className="py-32 text-center">
         Loading...
@@ -214,7 +222,7 @@ const CollectionProductsPage = () => {
   "
 >
 
-              {products.map((item) => (
+              {currentProducts.map((item) => (
 
                 <GemstoneCard
                   key={item._id}
@@ -226,6 +234,12 @@ const CollectionProductsPage = () => {
             </div>
 
           </div>
+
+          <ProductPagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
 
         </div>
 
@@ -306,7 +320,6 @@ max-w-[340px]
         </div>
 
       )}
-
     </>
   );
 };

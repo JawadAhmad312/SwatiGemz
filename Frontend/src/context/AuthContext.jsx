@@ -34,7 +34,28 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     let mounted = true;
 
+    const handleStorageChange = (event) => {
+      if (event.key !== "user") return;
+
+      if (event.newValue) {
+        try {
+          setUserState(JSON.parse(event.newValue));
+        } catch {
+          setUserState(null);
+        }
+      } else {
+        setUserState(null);
+      }
+    };
+
     const loadUser = async () => {
+      if (getStoredUser()) {
+        if (mounted) {
+          setLoading(false);
+        }
+        return;
+      }
+
       try {
         const res = await api.get("/current-user");
 
@@ -55,9 +76,11 @@ export const AuthProvider = ({ children }) => {
     };
 
     loadUser();
+    window.addEventListener("storage", handleStorageChange);
 
     return () => {
       mounted = false;
+      window.removeEventListener("storage", handleStorageChange);
     };
   }, []);
 

@@ -3,6 +3,7 @@ import { FaHeart } from "react-icons/fa";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import MobileFilter from "../filters/MobileFilter";
 import DesktopFilter from "../filters/DesktopFilter";
+import ProductPagination from "../common/ProductPagination";
 
 const WomenRing = () => {
   const [products, setProducts] = useState([]);
@@ -12,6 +13,7 @@ const WomenRing = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [filters, setFilters] = useState({
+    search: "",
     category: "All",
     availability: "all",
     sort: "default",
@@ -29,6 +31,10 @@ const WomenRing = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filters]);
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const categoryFromURL = params.get("category");
@@ -85,7 +91,7 @@ useEffect(() => {
       try {
         setLoading(true);
 
-        const res = await fetch("http://localhost:8080/api/womenrings");
+        const res = await fetch(apiUrl("/api/womenrings"));
         const json = await res.json();
 
         const data = json.data || json; // handle both formats
@@ -107,6 +113,12 @@ useEffect(() => {
 
   /* ================= FILTER ================= */
   let filteredProducts = [...products];
+
+  if (filters.search) {
+    filteredProducts = filteredProducts.filter((p) =>
+      p.name?.toLowerCase().includes(filters.search.toLowerCase())
+    );
+  }
 
   if (filters.availability === "inStock") {
     filteredProducts = filteredProducts.filter((p) => p.stockquantity > 0);
@@ -319,6 +331,12 @@ md:h-[160px]
         ))}
 
       </div>
+
+      <ProductPagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };

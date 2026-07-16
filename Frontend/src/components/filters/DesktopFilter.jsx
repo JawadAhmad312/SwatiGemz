@@ -11,6 +11,7 @@ const DesktopFilter = ({
   const resetFilters = () => {
 
     setFilters({
+      search: "",
       category: "All",
       availability: "all",
       sort: "default",
@@ -48,6 +49,30 @@ shadow-sm
 Filter
 
 </p>
+
+<input
+value={filters.search || ""}
+onChange={(e)=>
+setFilters({
+...filters,
+search:e.target.value,
+})
+}
+placeholder="Search products"
+className="
+h-11
+w-52
+rounded-full
+border
+border-gray-300
+px-4
+text-sm
+outline-none
+hover:border-[#1D4F38]
+focus:border-[#1D4F38]
+transition
+"
+/>
 
 {/* CATEGORY */}
 

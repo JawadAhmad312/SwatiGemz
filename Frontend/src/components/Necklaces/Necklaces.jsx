@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import DesktopFilter from "../filters/DesktopFilter";
 import MobileFilter from "../filters/MobileFilter";
-import { assetUrl } from "../../lib/api";
+import { apiUrl, assetUrl } from "../../lib/api";
+import ProductPagination from "../common/ProductPagination";
 
 const Necklaces = () => {
   const [necklaces, setNecklaces] = useState([]);
@@ -12,6 +13,7 @@ const Necklaces = () => {
   const [wishlist, setWishlist] = useState([]);
 
   const [filters, setFilters] = useState({
+    search: "",
     category: "All",
     availability: "all",
     sort: "default",
@@ -29,6 +31,10 @@ const Necklaces = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filters]);
   /* ---------------- LOAD WISHLIST ---------------- */
  useEffect(() => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -90,7 +96,7 @@ const Necklaces = () => {
   useEffect(() => {
     const fetchNecklaces = async () => {
       try {
-        const res = await fetch("http://localhost:8080/api/necklace");
+        const res = await fetch(apiUrl("/api/necklace"));
         const json = await res.json();
 
         const safeArray = Array.isArray(json)
@@ -117,13 +123,21 @@ const Necklaces = () => {
 
     if (filters.search) {
       temp = temp.filter((item) =>
-        item.name.toLowerCase().includes(filters.search.toLowerCase())
+        item.name?.toLowerCase().includes(filters.search.toLowerCase())
       );
+    }
+
+    if (filters.availability === "inStock") {
+      temp = temp.filter((item) => item.stockquantity > 0);
+    } else if (filters.availability === "outStock") {
+      temp = temp.filter((item) => item.stockquantity <= 0);
     }
 
     if (filters.category !== "All") {
       temp = temp.filter((item) =>
-        item.name.toLowerCase().includes(filters.category.toLowerCase())
+        (item.category || item.type || "")
+          .toLowerCase()
+          .includes(filters.category.toLowerCase())
       );
     }
 
@@ -133,8 +147,10 @@ const Necklaces = () => {
     if (filters.maxPrice)
       temp = temp.filter((item) => item.price <= Number(filters.maxPrice));
 
-    if (filters.sort === "low-high") temp.sort((a, b) => a.price - b.price);
-    if (filters.sort === "high-low") temp.sort((a, b) => b.price - a.price);
+    if (filters.sort === "low") temp.sort((a, b) => a.price - b.price);
+    if (filters.sort === "high") temp.sort((a, b) => b.price - a.price);
+    if (filters.sort === "az") temp.sort((a, b) => a.name.localeCompare(b.name));
+    if (filters.sort === "za") temp.sort((a, b) => b.name.localeCompare(a.name));
 
     return temp;
   }, [necklaces, filters]);
@@ -209,6 +225,12 @@ const Necklaces = () => {
           </div>
         ))}
       </div>
+
+      <ProductPagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };

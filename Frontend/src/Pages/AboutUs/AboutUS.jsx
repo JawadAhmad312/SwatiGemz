@@ -67,7 +67,8 @@ const AboutUs = () => {
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
 
-            <button
+            <Link
+              to="/collections"
               className="
                 bg-[#D4AF37]
                 text-white
@@ -80,7 +81,7 @@ const AboutUs = () => {
               "
             >
               Explore Collection
-            </button>
+            </Link>
 
             <button
               className="

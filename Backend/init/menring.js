@@ -154,11 +154,11 @@ const manrings = [
   {
     "name": "Blue Topaz Natural – 925 Silver Ring",
     "price": 28000,
-    "image": "https://55crt.com/cdn/shop/products/101_7173201e-7d26-429a-9a94-03a7641112d2_600x.jpg?v=1663396464",
+    "image": "https://images.diamondere.com/new_images/products/benton/benton_wg_bt_0.jpg",
 
     "category": "Ring",
     "images": [
-      "https://55crt.com/cdn/shop/products/101_7173201e-7d26-429a-9a94-03a7641112d2_600x.jpg?v=1663396464",
+      "https://images.diamondere.com/new_images/products/benton/benton_wg_bt_0.jpg",
       "https://images.unsplash.com/photo-1611591437281-460bfbe1220a",
       "https://images.unsplash.com/photo-1588444650700-6d9d0c8c1f12"
     ],

@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import MobileFilter from "../filters/MobileFilter";
 import DesktopFilter from "../filters/DesktopFilter";
+import { apiUrl } from "../../lib/api";
 
 
 
@@ -12,6 +13,7 @@ function Stone() {
 
   /* -------- FILTER STATES -------- */
  const [filters, setFilters] = useState({
+  search: "",
   category: "All",
   availability: "all",
   sort: "default",
@@ -27,7 +29,7 @@ function Stone() {
   ];
   /* ---------------- LOAD DATA ---------------- */
   useEffect(() => {
-   fetch("https://swatigemz.onrender.com/api/stone")
+   fetch(apiUrl("/api/stone"))
       .then(res => res.json())
       .then(data => setProducts(data));
 
@@ -37,6 +39,10 @@ function Stone() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filters]);
   /* ---------------- ADD TO CART ---------------- */
 const addToCart = (product) => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -85,6 +91,12 @@ const addToCart = (product) => {
   let filteredProducts = [...products];
 
   // availability
+  if (filters.search) {
+    filteredProducts = filteredProducts.filter((p) =>
+      p.name?.toLowerCase().includes(filters.search.toLowerCase())
+    );
+  }
+
   if (filters.availability === "inStock") {
   filteredProducts = filteredProducts.filter(
     p => p.stockquantity > 0
@@ -253,7 +265,6 @@ md:h-[160px]
 
       </div>
 
-      {/* PAGINATION (UNCHANGED) */}
       <div className="flex justify-center items-center gap-2 mt-12">
 
         <button
@@ -292,7 +303,6 @@ md:h-[160px]
         </button>
 
       </div>
-
     </div>
   );
 }
