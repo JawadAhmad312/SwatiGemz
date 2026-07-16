@@ -689,9 +689,6 @@ const cartKey = `cart_${userId}`;
             <NavLink to="/AboutUs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">About</NavLink>
             <NavLink to="/ContactUs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">Contact Us</NavLink>
             <NavLink to="/Faqs" onClick={() => setIsOpen(false)} className="text-lg text-gray-700">FAQ's</NavLink>
-            <div  to="/admin/dashboard" className="text-lg text-green-700 ">
-    Admin Dashboard
-  </div>
           </ul>
 
           <div className="absolute bottom-8 left-6 w-[calc(100%-3rem)] flex flex-col items-start">
@@ -728,6 +725,17 @@ const cartKey = `cart_${userId}`;
                   <i className="fa-solid fa-bag-shopping"></i>
                   <span className="text-sm">My Orders</span>
                 </NavLink>
+
+                {user?.role?.trim()?.toLowerCase() === "admin" && user?.status === "Active" && (
+                  <NavLink
+                    to="/admin/dashboard"
+                    onClick={() => setIsOpen(false)}
+                    className="hover:text-[#386855] transition flex items-center gap-2 text-green-700 font-semibold"
+                  >
+                    <i className="fa-solid fa-shield-halved"></i>
+                    <span className="text-sm">Admin Dashboard</span>
+                  </NavLink>
+                )}
 
                 <button
                   onClick={async () => {
