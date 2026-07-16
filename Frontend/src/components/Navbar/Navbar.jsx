@@ -302,7 +302,8 @@ const cartKey = `cart_${userId}`;
             to="/admin/dashboard"
              target="_blank"
             className="
-              block
+              hidden
+              md:block
               px-4
               py-3
               text-sm
