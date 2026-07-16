@@ -302,8 +302,7 @@ const cartKey = `cart_${userId}`;
             to="/admin/dashboard"
              target="_blank"
             className="
-              hidden
-              md:block
+              block
               px-4
               py-3
               text-sm
@@ -314,8 +313,7 @@ const cartKey = `cart_${userId}`;
               font-semibold
             "
           >
-            <i className=" hidden
-              md:block fa-solid fa-shield-halved mr-2"></i>
+            <i className="fa-solid fa-shield-halved mr-2"></i>
             Admin Dashboard
           </Link>
         )}
