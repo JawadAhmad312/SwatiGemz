@@ -27,7 +27,7 @@ function Stone() {
   ];
   /* ---------------- LOAD DATA ---------------- */
   useEffect(() => {
-    fetch("http://localhost:8080/api/stone")
+   fetch("https://swatigemz.onrender.com/api/stone")
       .then(res => res.json())
       .then(data => setProducts(data));
 
