@@ -22,7 +22,7 @@ function Home() {
         />
       </div>
       <div className='w-full h-auto mt-[2rem] text-center'>
-        <h1 className='text-[28px] md:text-5xl font-bold abril-fatface-regular bg-gradient-to-r from-[#092805] to-[#224225] bg-clip-text text-transparent text-white'>Personalized Gemstone <br /> Recommendation</h1>
+        <h1 className='text-[28px] md:text-5xl font-bold abril-fatface-regular bg-gradient-to-r from-[#092805] to-[#224225] md:bg-clip-text md:text-transparent text-white'>Personalized Gemstone <br /> Recommendation</h1>
 <p className="mt-[1.5rem] max-w-4xl mx-auto text-center text-[14px] md:text-[19px] font-normal">
   Discover authentic, high-quality gemstones carefully selected and verified by
   <span className="font-bold"> Muhammad Islam</span>. We are committed to helping you find the perfect gemstone with trusted quality, expert guidance, and exceptional craftsmanship.
