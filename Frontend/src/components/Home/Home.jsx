@@ -17,7 +17,7 @@ function Home() {
       <div className="w-full flex justify-center w-100% md:h-[800px] sm:h-[320px]">
         <img
           src="/images/herosection.png"
-          className=" object-cover rounded-xl"
+          className=" object-cover "
           alt="Banner"
         />
       </div>
