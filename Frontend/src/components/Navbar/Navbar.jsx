@@ -172,7 +172,7 @@ const cartKey = `cart_${userId}`;
             {/* Search */}
             <i
               onClick={() => setShowSearch(!showSearch)}
-              className="fa-solid fa-magnifying-glass cursor-pointer hover:text-[#386855] transition"
+              className="fa-solid fa-magnifying-glass cursor-pointer hover:text-[#386855] text-black transition"
             ></i>
 
            {/* User Section */}
