@@ -366,9 +366,9 @@ const cartKey = `cart_${userId}`;
             {/* Cart */}
             <NavLink
               to="/cart"
-              className="relative hover:text-[#386855] transition"
+              className="relative hover:text-[#386855] transition text-black"
             >
-              <i className="fa-solid fa-cart-shopping"></i>
+              <i className="fa-solid fa-cart-shopping text-black"></i>
 
               {user && cartCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-gradient-to-r from-[#092805] to-[#224225] text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
