@@ -181,7 +181,7 @@ function Map() {
           </div>
 
           {/* Map Container */}
-          <div className="w-full h-[650px] rounded-[32px] overflow-hidden border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
+          <div className="w-full h-[480px] md:h-[650px] rounded-[32px] overflow-hidden border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
 
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.509624920865!2d72.3578036!3d34.7741937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dc22c679da9e13%3A0xe2161d5b6ec53bb!2sMain%20Bazar%20near%20Sarafa%20Bazar%2C%20Mingora%2C%20Swat%2C%20Pakistan!5e0!3m2!1sen!2s!4v1733720000000"
