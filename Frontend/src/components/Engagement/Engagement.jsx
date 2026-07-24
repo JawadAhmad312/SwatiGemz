@@ -3,7 +3,7 @@ import React from 'react'
 function Engagement() {
     return (
         <>
-            <section className="w-full bg-white my-[2rem] mt-4  md:mt-[4rem]">
+            <section className="w-full bg-white my-[2rem]  md:mt-[4rem]">
                 <div className="max-w-5xl mx-auto px-2 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
                     {/* Left Image */}
@@ -21,7 +21,7 @@ function Engagement() {
                             Engagement Rings
                         </h1>
 
-                        <p className="text-[16.5px] leading-[1.9] text-gray-600 mb-5 text-gray-600 mb-5 text-center max-w-4xl mx-auto">
+                        <p className="text-[16.5px] leading-[1.9] text-gray-600 mb-5 ">
                             In love and commitment, Jawa Gems' range of engagement rings is an exquisite
                             symbol. They are all intricately cut and crafted and symbolic works of art
                             that symbolize the connection between two people.The rings we provide are a fusion of fantastic elements such as metals and
