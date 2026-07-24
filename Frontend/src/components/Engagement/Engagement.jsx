@@ -16,15 +16,16 @@ function Engagement() {
                     </div>
 
                     {/* Right Content */}
-                    <div className="max-w-[950px] md:mt-6 md:ml-[-9rem] px-14 md:py-12 bg-white ">
+                    <div className="max-w-[980px] md:mt-6 md:ml-[-9rem] px-2 md:py-12 bg-white ">
                         <h1 className="text-4xl abril-fatface-regular lg:text-5xl font-semibold text-black mb-6">
                             Engagement Rings
                         </h1>
 
-                        <p className="text-[16.5px] leading-[1.9] text-gray-600 mb-5 ">
+                        <p className=" w-full text-[16.5px] leading-[1.9] text-gray-600 mb-5 ">
                             In love and commitment, Jawa Gems' range of engagement rings is an exquisite
                             symbol. They are all intricately cut and crafted and symbolic works of art
-                            that symbolize the connection between two people.The rings we provide are a fusion of fantastic elements such as metals and
+                            that symbolize the connection between two people.The rings we provide are 
+                            a fusion of fantastic elements such as metals and
                             wonderfully made by professional designers that can only guarantee perfect
                             rings that will be passed from one generation to another.
                             You may fancy traditional style or contemporary design; at Swati Gemz, we

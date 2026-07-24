@@ -70,7 +70,8 @@ const CollectionsPage = () => {
           <p
             className="
               mt-5
-              text-white
+              text-gray-900
+dark:text-white
               md:text-gray-600
               max-w-2xl
               mx-auto

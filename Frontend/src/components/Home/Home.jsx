@@ -59,7 +59,22 @@ duration-300
 
 {/* GemzStone Video */}
 <div className='justify-items-center align-items-center w-full '>
-  <h1 className='mb-[2rem] py-6 text-xl md:text-5xl abril-fatface-regular bg-gradient-to-r from-[#092805] to-[#224225] bg-clip-text md:text-transparent text-white'>How Rings Are Made</h1>
+  <h1 className="
+mb-[2rem]
+py-6
+text-xl
+md:text-5xl
+abril-fatface-regular
+text-gray-900
+dark:text-white
+md:bg-gradient-to-r
+from-[#092805]
+to-[#224225]
+bg-clip-text
+md:dark:text-transparent
+transition-colors
+duration-300
+">How Rings Are Made</h1>
 <video muted autoPlay playsInline loop  className="w-full lg:max-w-[1300px] md:h-[470px] object-cover">
   <source src={gemVideo} type="video/mp4" />
 </video>
