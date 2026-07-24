@@ -58,7 +58,8 @@ const CollectionsPage = () => {
 
           <h1
             className="
-              text-5xl
+            text-2xl
+              md:text-5xl
               font-bold
               tracking-tight
             "
@@ -69,7 +70,8 @@ const CollectionsPage = () => {
           <p
             className="
               mt-5
-              text-gray-600
+              text-white
+              md:text-gray-600
               max-w-2xl
               mx-auto
               leading-8
