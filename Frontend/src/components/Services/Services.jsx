@@ -82,7 +82,7 @@ function Services() {
 
         {/* HEADER */}
         <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-wide">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-wide text-gray-900 dark:text-gray-900">
             Our Services
           </h1>
           <p className="mt-6 max-w-3xl mx-auto text-gray-600 text-lg">
@@ -105,7 +105,7 @@ function Services() {
                 {service.icon}
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-900">
                 {service.title}
               </h3>
 
@@ -121,7 +121,7 @@ function Services() {
         {/* WHY CHOOSE US */}
         <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
           <div>
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-900">
               Why Choose GemzStone
             </h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
@@ -142,7 +142,7 @@ function Services() {
 
           {/* INFO CARD */}
           <div className="bg-white p-10 rounded-2xl border border-gray-200 shadow-sm">
-            <h3 className="text-2xl font-semibold mb-4">
+            <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-900">
               Our Commitment to Excellence
             </h3>
             <p className="text-gray-600 leading-relaxed text-sm">
@@ -156,7 +156,7 @@ function Services() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-gray-900">
             Begin Your Luxury Journey
           </h2>
           <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
