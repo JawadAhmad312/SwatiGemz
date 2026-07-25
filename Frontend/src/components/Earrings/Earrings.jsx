@@ -242,7 +242,7 @@ useEffect(() => {
                       Sold out
                     </span>
                   )}
-                  <div     className="
+                  <div      className="
        w-[110px]
 h-[110px]
 md:w-[240px]
@@ -262,28 +262,27 @@ md:h-[240px]
                           ? earring.image
                           : assetUrl(earring.image)
                       }
-                    className="
-         w-[70px]
-h-[70px]
-md:w-[160px]
-md:h-[160px]
-          object-contain
-          group-hover:scale-110
-          transition-all
-          duration-300
-        "
+                   className="h-[90px] md:h-[120px]
+          w-auto object-contain transition-transform
+          duration-300 group-hover:scale-105"
                     />
                     </div>
                 </div>
               </Link>
 
-              <div className="p-5 text-start">
-                <h3 className="font-semibold mb-2 line-clamp-2">
+              <div className="p-3 sm:p-5 text-start">
+                <h3 className="text-[14px] sm:text-lg
+          font-semibold text-gray-900
+           dark:text-black
+          group-hover:text-black
+          leading-[20px] sm:leading-normal
+          line-clamp-2 min-h-[42px]">
                   {earring.name}
                 </h3>
                 <div className="flex  gap-2 items-start">
-                  <span className="text-lg font-bold">
-                    Rs.{earring.price}
+                  <span className=" text-gray-600
+    dark:text-black text-[13px] sm:text-[15px]">
+                    PKR.{Number(earring.price).toLocaleString()}
                   </span>
                 </div>
                
