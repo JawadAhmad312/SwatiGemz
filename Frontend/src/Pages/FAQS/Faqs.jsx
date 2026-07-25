@@ -76,7 +76,7 @@ const FAQ = () => {
 
       {/* PAGE HEADER */}
       <div className="max-w-4xl mx-auto text-center mb-14">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h1 className="text-3xl text-gray-900 dark:text-gray-900 sm:text-4xl md:text-5xl font-bold">
           Frequently Asked Questions
         </h1>
         <p className="mt-4 text-gray-600 text-sm sm:text-lg">
