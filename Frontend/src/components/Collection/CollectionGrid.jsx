@@ -168,8 +168,9 @@ py-2
                     py-2.5
                     rounded-full
                     border
-                    border-white
+                    border-black
                     md:border-black
+                    dark:border-white
                     text-sm
                     font-semibold
                     tracking-[2px]
