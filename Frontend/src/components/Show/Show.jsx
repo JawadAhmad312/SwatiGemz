@@ -287,12 +287,14 @@ alert("Added to cart 🛒");
         {/* RIGHT SIDE */}
         <div className="w-full lg:w-[520px]">
           <p className="text-sm text-gray-500 tracking-wide">SWATI GEMZ</p>
-          <h1 className="text-4xl font-mediumbold mt-1 leading-tight abril-fatface-regular">
+          <h1 className="text-4xl text-gray-900
+    dark:text-black font-mediumbold mt-1 leading-tight abril-fatface-regular">
             {item.name || item.title}
             {displayType === "stone" && ` - ${item.weight} crt`}
             {displayType === "necklace" && ` - ${item.stoneWeight} ${item.weightUnit}`}
           </h1>
-          <p className="mt-6 text-sm md:text-[22px] font-semibold">
+          <p className="mt-6 text-sm text-gray-900
+    dark:text-black md:text-[22px] font-semibold">
             Rs.{new Intl.NumberFormat("en-PK").format(
               displayType === "gemstone"
                 ? item.price
@@ -302,9 +304,9 @@ alert("Added to cart 🛒");
           </p>
 
           {/* Quantity */}
-          <p className="mt-6 font-medium">Quantity</p>
+          <p className="mt-6 font-medium text-gray-900 dark:text-black">Quantity</p>
 
-          <div className="mt-2 border w-40 h-12 mb-4 flex items-center justify-between px-5 rounded">
+          <div className="mt-2 border dark:border-black w-40 h-12 mb-4 flex items-center justify-between px-5 rounded">
             <button
               onClick={() => counter > 1 && setCounter(counter - 1)}
               className="text-xl text-gray-600 hover:text-black"
@@ -334,7 +336,7 @@ alert("Added to cart 🛒");
       item.soldOut ||
       item.stockquantity <= 0
     }
-    className="w-full border py-3 hover:bg-gray-100 transition disabled:opacity-60 disabled:cursor-not-allowed"
+    className="w-full border dark:border-black py-3 hover:bg-gray-100 transition disabled:opacity-60 disabled:cursor-not-allowed"
   >
     {item.soldOut ||
     item.stockquantity <= 0

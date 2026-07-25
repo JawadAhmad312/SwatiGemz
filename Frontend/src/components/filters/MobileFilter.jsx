@@ -77,6 +77,8 @@ const MobileFilter = ({
             rounded-full
             px-5
             py-2.5
+            text-black
+            dark:text-black
             font-medium
             text-sm
             shadow-sm
@@ -87,7 +89,7 @@ const MobileFilter = ({
           Filter & Sort
         </button>
 
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-gray-500 dark:text-gray-600">
           {totalProducts} Products
         </p>
 
@@ -163,7 +165,7 @@ const MobileFilter = ({
 
             )}
 
-            <h2 className="font-semibold text-lg">
+            <h2 className="font-semibold text-lg text-gray-900 dark:text-black">
 
               {screen === "main" &&
                 "Filter & Sort"}
@@ -187,7 +189,7 @@ const MobileFilter = ({
           <button
             onClick={closeDrawer}
           >
-            <FiX size={24} />
+            <FiX size={24} className="text-black dark:text-black"/>
           </button>
 
         </div>
@@ -230,6 +232,8 @@ const MobileFilter = ({
           px-4
           text-sm
           outline-none
+          text-gray-900
+          dark:text-black
         "
       />
     </div>
@@ -262,7 +266,8 @@ const MobileFilter = ({
 
       </div>
 
-      <FiChevronRight size={22} />
+      <FiChevronRight size={22} className="text-gray-900
+          dark:text-black" />
 
     </button>
 
@@ -300,7 +305,8 @@ const MobileFilter = ({
 
       </div>
 
-      <FiChevronRight size={22} />
+      <FiChevronRight size={22} className="text-gray-900
+          dark:text-black"/>
 
     </button>
 
@@ -339,7 +345,8 @@ const MobileFilter = ({
 
       </div>
 
-      <FiChevronRight size={22} />
+      <FiChevronRight size={22} className="text-gray-900
+          dark:text-black"/>
 
     </button>
 
@@ -361,11 +368,13 @@ const MobileFilter = ({
 
       <div className="text-left">
 
-        <p className="font-medium text-gray-900">
+        <p className="font-medium text-gray-900
+          dark:text-black">
           Sort By
         </p>
 
-        <p className="text-sm text-gray-400 mt-1">
+        <p className="text-sm text-gray-400 
+          dark:text-black mt-1">
 
           {tempFilters.sort === "default" &&
             "Best Selling"}
@@ -386,7 +395,8 @@ const MobileFilter = ({
 
       </div>
 
-      <FiChevronRight size={22} />
+      <FiChevronRight size={22} className="text-gray-900
+          dark:text-black"/>
 
     </button>
 
@@ -521,6 +531,7 @@ const MobileFilter = ({
             h-5
             rounded-full
             border-2
+            dark:border-black
             flex
             items-center
             justify-center
@@ -579,6 +590,9 @@ const MobileFilter = ({
               className="
                 w-1/2
                 border
+                dark:border-black
+                text-gray-900
+          dark:text-black
                 py-3
                 rounded-full
                 font-medium

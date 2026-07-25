@@ -106,8 +106,10 @@ const CollectionGrid = ({ collections }) => {
                     src={item.image}
                     alt={item.name}
                     className="
-      w-[150px]
-      h-[150px]
+                    w-[120px]
+                    h-[120px]
+      md:w-[150px]
+      md:h-[150px]
       object-contain
       relative
       z-10
@@ -116,6 +118,7 @@ const CollectionGrid = ({ collections }) => {
       group-hover:scale-105
       object-cover
     rounded-full
+    overflow-hidden
     "
                   />
                 </div>

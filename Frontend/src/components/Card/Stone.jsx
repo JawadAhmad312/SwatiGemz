@@ -235,24 +235,23 @@ md:h-[240px]
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="
-         w-[70px]
-h-[70px]
-md:w-[160px]
-md:h-[160px]
-          object-contain
-          group-hover:scale-110
-          transition-all
-          duration-300
-        "
+                  className="h-[90px] md:h-[120px]
+          w-auto object-contain transition-transform
+          duration-300 group-hover:scale-105"
                   />
                 </div>
               </div>
             </Link>
 
-            <div className="p-4 text-start">
-              <h3 className="font-semibold mb-2">{item.name}</h3>
-              <p className="text-lg font-semibold mb-3">
+            <div className="p-3 sm:p-5 text-start">
+              <h3  className="text-[14px] sm:text-lg
+          font-semibold text-gray-900
+           dark:text-black
+          group-hover:text-black
+          leading-[20px] sm:leading-normal
+          line-clamp-2 min-h-[42px]">{item.name}</h3>
+              <p className=" text-gray-600
+    dark:text-black text-[13px] sm:text-[15px]">
                 PKR.{Number(item.price).toLocaleString()}
               </p>
 
@@ -270,7 +269,7 @@ md:h-[160px]
         <button
           onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
-          className="px-3 py-2 bg-gray-200 rounded"
+          className="px-3 py-2 bg-gray-200 rounded "
         >
           ←
         </button>
@@ -297,7 +296,7 @@ md:h-[160px]
             setCurrentPage(prev => Math.min(prev + 1, totalPages))
           }
           disabled={currentPage === totalPages}
-          className="px-3 py-2 bg-gray-200 rounded"
+          className="px-3 py-2 bg-gray-200 text-black rounded"
         >
           →
         </button>
