@@ -108,7 +108,7 @@ const AboutUs = () => {
 
       {/* ================= BRAND STORY ================= */}
 
-      <section className="py-28 max-w-7xl mx-auto px-6">
+      <section className="py-22 max-w-7xl mx-auto px-6">
 
         <div className="grid md:grid-cols-2 gap-20 items-center">
 
@@ -137,19 +137,21 @@ const AboutUs = () => {
             whileInView="visible"
           >
 
-            <p className="uppercase tracking-[6px] text-[#D4AF37] text-md">
+            <p className="uppercase tracking-[6px] text-[#D4AF37] text-lg">
               Our Story
             </p>
 
             <h2
-              className="text-5xl font-bold mt-6"
+              className="text-5xl font-bold mt-6 "
               style={{
                 fontFamily: '"Playfair Display", serif',
               }}
             >
               Luxury Crafted
               <br />
-              With Trust
+              <p style={{
+                fontFamily: '"Playfair Display", serif',
+              }} className="mt-2 font-bold">With Trust</p>
             </h2>
 
             <p className="mt-8 text-gray-600 leading-8">
@@ -157,8 +159,7 @@ const AboutUs = () => {
               gemstones and premium jewellery for collectors,
               investors, and luxury enthusiasts around the world.
             </p>
-
-            <p className="mt-5 text-gray-600 leading-8">
+            <p className="mt-2 text-gray-600 leading-8">
               Every gemstone is carefully selected, verified,
               and presented with transparency and excellence.
             </p>
