@@ -282,7 +282,7 @@ md:h-[240px]
               key={page}
               onClick={() => setCurrentPage(page)}
               className={`px-4 py-2 rounded-full border transition-all duration-300 ${currentPage === page
-                ? "bg-gradient-to-r from-[#092805] to-[#224225] text-white scale-110 shadow"
+                ? "bg-gradient-to-r from-[#092805] to-[#224225] text-white dark:text-black scale-110 shadow"
                 : "bg-white hover:bg-gradient-to-r from-[#092805] to-[#224225] hover:text-white"
                 }`}
             >
