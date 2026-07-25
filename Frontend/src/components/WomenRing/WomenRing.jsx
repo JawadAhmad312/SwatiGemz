@@ -298,16 +298,9 @@ md:h-[240px]
  <img
                     src={product.image}
                     alt={product.name}
-                    className="
-         w-[70px]
-h-[70px]
-md:w-[160px]
-md:h-[160px]
-          object-contain
-          group-hover:scale-110
-          transition-all
-          duration-300
-        "
+                    className="h-[90px] md:h-[120px]
+          w-auto object-contain transition-transform
+          duration-300 group-hover:scale-105"
                   />
     </div>
                  
@@ -315,12 +308,18 @@ md:h-[160px]
               </Link>
           
 
-            <div className="p-4">
-              <h3 className="font-semibold mb-2 line-clamp-2">
+            <div className="p-3 sm:p-5 text-start">
+              <h3 className="text-[14px] sm:text-lg
+          font-semibold text-gray-900
+           dark:text-black
+          group-hover:text-black
+          leading-[20px] sm:leading-normal
+          line-clamp-2 min-h-[42px]">
                 {product.name}
               </h3>
-              <span className="text-lg font-bold">
-                Rs.{product.price.toLocaleString()}
+              <span className=" text-gray-600
+    dark:text-black text-[13px] sm:text-[15px]">
+                PKR.{Number([product].price).toLocaleString()}
               </span>
 
             

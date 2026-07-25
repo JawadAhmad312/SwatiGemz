@@ -195,7 +195,19 @@ const Necklaces = () => {
 
             <Link to={`/product/necklace/${necklace._id}`}>
               <div className="p-6 flex justify-center items-center">
-                <div className="w-[110px] h-[110px] md:w-[240px] md:h-[240px] rounded-full bg-white flex justify-center items-center shadow-inner overflow-hidden">
+                <div  className="
+       w-[110px]
+h-[110px]
+md:w-[240px]
+md:h-[240px]
+        rounded-full
+        bg-white
+        flex
+        justify-center
+        items-center
+        shadow-inner
+        overflow-hidden
+      ">
                   <img
                     src={
                       necklace.image?.startsWith("http")
@@ -203,22 +215,30 @@ const Necklaces = () => {
                         : assetUrl(necklace.image)
                     }
                     alt={necklace.name}
-                    className="w-[70px] h-[70px] md:w-[160px] md:h-[160px] object-contain group-hover:scale-110 transition-all duration-300"
+                     className="h-[90px] md:h-[120px]
+          w-auto object-contain transition-transform
+          duration-300 group-hover:scale-105"
                   />
                 </div>
               </div>
             </Link>
 
-            <div className="p-5 text-start">
-              <h3 className="font-semibold mb-2 line-clamp-2">
+            <div className="p-3 sm:p-5 text-start">
+              <h3 className="text-[14px] sm:text-lg
+          font-semibold text-gray-900
+           dark:text-black
+          group-hover:text-black
+          leading-[20px] sm:leading-normal
+          line-clamp-2 pb-2">
                 {necklace.name.split(" ").slice(0, 3).join(" ")}-{necklace.stoneWeight}{necklace.weightUnit}
               </h3>
               <p className="text-sm text-gray-500 mb-2">
                 <span className="font-bold text-black">Beadsize - </span>{necklace.beadSize}
               </p>
               <div className="flex gap-2 items-start">
-                <span className="text-lg font-bold">
-                  Rs.{necklace.price.toLocaleString()}
+                <span className=" text-gray-600
+    dark:text-black text-[13px] sm:text-[15px]">
+                   PKR.{Number(necklace.price).toLocaleString()}
                 </span>
               </div>
             </div>
