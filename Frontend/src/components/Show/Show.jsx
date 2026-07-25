@@ -336,7 +336,7 @@ alert("Added to cart 🛒");
       item.soldOut ||
       item.stockquantity <= 0
     }
-    className="w-full border dark:border-black py-3 hover:bg-gray-100 transition disabled:opacity-60 disabled:cursor-not-allowed"
+    className="w-full border dark:border-black text-black dark:text-black py-3 hover:bg-gray-100 transition disabled:opacity-60 disabled:cursor-not-allowed"
   >
     {item.soldOut ||
     item.stockquantity <= 0
@@ -354,7 +354,7 @@ alert("Added to cart 🛒");
       item.soldOut ||
       item.stockquantity <= 0
     }
-    className="w-full bg-black text-white py-3 hover:bg-gray-800 transition disabled:opacity-60 disabled:cursor-not-allowed"
+    className="w-full bg-black text-white dark:text-black py-3 hover:bg-gray-800 transition disabled:opacity-60 disabled:cursor-not-allowed"
   >
     {item.soldOut ||
     item.stockquantity <= 0
