@@ -166,7 +166,7 @@ const Rings = () => {
         totalProducts={filteredProducts.length}
       />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-4">
         {currentRings.map((ring) => (
           <div
             key={ring._id}
@@ -180,7 +180,19 @@ const Rings = () => {
                   </span>
                 )}
 
-                <div className="w-[110px] h-[110px] md:w-[240px] md:h-[240px] rounded-full bg-white flex justify-center items-center shadow-inner overflow-hidden">
+                <div className="
+       w-[110px]
+h-[110px]
+md:w-[240px]
+md:h-[240px]
+        rounded-full
+        bg-white
+        flex
+        justify-center
+        items-center
+        shadow-inner
+        overflow-hidden
+      ">
                   <img
                     src={
                       ring.image?.startsWith("http")
@@ -188,15 +200,23 @@ const Rings = () => {
                         : assetUrl(ring.image)
                     }
                     alt={ring.name}
-                    className="w-[70px] h-[70px] md:w-[160px] md:h-[160px] object-contain group-hover:scale-110 transition-all duration-300"
+                  className="h-[90px] md:h-[120px]
+          w-auto object-contain transition-transform
+          duration-300 group-hover:scale-105"
                   />
                 </div>
               </div>
             </Link>
 
             <div className="p-4 text-start">
-              <h3 className="font-semibold mb-2">{ring.name}</h3>
-              <p className="text-lg font-semibold mb-3">
+              <h3 className="text-[14px] sm:text-lg
+          font-semibold text-gray-900
+           dark:text-black
+          group-hover:text-black
+          leading-[20px] sm:leading-normal
+          line-clamp-2 min-h-[42px]">{ring.name}</h3>
+              <p className=" text-gray-600
+    dark:text-black text-[13px] sm:text-[15px]">
                 PKR.{Number(ring.price).toLocaleString()}
               </p>
             </div>
