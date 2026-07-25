@@ -460,7 +460,7 @@ alert("Added to cart 🛒");
 
       {/* RELATED PRODUCTS SECTION */}
       <div className="mt-16">
-        <h2 className="lg:ml-[125px] mt-6 max-w-7xl mx-auto text-2xl md:text-3xl font-bold abril-fatface-regular inline-block px-3 py-1">
+        <h2 className="lg:ml-[125px] mt-6 max-w-7xl mx-auto text-[26px] md:text-3xl font-bold abril-fatface-regular inline-block px-3 py-1">
           You Might Love These Gems
         </h2>
         <div
