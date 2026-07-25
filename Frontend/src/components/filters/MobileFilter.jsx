@@ -89,7 +89,7 @@ const MobileFilter = ({
           Filter & Sort
         </button>
 
-        <p className="text-sm text-gray-500 dark:text-gray-600">
+        <p className="text-sm text-gray-500 dark:text-gray-400">
           {totalProducts} Products
         </p>
 
