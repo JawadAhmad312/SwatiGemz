@@ -269,7 +269,7 @@ md:h-[240px]
         <button
           onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
-          className="px-3 py-2 bg-gray-200 rounded "
+          className="px-3 py-2 bg-gray-200 rounded dark:text-black "
         >
           ←
         </button>
