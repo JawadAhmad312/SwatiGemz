@@ -4,6 +4,7 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 import MobileFilter from "../filters/MobileFilter";
 import DesktopFilter from "../filters/DesktopFilter";
 import ProductPagination from "../common/ProductPagination";
+import { apiUrl, assetUrl } from "../../lib/api";
 
 const WomenRing = () => {
   const [products, setProducts] = useState([]);
@@ -296,7 +297,7 @@ md:h-[240px]
         overflow-hidden
       ">
  <img
-                    src={product.image}
+                    src={assetUrl(product.image)}
                     alt={product.name}
                     className="h-[90px] md:h-[120px]
           w-auto object-contain transition-transform
