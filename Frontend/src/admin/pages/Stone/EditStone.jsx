@@ -196,7 +196,7 @@ function EditStone() {
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
 
-      <h1 className="text-2xl font-bold mb-6">Edit Stone</h1>
+      <h1 className="text-2xl font-bold mb-6 dark:text-gray-900">Edit Stone</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 ">
 
@@ -204,12 +204,12 @@ function EditStone() {
         <div className="lg:col-span-2 space-y-6">
 
           {/* INFO */}
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-lg font-semibold mb-4">Product Information</h2>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <h2 className="text-lg font-semibold mb-4 dark:text-gray-900">Product Information</h2>
 
-            <label className="text-sm font-medium">Product Name </label>
+            <label className="text-sm font-medium dark:text-gray-900">Product Name </label>
             <input ref={refs.name} name="name" value={stone.name || ""} onChange={handleChange} className={inputClass("name")} placeholder="Name" />
-            <label className="text-sm font-medium mt-3 block">Description </label>
+            <label className="text-sm font-medium mt-3 block dark:text-gray-900">Description </label>
             <textarea ref={refs.description} name="description" value={stone.description || ""} onChange={handleChange} rows={4} className={inputClass("description")} placeholder="Description" />
           </div>
 
@@ -218,7 +218,7 @@ function EditStone() {
 
 <div className="bg-white p-6 rounded-xl shadow">
 
-  <p className="text-gray-400 mb-2">
+  <p className="text-gray-400 mb-2 dark:text-gray-900">
 
     Main Image
 
@@ -306,6 +306,7 @@ function EditStone() {
           rounded
           text-sm
           text-gray-700
+          
         "
       >
 
@@ -346,7 +347,7 @@ function EditStone() {
 
 <div className="bg-white p-6 rounded-xl shadow">
 
-  <p className="text-gray-400 mb-2">
+  <p className="text-gray-400 mb-2 ">
 
     Other Images
 
@@ -529,19 +530,19 @@ function EditStone() {
         {/* RIGHT */}
         <div className="space-y-6">
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            <label className="text-sm font-medium">Price </label>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <label className="text-sm font-medium dark:text-gray-900">Price </label>
             <input type="number" ref={refs.price} name="price" value={stone.price || ""} onChange={handleChange} className={inputClass("price")} placeholder="Price" />
-            <label className="text-sm font-medium">Stock Quantity </label>
+            <label className="text-sm font-medium dark:text-gray-900">Stock Quantity </label>
             <input type="number" ref={refs.stockquantity} name="stockquantity" value={stone.stockquantity || ""} onChange={handleChange} className={inputClass("stockquantity")} placeholder="Stock" />
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            <label className="text-sm font-medium">Stone Weight</label>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <label className="text-sm font-medium dark:text-gray-900">Stone Weight</label>
             <input type="number" ref={refs.weight} name="weight" value={stone.weight || ""} onChange={handleChange} className={inputClass("weight")} placeholder="Weight" />
-            <label className="text-sm font-medium">Stone Shape</label>
+            <label className="text-sm font-medium dark:text-gray-900">Stone Shape</label>
             <input ref={refs.shape} name="shape" value={stone.shape || ""} onChange={handleChange} className={inputClass("shape")} placeholder="Shape" />
-            <label className="text-sm font-medium">Category</label>
+            <label className="text-sm font-medium dark:text-gray-900">Category</label>
             <select ref={refs.category} name="category" value={stone.category || ""} onChange={handleChange} className={inputClass("category")}>
               <option value="">Select Category</option>
               {categories.map((cat, i) => (
