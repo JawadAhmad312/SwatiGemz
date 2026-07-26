@@ -671,6 +671,7 @@ className="bg-white rounded-xl shadow p-4 border"
     py-1
     outline-none
     bg-white
+    dark:text-black
   "
 >
   <option>Pending</option>
