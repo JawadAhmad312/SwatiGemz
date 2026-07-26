@@ -642,7 +642,7 @@ className="bg-white rounded-xl shadow p-4 border"
 
 <div>
 
-<h3 className="font-bold text-lg">
+<h3 className="font-bold text-lg dark:text-black">
 
 {order.shippingAddress?.firstName}{" "}
 {order.shippingAddress?.lastName}
