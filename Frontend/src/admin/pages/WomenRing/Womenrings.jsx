@@ -242,6 +242,7 @@ mb-6
             py-2
             rounded-lg
            w-full md:w-64
+           dark:text-black
           "
         />
 
@@ -275,7 +276,7 @@ items-center
               px-3
               py-2
               rounded-lg
-            "
+             dark:text-black"
           >
 
             <option value="">
@@ -303,7 +304,7 @@ items-center
               outline-none
               px-3
               py-2
-              rounded-lg
+              rounded-lg dark:text-black
             "
           >
 
@@ -340,7 +341,7 @@ items-center
               outline-none
               px-3
               py-2
-              rounded-lg
+              rounded-lg dark:text-black
             "
           >
 
@@ -397,7 +398,7 @@ items-center
         border-gray-300
         font-bold
         py-2
-        px-4
+        px-4 dark:text-black
       ">
 
         <div className="w-[30%]">
@@ -506,7 +507,7 @@ items-center
                   flex
                   items-center
                   gap-4
-                 w-full md:w-[30%]
+                 w-full md:w-[30%] dark:text-black
                 ">
 
                   <img
@@ -521,7 +522,7 @@ items-center
 
                   <div>
 
-                    <p className="text-[14px]">
+                    <p className="text-[14px]  dark:text-black">
                       {item.name}
                     </p>
 
@@ -534,7 +535,7 @@ items-center
                 </div>
 
                 {/* CATEGORY */}
-<div className="w-full md:w-[10%]">
+<div className="w-full md:w-[10%]  dark:text-black">
   <span className="md:hidden font-semibold">
     Category:
   </span>{" "}
@@ -543,7 +544,7 @@ items-center
 
                 {/* STOCK */}
 
-               <div className="w-full md:w-[10%]">
+               <div className="w-full md:w-[10%] dark:text-black">
   <span className="md:hidden font-semibold">
     Stock:
   </span>{" "}
@@ -552,7 +553,7 @@ items-center
 
                 {/* PRICE */}
 
-             <div className="w-full md:w-[10%]">
+             <div className="w-full md:w-[10%] dark:text-black">
   <span className="md:hidden font-semibold">
     Price:
   </span>{" "}
@@ -561,7 +562,7 @@ items-center
 
                 {/* ORDERS */}
 
-                <div className="w-full md:w-[10%]">
+                <div className="w-full md:w-[10%] dark:text-black">
   <span className="md:hidden font-semibold">
     Orders:
   </span>{" "}
@@ -719,7 +720,7 @@ items-center
                 px-3
                 py-1
                 rounded
-                disabled:opacity-50
+                disabled:opacity-50 dark:text-black
               "
             >
 
@@ -749,7 +750,7 @@ items-center
 
                       ? "bg-blue-500 text-white"
 
-                      : "border"
+                      : "border dark:text-black"
                     }
                   `}
                 >
@@ -776,7 +777,7 @@ items-center
                 px-3
                 py-1
                 rounded
-                disabled:opacity-50
+                disabled:opacity-50 dark:text-black
               "
             >
 

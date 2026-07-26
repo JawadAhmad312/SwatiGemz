@@ -141,7 +141,7 @@ function AddWomenRing() {
     return (
         <div className="bg-gray-100 min-h-screen p-6">
 
-            <h1 className="text-2xl font-semibold mb-6">Add Women Ring</h1>
+            <h1 className="text-2xl font-semibold mb-6 dark:text-black">Add Women Ring</h1>
 
             <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
@@ -149,8 +149,8 @@ function AddWomenRing() {
                 <div className="lg:col-span-2 space-y-6">
 
                     {/* PRODUCT INFO */}
-                    <div className="bg-white p-6 rounded-xl shadow">
-                        <h2 className="text-lg font-semibold mb-2">Product Information</h2>
+                    <div className="bg-white p-6 rounded-xl shadow dark:text-black">
+                        <h2 className="text-lg font-semibold mb-2 dark:text-black">Product Information</h2>
                         <p className="text-gray-400">To add a new product, please provide the necessary details in the fields below.</p>
 
                         <input
@@ -158,7 +158,7 @@ function AddWomenRing() {
                             placeholder="Product Name"
                             value={ring.name}
                             onChange={handleChange}
-                            className="w-full border border-gray-400 p-2 text-gray-600 outline-none rounded-md mt-3"
+                            className="w-full border border-gray-400 p-2 text-gray-600 outline-none rounded-md mt-3 dark:text-black"
                         />
                         <p className="text-red-500 mt-2 text-sm">{errors.name}</p>
 
@@ -168,7 +168,7 @@ function AddWomenRing() {
                             value={ring.description}
                             onChange={handleChange}
                             rows={5}
-                            className="w-full border rounded mt-3 mb-2 border-gray-400 p-2 text-gray-600 outline-none"
+                            className="w-full border rounded mt-3 mb-2 border-gray-400 p-2 text-gray-600 outline-none dark:text-black"
                         />
                         <p className="text-red-500 text-sm">{errors.description}</p>
                     </div>
@@ -176,7 +176,7 @@ function AddWomenRing() {
                     {/* MAIN IMAGE */}
                     <div className="bg-white p-6 rounded-xl shadow">
 
-                        <h2 className="text-lg font-semibold mb-2">Main Image</h2>
+                        <h2 className="text-lg font-semibold mb-2 dark:text-black">Main Image</h2>
 
                         <div
                             onClick={() => document.getElementById("mainImageInput").click()}
@@ -210,7 +210,7 @@ function AddWomenRing() {
                             onDragOver={(e) => e.preventDefault()}
                             onDrop={handleDrop}
                             onClick={() => inputRef.current.click()}
-                            className="border-2 border-dashed border-gray-300 rounded-xl p-10 text-center cursor-pointer"
+                            className="border-2 border-dashed border-gray-300 rounded-xl p-10 text-center cursor-pointer dark:text-black"
                         >
                             Drop files here or click to upload
                             <input
@@ -240,41 +240,41 @@ function AddWomenRing() {
                 {/* RIGHT */}
                 <div className="space-y-6">
 
-                    <div className="bg-white p-6 rounded-xl shadow">
-                        <h2 className="text-lg font-semibold mb-2">Pricing</h2>
+                    <div className="bg-white p-6 rounded-xl shadow dark:text-black">
+                        <h2 className="text-lg font-semibold mb-2 dark:text-black">Pricing</h2>
                         <input
                             type="number"
                             name="price"
                             placeholder="Price"
                             value={ring.price}
                             onChange={handleChange}
-                            className="w-full border border-gray-400 outline-none p-2 rounded-lg"
+                            className="w-full border border-gray-400 outline-none p-2 rounded-lg dark:text-black"
                         />
                         <p className="text-red-500 text-sm mt-2">{errors.price}</p>
                     </div>
 
-                    <div className="bg-white p-6 rounded-xl shadow">
-                        <h2 className="text-lg font-semibold mb-2">Inventory</h2>
+                    <div className="bg-white p-6 rounded-xl shadow dark:text-black">
+                        <h2 className="text-lg font-semibold mb-2 dark:text-black">Inventory</h2>
                         <input
                             type="number"
                             name="stockquantity"
                             placeholder="Stock Quantity"
                             value={ring.stockquantity}
                             onChange={handleChange}
-                            className="w-full border border-gray-400 outline-none rounded-lg p-2"
+                            className="w-full border border-gray-400 outline-none rounded-lg p-2 dark:text-black"
                         />
                         <p className="text-red-500 text-sm mt-2">{errors.stockquantity}</p>
                     </div>
 
-                    <div className="bg-white p-6 rounded-xl shadow">
-                        <h2 className="text-lg font-semibold mb-2">Details</h2>
+                    <div className="bg-white p-6 rounded-xl shadow dark:text-black">
+                        <h2 className="text-lg font-semibold mb-2 dark:text-black">Details</h2>
                         <input
                             type="number"
                             name="ringSize"
                             placeholder="Ring Size"
                             value={ring.ringSize}
                             onChange={handleChange}
-                            className="w-full border border-gray-400 outline-none rounded-lg p-2"
+                            className="w-full border border-gray-400 outline-none rounded-lg p-2 dark:text-black"
                         />
                         <p className="text-red-500 mt-2 text-sm">{errors.ringSize}</p>
 
@@ -284,7 +284,7 @@ function AddWomenRing() {
                             placeholder="Stone Weight"
                             value={ring.stoneWeight}
                             onChange={handleChange}
-                            className="w-full border border-gray-400 outline-none rounded-lg p-2 mt-2"
+                            className="w-full border border-gray-400 outline-none rounded-lg p-2 mt-2 dark:text-black"
                         />
                         <p className="text-red-500 mt-2 text-sm">{errors.stoneWeight}</p>
                         <input
@@ -292,21 +292,21 @@ function AddWomenRing() {
                             placeholder="Metal"
                             value={ring.metal}
                             onChange={handleChange}
-                            className="w-full border border-gray-400 outline-none rounded-lg p-2 mt-2"
+                            className="w-full border border-gray-400 outline-none rounded-lg p-2 mt-2 dark:text-black"
                         />
                         <p className="text-red-500 mt-2 text-sm">{errors.metal}</p>
                         <select
                             name="weightUnit"
                             value={ring.weightUnit}
                             onChange={handleChange}
-                            className="w-full border border-gray-400 outline-none rounded-lg p-2 mt-2"
+                            className="w-full border border-gray-400 outline-none rounded-lg p-2 mt-2 dark:text-black"
                         >
                             <option value="crt">Carat</option>
                             <option value="gram">Gram</option>
                             <option value="ratti">Ratti</option>
                         </select>
 
-                        <label className="flex gap-2 mt-2">
+                        <label className="flex gap-2 mt-2 dark:text-black">
                             <input
                                 type="checkbox"
                                 name="isFeatured"

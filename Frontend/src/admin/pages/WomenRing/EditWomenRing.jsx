@@ -98,7 +98,7 @@ function EditWomenRing() {
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
 
-      <h1 className="text-2xl font-bold mb-6">Edit Women Ring</h1>
+      <h1 className="text-2xl font-bold mb-6 dark:text-black">Edit Women Ring</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
@@ -108,21 +108,21 @@ function EditWomenRing() {
           {/* PRODUCT INFO */}
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <label className="text-gray-500">Product Name </label>
+            <label className="text-gray-500 dark:text-black">Product Name </label>
             <input
               name="name"
               value={ring.name || ""}
               onChange={handleChange}
-              className="w-full border p-2 rounded mt-1 outline-none  border-gray-400"
+              className="w-full border p-2 rounded mt-1 outline-none  border-gray-400 dark:text-black"
             />
 
-            <label className="mt-3 block text-gray-500">Description </label>
+            <label className="mt-3 block text-gray-500 dark:text-black">Description </label>
             <textarea
               name="description"
               value={ring.description || ""}
               onChange={handleChange}
               rows={4}
-              className="w-full border p-2 rounded mt-1 outline-none border-gray-400"
+              className="w-full border p-2 rounded mt-1 outline-none border-gray-400 dark:text-black"
             />
 
           </div>
@@ -131,7 +131,7 @@ function EditWomenRing() {
 
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h3 className="font-semibold mb-3 text-gray-500">
+            <h3 className="font-semibold mb-3 text-gray-500 dark:text-black">
 
               Main Image
 
@@ -224,7 +224,7 @@ function EditWomenRing() {
           bg-gray-200
           rounded
           text-sm
-          text-gray-700
+          text-gray-700 dark:text-black
         "
                   >
 
@@ -261,7 +261,7 @@ function EditWomenRing() {
           {/* OTHER IMAGES */}
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h3 className="font-semibold mb-3 text-gray-500">Other Images</h3>
+            <h3 className="font-semibold mb-3 text-gray-500 dark:text-black">Other Images</h3>
 
             {/* OLD */}
             <div className="flex gap-3 flex-wrap mb-4">
@@ -332,7 +332,7 @@ function EditWomenRing() {
       text-xs
       bg-gray-200
       rounded
-      text-gray-700
+      text-gray-700 dark:text-black
     "
               >
 
@@ -360,69 +360,69 @@ function EditWomenRing() {
         {/* RIGHT */}
         <div className="space-y-6">
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            <label className="text-gray-500">Price </label>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
+            <label className="text-gray-500 dark:text-black">Price </label>
             <input
               type="number"
               name="price"
               value={ring.price || ""}
               onChange={handleChange}
-              className="w-full border p-2 rounded outline-none border-gray-400"
+              className="w-full border p-2 rounded outline-none border-gray-400 dark:text-black"
             />
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            <label className="text-gray-500">Stock Quantity </label>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
+            <label className="text-gray-500 dark:text-black">Stock Quantity </label>
             <input
               type="number"
               name="stockquantity"
               value={ring.stockquantity || ""}
               onChange={handleChange}
-              className="w-full border p-2 rounded outline-none border-gray-400"
+              className="w-full border p-2 rounded outline-none border-gray-400 dark:text-black"
             />
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
-            <label className="text-gray-500">Ring Size </label>
+            <label className="text-gray-500 dark:text-black">Ring Size </label>
             <input
               type="number"
               name="ringSize"
               value={ring.ringSize || ""}
               onChange={handleChange}
-              className="w-full border p-2 rounded outline-none border-gray-400"
+              className="w-full border p-2 rounded outline-none border-gray-400 dark:text-black"
             />
 
-            <label className="mt-2 block text-gray-500">Stone Weight </label>
+            <label className="mt-2 block text-gray-500 dark:text-black">Stone Weight </label>
             <input
               type="number"
               name="stoneWeight"
               value={ring.stoneWeight || ""}
               onChange={handleChange}
-              className="w-full border p-2 rounded outline-none border-gray-400"
+              className="w-full border p-2 rounded outline-none border-gray-400 dark:text-black"
             />
 
-            <label className="mt-2 block">Metal</label>
+            <label className="mt-2 block dark:text-black">Metal</label>
             <input
               name="metal"
               value={ring.metal || ""}
               onChange={handleChange}
-              className="w-full border p-2 rounded outline-none border-gray-400"
+              className="w-full border p-2 rounded outline-none border-gray-400 dark:text-black"
             />
 
-            <label className="mt-2 block">Weight Unit</label>
+            <label className="mt-2 block dark:text-black">Weight Unit</label>
             <select
               name="weightUnit"
               value={ring.weightUnit || "crt"}
               onChange={handleChange}
-              className="w-full border p-2 rounded outline-none border-gray-400"
+              className="w-full border p-2 rounded outline-none border-gray-400 dark:text-black"
             >
               <option value="crt">Carat</option>
               <option value="gram">Gram</option>
               <option value="ratti">Ratti</option>
             </select>
 
-            <label className="flex gap-2 mt-3">
+            <label className="flex gap-2 mt-3 dark:text-black">
               <input
                 type="checkbox"
                 name="isFeatured"
