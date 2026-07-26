@@ -122,7 +122,7 @@ function AddStone() {
   return (
     <div className="bg-gray-100 min-h-screen p-6">
 
-      <h1 className="text-2xl font-semibold mb-6">Add Stone</h1>
+      <h1 className="text-2xl font-semibold mb-6 dark:text-gray-900">Add Stone</h1>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
@@ -132,25 +132,25 @@ function AddStone() {
           {/* PRODUCT INFO */}
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="text-lg font-semibold mb-2">Product Information</h2>
+            <h2 className="text-lg font-semibold mb-2 dark:text-gray-900">Product Information</h2>
 
             <input
               name="name"
               placeholder="Stone Name"
               value={stone.name}
               onChange={handleChange}
-              className="w-full border p-2 border-gray-400 rounded-md outline-none mb-2"
+              className="w-full border p-2 border-gray-400 rounded-md outline-none mb-2 dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.name}</p>
 
-            <h2 className="text-lg font-semibold mb-2">Description</h2>
+            <h2 className="text-lg font-semibold mb-2 dark:text-gray-900">Description</h2>
             <textarea
               name="description"
               placeholder="Description"
               value={stone.description}
               onChange={handleChange}
               rows={4}
-              className="w-full border p-2 border-gray-400 rounded-md outline-none"
+              className="w-full border p-2 border-gray-400 rounded-md outline-none dark:text-gray-900"
             />
 
           </div>
@@ -160,7 +160,7 @@ function AddStone() {
 
 <div className="bg-white p-6 rounded-xl shadow">
 
-  <h2 className="font-semibold mb-3">
+  <h2 className="font-semibold mb-3 dark:text-gray-900">
 
     Main Image
 
@@ -283,7 +283,7 @@ function AddStone() {
 
 <div className="bg-white p-6 rounded-xl shadow">
 
-  <h2 className="font-semibold mb-3">
+  <h2 className="font-semibold mb-3 dark:text-gray-900">
 
     Other Images
 
@@ -401,8 +401,8 @@ function AddStone() {
         <div className="space-y-6">
 
           {/* PRICE */}
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="font-semibold">Pricing</h2>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <h2 className="font-semibold dark:text-gray-900">Pricing</h2>
 
             <input
               type="number"
@@ -410,22 +410,22 @@ function AddStone() {
               placeholder="Price"
               value={stone.price}
               onChange={handleChange}
-              className="w-full border p-2 border-gray-400  rounded-md outline-none"
+              className="w-full border p-2 border-gray-400  rounded-md outline-none dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.price}</p>
           </div>
 
           {/* DETAILS */}
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
 
-            <h2 className="font-semibold">Details</h2>
+            <h2 className="font-semibold dark:text-gray-900">Details</h2>
 
             <input
               name="category"
               placeholder="Category"
               value={stone.category}
               onChange={handleChange}
-              className="w-full border p-2 border-gray-400 rounded-md outline-none mb-2"
+              className="w-full border p-2 border-gray-400 rounded-md outline-none mb-2 dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.category}</p>
 
@@ -434,7 +434,7 @@ function AddStone() {
               placeholder="Weight"
               value={stone.weight}
               onChange={handleChange}
-              className="w-full border p-2 border-gray-400 rounded-md outline-none mb-2"
+              className="w-full border p-2 border-gray-400 rounded-md outline-none mb-2 dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.weight}</p>
 
@@ -443,7 +443,7 @@ function AddStone() {
               placeholder="Shape"
               value={stone.shape}
               onChange={handleChange}
-              className="w-full border p-2 border-gray-400 rounded-md outline-none mb-2"
+              className="w-full border p-2 border-gray-400 rounded-md outline-none mb-2 dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.shape}</p>
 
@@ -453,7 +453,7 @@ function AddStone() {
               placeholder="Stock Quantity"
               value={stone.stockquantity}
               onChange={handleChange}
-              className="w-full border p-2 border-gray-400 rounded-md outline-none"
+              className="w-full border p-2 border-gray-400 rounded-md outline-none dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.stockquantity}</p>
 
