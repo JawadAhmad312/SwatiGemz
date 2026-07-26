@@ -781,7 +781,7 @@ Manage user roles and permissions.
                 <div className="space-y-2 text-sm mb-4">
                 <div className="space-y-2 text-sm mb-5">
 
-<p className="flex items-center gap-2">
+<p className="flex items-center gap-2 dark:text-gray-900">
 <span className="text-green-600">✔</span>
 Manage Users
 </p>
@@ -1002,7 +1002,7 @@ transition
                         {/* USER */}
                         <div className="w-[33%] flex items-start gap-3">
 
-                          <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-sm font-bold">
+                          <div className="w-10 h-10 rounded-full dark:text-gray-900 bg-gray-200 flex items-center justify-center text-sm font-bold">
                             {user.username?.charAt(0)}
                           </div>
 
@@ -1069,7 +1069,7 @@ className="bg-white rounded-xl shadow border p-4"
 
 <div>
 
-<h3 className="font-semibold">
+<h3 className="font-semibold dark:text-gray-900">
 
 {user.username}
 
