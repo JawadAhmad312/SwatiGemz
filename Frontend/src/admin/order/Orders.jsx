@@ -403,7 +403,7 @@ border-gray-400 dark:text-black
 
       {/* TABLE */}
 
-     <div className="hidden md:block bg-white rounded-xl shadow overflow-x-auto">
+     <div className="hidden md:block bg-white rounded-xl shadow overflow-x-auto dark:text-black">
 
         <table className="w-full dark:text-black">
 
