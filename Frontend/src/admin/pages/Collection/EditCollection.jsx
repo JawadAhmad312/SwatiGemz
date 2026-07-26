@@ -187,7 +187,7 @@ const EditCollection = () => {
 
         <div className="bg-gray-100 min-h-screen p-6">
 
-            <h1 className="text-2xl font-semibold mb-6">
+            <h1 className="text-2xl font-semibold mb-6 dark:text-gray-900">
                 Edit Collection
             </h1>
 
@@ -209,7 +209,7 @@ const EditCollection = () => {
 
                     <div className="bg-white p-6 rounded-xl shadow">
 
-                        <h2 className="text-lg font-semibold mb-2">
+                        <h2 className="text-lg font-semibold mb-2 dark:text-gray-900">
                             Collection Information
                         </h2>
 
@@ -233,6 +233,7 @@ const EditCollection = () => {
                 p-2
                 rounded-md
                 mb-2
+                dark:text-gray-900
               "
                         />
 
@@ -246,6 +247,7 @@ const EditCollection = () => {
                 w-full
                 border
                 border-gray-400
+                dark:text-gray-900
                 outline-none
                 p-2
                 rounded-md
@@ -271,6 +273,7 @@ const EditCollection = () => {
                 border-gray-400
                 mt-3
                 mb-2
+                dark:text-gray-900
                 p-2
                 rounded-md
                 outline-none
@@ -283,7 +286,7 @@ const EditCollection = () => {
 
                     <div className="bg-white p-6 rounded-xl shadow">
 
-                        <h2 className="font-semibold mb-4">
+                        <h2 className="font-semibold mb-4 dark:text-gray-900">
                             Collection Image
                         </h2>
 
@@ -305,6 +308,7 @@ const EditCollection = () => {
                   h-40
                   object-contain
                   border
+                  dark:border-gray-400
                   rounded-xl
                   p-2
                 "
@@ -327,6 +331,7 @@ const EditCollection = () => {
                 p-6
                 text-center
                 cursor-pointer
+                dark:text-gray-900
               "
                         >
 
@@ -356,11 +361,11 @@ const EditCollection = () => {
 
                     <div className="bg-white p-6 rounded-xl shadow">
 
-                        <h2 className="text-lg font-semibold mb-3">
+                        <h2 className="text-lg font-semibold mb-3 dark:text-gray-900">
                             Collection Status
                         </h2>
 
-                        <label className="flex gap-2">
+                        <label className="flex gap-2 dark:text-gray-900">
 
                             <input
                                 type="checkbox"
