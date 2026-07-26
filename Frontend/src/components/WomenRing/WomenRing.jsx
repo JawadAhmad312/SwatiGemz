@@ -318,10 +318,10 @@ md:h-[240px]
           line-clamp-2 min-h-[42px]">
                 {product.name}
               </h3>
-              <span className=" text-gray-600
+              <p className=" text-gray-600
     dark:text-black text-[13px] sm:text-[15px]">
-                PKR.{Number([product].price).toLocaleString()}
-              </span>
+                PKR.{Number(product.price).toLocaleString()}
+              </p>
 
             
             </div>
