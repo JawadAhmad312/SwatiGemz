@@ -30,7 +30,7 @@ export default function StatsCards({ stats }) {
         >
           <p className="text-gray-400 text-sm">{card.title}</p>
 
-          <h2 className="text-xl font-bold">
+          <h2 className="text-xl font-bold dark:text-gray-900">
             {card.value}
           </h2>
 
