@@ -167,7 +167,7 @@ const Navbar = ({
                 "
               >
 
-                <h3 className="font-semibold text-lg">
+                <h3 className="font-semibold text-lg dark:text-gray-900">
                   Notifications
                 </h3>
 
@@ -238,7 +238,7 @@ const Navbar = ({
                         "
                       >
 
-                        <h4 className="font-semibold">
+                        <h4 className="font-semibold dark:text-gray-900">
                           New Order
                         </h4>
 
@@ -340,7 +340,7 @@ const Navbar = ({
             "
           >
 
-            <p className="font-medium">
+            <p className="font-medium dark:text-gray-900">
               {admin?.username || "Admin"}
             </p>
 
