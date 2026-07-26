@@ -346,7 +346,7 @@ function EditRing() {
 
                     {/* PRODUCT INFO */}
 
-                    <div className="bg-white p-6 rounded-xl shadow">
+                    <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
 
                         <h2 className="text-lg font-semibold mb-4 dark:text-gray-900">
 
@@ -715,7 +715,7 @@ function EditRing() {
 
                 <div className="space-y-6">
 
-                    <div className="bg-white p-6 rounded-xl shadow">
+                    <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
 
                         <label className="text-sm font-medium dark:text-gray-900">
 
@@ -734,7 +734,7 @@ function EditRing() {
 
                     </div>
 
-                    <div className="bg-white p-6 rounded-xl shadow">
+                    <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
 
                         <label className="text-sm font-medium dark:text-gray-900">
 
@@ -755,7 +755,7 @@ function EditRing() {
 
                     <div className="bg-white p-6 rounded-xl shadow space-y-3">
 
-                        <div>
+                        <div className="dark:text-gray-900">
 
                             <label className="text-sm dark:text-gray-900">
 
@@ -774,7 +774,7 @@ function EditRing() {
 
                         </div>
 
-                        <div>
+                        <div className="dark:text-gray-900">
 
                             <label className="text-sm dark:text-gray-900">
 
