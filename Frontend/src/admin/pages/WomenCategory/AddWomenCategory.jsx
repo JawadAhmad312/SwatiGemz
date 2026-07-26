@@ -300,7 +300,7 @@ function AddWomenCategory() {
       <h1 className="
         text-3xl
         font-bold
-        mb-6
+        mb-6 dark:text-black
       ">
 
         Add Women Category
@@ -330,13 +330,13 @@ function AddWomenCategory() {
             bg-white
             p-6
             rounded-2xl
-            shadow
+            shadow dark:text-black
           ">
 
             <h2 className="
               text-xl
               font-semibold
-              mb-5
+              mb-5 dark:text-black
             ">
 
               Product Information
@@ -345,11 +345,11 @@ function AddWomenCategory() {
 
             {/* TITLE */}
 
-            <div className="mb-4">
+            <div className="mb-4 dark:text-black">
 
               <label className="
                 text-sm
-                font-medium
+                font-medium dark:text-black
               ">
 
                 Title
@@ -382,11 +382,11 @@ function AddWomenCategory() {
 
             {/* DESCRIPTION */}
 
-            <div>
+            <div className=" dark:text-black">
 
               <label className="
                 text-sm
-                font-medium
+                font-medium dark:text-black
               ">
 
                 Description
@@ -424,7 +424,7 @@ function AddWomenCategory() {
           
             <h2 className="
               text-xl
-              font-semibold
+              font-semibold dark:text-black
             ">
 
               Product Images
@@ -433,12 +433,12 @@ function AddWomenCategory() {
 
             {/* MAIN IMAGE */}
 
-            <div className="bg-white p-6 rounded-xl shadow">
+            <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
               <h3 className="
                 font-medium
                 mb-4
-                text-gray-600
+                text-gray-600 dark:text-black
               ">
 
                 Main Image
@@ -506,7 +506,7 @@ function AddWomenCategory() {
                     items-center
                     justify-center
                     cursor-pointer
-                    text-sm
+                    text-sm dark:text-black
                   ">
 
                     Browse Main Image
@@ -538,12 +538,12 @@ function AddWomenCategory() {
 
             {/* OTHER IMAGES */}
 
-            <div className="bg-white p-6 rounded-xl shadow">
+            <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
               <h3 className="
                 font-medium
                 mb-4
-                text-gray-600
+                text-gray-600 dark:text-black
               ">
 
                 Other Images
@@ -613,7 +613,7 @@ function AddWomenCategory() {
                   items-center
                   justify-center
                   cursor-pointer
-                  text-sm
+                  text-sm dark:text-black
                 ">
 
                   Browse Other Images
@@ -687,12 +687,12 @@ function AddWomenCategory() {
             bg-white
             p-6
             rounded-2xl
-            shadow
+            shadow dark:text-black
           ">
 
             <label className="
               text-sm
-              font-medium
+              font-medium dark:text-black
             ">
 
               Stock
@@ -717,12 +717,12 @@ function AddWomenCategory() {
             p-6
             rounded-2xl
             shadow
-            space-y-4
+            space-y-4 dark:text-black
           ">
 
             <h2 className="
               text-lg
-              font-semibold
+              font-semibold dark:text-black
             ">
 
               Product Details
@@ -736,7 +736,7 @@ function AddWomenCategory() {
                 <label className="
                   text-sm
                   capitalize
-                  font-medium
+                  font-medium dark:text-black
                 ">
 
                   {key}
@@ -754,7 +754,7 @@ function AddWomenCategory() {
                     border-gray-300
                     p-3
                     rounded-xl
-                    outline-none
+                    outline-none dark:text-black
                   "
                 />
 

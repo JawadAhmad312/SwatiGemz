@@ -432,7 +432,7 @@ function EditWomenCategory() {
       <h1 className="
         text-3xl
         font-bold
-        mb-6
+        mb-6 dark:text-black
       ">
 
         Edit Women Category
@@ -468,7 +468,7 @@ function EditWomenCategory() {
             <h2 className="
               text-xl
               font-semibold
-              mb-5
+              mb-5 dark:text-black
             ">
 
               Product Information
@@ -477,11 +477,11 @@ function EditWomenCategory() {
 
             {/* TITLE */}
 
-            <div className="mb-4">
+            <div className="mb-4 dark:text-black">
 
               <label className="
                 text-sm
-                font-medium
+                font-medium dark:text-black
               ">
 
                 Title
@@ -501,11 +501,11 @@ function EditWomenCategory() {
 
             {/* DESCRIPTION */}
 
-            <div>
+            <div className=" dark:text-black"> 
 
               <label className="
                 text-sm
-                font-medium
+                font-medium dark:text-black
               ">
 
                 Description
@@ -531,7 +531,7 @@ function EditWomenCategory() {
 
             <h2 className="
               text-xl
-              font-semibold
+              font-semibold dark:text-black
             ">
 
               Product Images
@@ -545,7 +545,7 @@ function EditWomenCategory() {
               <h3 className="
                 font-medium
                 mb-4
-                text-gray-600
+                text-gray-600 dark:text-black
               ">
 
                 Main Image
@@ -671,7 +671,7 @@ function EditWomenCategory() {
                     items-center
                     justify-center
                     cursor-pointer
-                    text-sm
+                    text-sm dark:text-black
                   ">
 
                     Browse Main Image
@@ -708,7 +708,7 @@ function EditWomenCategory() {
               <h3 className="
                 font-medium
                 mb-4
-                text-gray-600
+                text-gray-600 dark:text-black
               ">
 
                 Other Images
@@ -832,7 +832,7 @@ function EditWomenCategory() {
                   items-center
                   justify-center
                   cursor-pointer
-                  text-sm
+                  text-sm dark:text-black
                 ">
 
                   Browse Other Images
@@ -877,12 +877,12 @@ function EditWomenCategory() {
             bg-white
             p-6
             rounded-2xl
-            shadow
+            shadow dark:text-black
           ">
 
             <label className="
               text-sm
-              font-medium
+              font-medium dark:text-black
             ">
 
               Price
@@ -906,12 +906,12 @@ function EditWomenCategory() {
             bg-white
             p-6
             rounded-2xl
-            shadow
+            shadow dark:text-black
           ">
 
             <label className="
               text-sm
-              font-medium
+              font-medium dark:text-black
             ">
 
               Stock
@@ -941,7 +941,7 @@ function EditWomenCategory() {
 
             <h2 className="
               text-lg
-              font-semibold
+              font-semibold dark:text-black
             ">
 
               Product Details
@@ -973,7 +973,7 @@ function EditWomenCategory() {
                     border-gray-300
                     p-3
                     rounded-xl
-                    outline-none
+                    outline-none dark:text-black
                   "
                 />
 
