@@ -420,7 +420,7 @@ border-gray-400 dark:text-black
               </th>
 
               <th className="p-4 text-start ">
-               <p className="dark:text-black">Total</p> Total
+                Total
               </th>
 
               <th className="p-4 text-start dark:text-black">
@@ -684,13 +684,13 @@ className="bg-white rounded-xl shadow p-4 border"
 
 <div className="mt-4 space-y-2">
 
-<div className="flex justify-between">
+<div className="flex justify-between dark:text-black">
 
-<span className="font-semibold">
+<span className="font-semibold dark:text-black">
 Total
 </span>
 
-<span>
+<span className="dark:text-black">
 
 PKR {Number(order.total).toLocaleString()}
 
@@ -698,13 +698,13 @@ PKR {Number(order.total).toLocaleString()}
 
 </div>
 
-<div className="flex justify-between">
+<div className="flex justify-between dark:text-black">
 
-<span className="font-semibold">
+<span className="font-semibold dark:text-black">
 Payment
 </span>
 
-<span>
+<span className="dark:text-black">
 
 {order.paymentMethod}
 
@@ -712,13 +712,13 @@ Payment
 
 </div>
 
-<div className="flex justify-between">
+<div className="flex justify-between dark:text-black">
 
-<span className="font-semibold">
+<span className="font-semibold dark:text-black">
 Date
 </span>
 
-<span>
+<span className="dark:text-black">
 
 {new Date(order.createdAt).toLocaleDateString()}
 
