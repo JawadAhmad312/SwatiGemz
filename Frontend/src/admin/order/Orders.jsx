@@ -254,7 +254,7 @@ function Orders() {
 
   <div className="p-3 md:p-6 w-full">
 
-     <h1 className="text-2xl md:text-3xl font-bold mb-6">
+     <h1 className="text-2xl md:text-3xl font-bold mb-6 dark:text-black">
         Orders Management
       </h1>
 
@@ -276,15 +276,15 @@ bg-white
 p-4
 md:p-5
 rounded-xl
-shadow
+shadow dark:text-black
 "
         >
-          <p>Total Orders</p>
+          <p className=" dark:text-black">Total Orders</p>
 
           <h2
             className="
               text-3xl
-              font-bold
+              font-bold dark:text-black
             "
           >
             {orders.length}
@@ -296,10 +296,10 @@ shadow
             bg-white
             p-5
             rounded-xl
-            shadow
+            shadow dark:text-black
           "
         >
-          <p>Pending</p>
+          <p className="dark:text-black">Pending</p>
 
           <h2
             className="
@@ -325,10 +325,10 @@ shadow
             bg-white
             p-5
             rounded-xl
-            shadow
+            shadow dark:text-black
           "
         >
-          <p>Delivered</p>
+          <p className="dark:text-black">Delivered</p>
 
           <h2
             className="
@@ -357,12 +357,12 @@ shadow
             shadow
           "
         >
-          <p>Revenue</p>
+          <p className="dark:text-black">Revenue</p>
 
           <h2
             className="
               text-2xl
-              font-bold
+              font-bold dark:text-black
             "
           >
             Rs.
@@ -396,7 +396,7 @@ rounded-lg
 p-3
 mb-5
 outline-none
-border-gray-400
+border-gray-400 dark:text-black
 "
 
       />
@@ -455,7 +455,7 @@ border-gray-400
 
                   <td className="p-4">
 
-                    <p className="font-semibold">
+                    <p className="font-semibold dark:text-black">
 
                       {
                         order
@@ -490,7 +490,7 @@ border-gray-400
 
                   </td>
 
-                  <td className="p-4">
+                  <td className="p-4 dark:text-black">
 
                     Rs.
                     {Number(
@@ -499,7 +499,7 @@ border-gray-400
 
                   </td>
 
-                  <td className="p-4">
+                  <td className="p-4 dark:text-black">
 
                     {
                       order.paymentMethod
@@ -507,7 +507,7 @@ border-gray-400
 
                   </td>
 
-                  <td className="p-4 ">
+                  <td className="p-4 dark:text-black ">
 
                     <select
 
@@ -532,7 +532,7 @@ border-gray-400
                         rounded
                         p-2
                         outline-none
-                        border-gray-400
+                        border-gray-400 dark:text-black
                       "
 
                     >
