@@ -213,30 +213,7 @@ const MobileFilter = ({
 {screen === "main" && (
   <div className="divide-y">
 
-    <div className="px-5 py-4">
-      <input
-        value={tempFilters.search || ""}
-        onChange={(e) =>
-          setTempFilters({
-            ...tempFilters,
-            search: e.target.value,
-          })
-        }
-        placeholder="Search products"
-        className="
-          w-full
-          h-12
-          rounded-2xl
-          border
-          border-gray-300
-          px-4
-          text-sm
-          outline-none
-          text-gray-900
-          dark:text-black
-        "
-      />
-    </div>
+    
 
     {/* CATEGORY */}
     <button

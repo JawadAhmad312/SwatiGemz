@@ -13,7 +13,7 @@ const ProductPagination = ({
           type="button"
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="px-3 py-2 bg-gray-200 rounded"
+          className="px-3 py-2 bg-gray-200 dark:text-black rounded"
         >
           ←
         </button>
@@ -27,7 +27,7 @@ const ProductPagination = ({
               className={`px-4 py-2 rounded-full border transition-all duration-300 ${
                 page === currentPage
                   ? "bg-gradient-to-r from-[#092805] to-[#224225] text-white scale-110 shadow"
-                  : "bg-white hover:bg-gradient-to-r from-[#092805] hover:to-[#224225] hover:text-white"
+                  : "bg-white hover:bg-gradient-to-r from-[#092805] hover:to-[#224225] dark:text-black hover:text-white"
               }`}
             >
               {page}
@@ -39,7 +39,7 @@ const ProductPagination = ({
           type="button"
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="px-3 py-2 bg-gray-200 rounded"
+          className="px-3 py-2 bg-gray-200 text-black rounded"
         >
           →
         </button>
