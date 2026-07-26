@@ -675,19 +675,19 @@ items-center
 
                 {/* CATEGORY */}
 
-                <div className="w-full md:w-[10%] text-start">
-  <span className="md:hidden font-semibold dark:text-gray-900">
+                <div className="w-full md:w-[10%] text-start dark:text-gray-900">
+  <span className="md:hidden font-semibold">
     Category:
   </span>{" "}
 
-                 <P className="dark:text-gray-900">{item.category || ""}</P> 
+                  {item.category || ""}
 
                 </div>
 
                 {/* STOCK */}
 
                 <div className="w-full md:w-[10%] text-start dark:text-gray-900">
-  <span className="md:hidden font-semibold dark:text-gray-900">
+  <span className="md:hidden font-semibold ">
     Stock:
   </span>{" "}
 
@@ -697,8 +697,8 @@ items-center
 
                 {/* PRICE */}
 
-              <div className="w-full md:w-[10%] text-start">
-  <span className="md:hidden font-semibold dark:text-gray-900">
+              <div className="w-full md:w-[10%] text-start dark:text-gray-900">
+  <span className="md:hidden font-semibold ">
     Price:
   </span>{" "}
   PKR {Number(item.price).toLocaleString()}
@@ -706,8 +706,8 @@ items-center
 
                 {/* ORDERS */}
 
-                <div className="w-full md:w-[10%] text-start">
- <span className="md:hidden font-semibold dark:text-gray-900">
+                <div className="w-full md:w-[10%] text-start dark:text-gray-900">
+ <span className="md:hidden font-semibold ">
      Order:
   </span>{" "}
                {Math.floor(
