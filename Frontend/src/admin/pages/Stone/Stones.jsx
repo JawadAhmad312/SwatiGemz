@@ -332,6 +332,7 @@ mb-6
             py-2
             rounded-lg
            w-full md:w-64
+           dark:text-gray-900
           "
         />
 
@@ -368,6 +369,7 @@ items-center
               border
               border-gray-400
               outline-none
+              dark:text-gray-900
               px-3
               py-2
               rounded-lg
@@ -417,6 +419,7 @@ items-center
               outline-none
               px-3
               py-2
+              dark:text-gray-900
             "
           >
 
@@ -457,6 +460,7 @@ items-center
               outline-none
               px-3
               py-2
+              dark:text-gray-900
               rounded-lg
             "
           >
@@ -514,6 +518,7 @@ items-center
   text-gray-600
   text-[12px]
   bg-gray-100
+  dark:text-gray-900
   border-b
   border-gray-300
   cursor-pointer
@@ -563,6 +568,7 @@ items-center
           text-center
           text-gray-400
           mt-4
+          dark:text-gray-900
         ">
 
           No Stones Found
@@ -651,7 +657,7 @@ items-center
 
                   <div>
 
-                    <p className="text-[14px]">
+                    <p className="text-[14px] dark:text-gray-900">
 
                       {item.name}
 
@@ -670,7 +676,7 @@ items-center
                 {/* CATEGORY */}
 
                 <div className="w-full md:w-[10%] text-start">
-  <span className="md:hidden font-semibold">
+  <span className="md:hidden font-semibold dark:text-gray-900">
     Category:
   </span>{" "}
 
@@ -681,7 +687,7 @@ items-center
                 {/* STOCK */}
 
                 <div className="w-full md:w-[10%] text-start">
-  <span className="md:hidden font-semibold">
+  <span className="md:hidden font-semibold dark:text-gray-900">
     Stock:
   </span>{" "}
 
@@ -692,7 +698,7 @@ items-center
                 {/* PRICE */}
 
               <div className="w-full md:w-[10%] text-start">
-  <span className="md:hidden font-semibold">
+  <span className="md:hidden font-semibold dark:text-gray-900">
     Price:
   </span>{" "}
   PKR {Number(item.price).toLocaleString()}
@@ -701,7 +707,7 @@ items-center
                 {/* ORDERS */}
 
                 <div className="w-full md:w-[10%] text-start">
- <span className="md:hidden font-semibold">
+ <span className="md:hidden font-semibold dark:text-gray-900">
      Order:
   </span>{" "}
                {Math.floor(
@@ -859,6 +865,7 @@ items-center
                 py-1
                 rounded
                 disabled:opacity-50
+                dark:text-gray-900
               "
             >
 
@@ -891,7 +898,7 @@ items-center
 
                     ? "bg-blue-500 text-white"
 
-                    : "border"
+                    : "border dark:text-gray-900"
                   }
                 `}
               >
@@ -921,6 +928,7 @@ items-center
                 py-1
                 rounded
                 disabled:opacity-50
+                dark:text-gray-900
               "
             >
 
