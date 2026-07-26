@@ -177,7 +177,7 @@ const AddCollection = () => {
 
         <div className="bg-gray-100 min-h-screen p-6">
 
-            <h1 className="text-2xl font-semibold mb-6">
+            <h1 className="text-2xl font-semibold mb-6 dark:text-gray-900">
                 Add Collection
             </h1>
 
@@ -199,7 +199,7 @@ const AddCollection = () => {
 
                     <div className="bg-white p-6 rounded-xl shadow">
 
-                        <h2 className="text-lg font-semibold mb-2">
+                        <h2 className="text-lg font-semibold mb-2 dark:text-gray-900">
                             Collection Information
                         </h2>
 
@@ -223,6 +223,7 @@ const AddCollection = () => {
                 p-2
                 rounded-md
                 mb-2
+                dark:text-gray-900
               "
                         />
 
@@ -246,6 +247,7 @@ const AddCollection = () => {
                 rounded-md
                 mt-3
                 mb-2
+                dark:text-gray-900
               "
                         />
 
@@ -272,6 +274,7 @@ const AddCollection = () => {
                 p-2
                 rounded-md
                 outline-none
+                dark:text-gray-900
               "
                         />
 
@@ -285,7 +288,7 @@ const AddCollection = () => {
 
                     <div className="bg-white p-6 rounded-xl shadow">
 
-                        <h2 className="font-semibold mb-2">
+                        <h2 className="font-semibold mb-2 dark:text-gray-900">
                             Collection Image
                         </h2>
 
@@ -316,6 +319,7 @@ const AddCollection = () => {
                     h-32
                     mx-auto
                     object-contain
+                    dark:text-gray-900
                   "
                                 />
 
@@ -354,11 +358,11 @@ const AddCollection = () => {
 
                     <div className="bg-white p-6 rounded-xl shadow">
 
-                        <h2 className="text-lg font-semibold mb-2">
+                        <h2 className="text-lg font-semibold mb-2 dark:text-gray-900">
                             Collection Status
                         </h2>
 
-                        <label className="flex gap-2">
+                        <label className="flex gap-2 dark:text-gray-900">
 
                             <input
                                 type="checkbox"

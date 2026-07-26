@@ -51,6 +51,7 @@ export default function OrdersTable({
               border-b
               text-sm
               hover:bg-gray-50
+              justify-between
             "
           >
 
@@ -61,7 +62,7 @@ export default function OrdersTable({
 
             </span>
 
-            <span className="dark:text-gray-900">
+            <span className="dark:text-gray-900 text-[8px]">
 
               {new Date(
                 order.createdAt
@@ -71,7 +72,7 @@ export default function OrdersTable({
 
             <span className="font-semibold dark:text-gray-900">
 
-              Rs {order.total}
+              Rs.{order.total}
 
             </span>
 
