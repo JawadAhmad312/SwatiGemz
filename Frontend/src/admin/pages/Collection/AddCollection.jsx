@@ -305,6 +305,7 @@ const AddCollection = () => {
                 p-10
                 text-center
                 cursor-pointer
+                dark:text-gray-900
               "
                         >
 
