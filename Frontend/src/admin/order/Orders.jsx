@@ -419,8 +419,8 @@ border-gray-400 dark:text-black
                 Customer
               </th>
 
-              <th className="p-4 text-start">
-                Total
+              <th className="p-4 text-start ">
+               <p className="dark:text-black">Total</p> Total
               </th>
 
               <th className="p-4 text-start dark:text-black">
@@ -431,7 +431,7 @@ border-gray-400 dark:text-black
                 Status
               </th>
 
-              <th className="p-4 text-start">
+              <th className="p-4 text-start dark:text-black">
                 Date
               </th>
 

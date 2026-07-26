@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
         const res = await api.get("/current-user");
 
         if (mounted) {
-          setUser(res.data.user);
+          setUser(res.data.authenticated ? res.data.user : null);
         }
       } catch (error) {
         const status = error.response?.status;

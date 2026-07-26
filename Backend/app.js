@@ -770,8 +770,9 @@ app.post("/logout", (req, res) => {
 
 app.get("/current-user", (req, res) => {
   if (!req.user || !isActiveUser(req.user)) {
-    return res.status(401).json({
+    return res.status(200).json({
       authenticated: false,
+      user: null,
     });
   }
 
