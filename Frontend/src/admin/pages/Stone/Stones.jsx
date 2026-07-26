@@ -686,7 +686,7 @@ items-center
 
                 {/* STOCK */}
 
-                <div className="w-full md:w-[10%] text-start">
+                <div className="w-full md:w-[10%] text-start dark:text-gray-900">
   <span className="md:hidden font-semibold dark:text-gray-900">
     Stock:
   </span>{" "}
