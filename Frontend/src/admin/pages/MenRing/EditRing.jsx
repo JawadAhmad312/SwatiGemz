@@ -793,7 +793,7 @@ function EditRing() {
 
                         </div>
 
-                        <div>
+                        <div className="dark:text-gray-900">
 
                             <label className="text-sm dark:text-gray-900">
 
