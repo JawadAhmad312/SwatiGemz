@@ -680,7 +680,7 @@ items-center
     Category:
   </span>{" "}
 
-                  {item.category || ""}
+                 <P className="dark:text-gray-900">{item.category || ""}</P> 
 
                 </div>
 
