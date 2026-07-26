@@ -423,7 +423,7 @@ border-gray-400 dark:text-black
                 Total
               </th>
 
-              <th className="p-4 text-start">
+              <th className="p-4 text-start dark:text-black">
                 Payment
               </th>
 
