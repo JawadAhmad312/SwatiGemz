@@ -332,7 +332,7 @@ function EditRing() {
 
         <div className="p-6 bg-gray-100 min-h-screen">
 
-            <h1 className="text-2xl font-bold mb-6">
+            <h1 className="text-2xl font-bold mb-6 dark:text-gray-900">
 
                 Edit Ring
 
@@ -348,13 +348,13 @@ function EditRing() {
 
                     <div className="bg-white p-6 rounded-xl shadow">
 
-                        <h2 className="text-lg font-semibold mb-4">
+                        <h2 className="text-lg font-semibold mb-4 dark:text-gray-900">
 
                             Product Information
 
                         </h2>
 
-                        <label className="text-sm font-medium">
+                        <label className="text-sm font-medium dark:text-gray-900">
 
                             Product Name
                         </label>
@@ -376,7 +376,7 @@ function EditRing() {
                             </p>
                         )}
 
-                        <label className="text-sm font-medium mt-3 block">
+                        <label className="text-sm font-medium mt-3 block dark:text-gray-900">
 
                             Description
 
@@ -407,7 +407,7 @@ function EditRing() {
 
                         <div className="bg-white p-6 rounded-xl shadow">
 
-                            <h3 className="font-semibold mb-4 text-gray-600">
+                            <h3 className="font-semibold mb-4 text-gray-600 ">
 
                                 Main Image
 
@@ -519,6 +519,7 @@ function EditRing() {
                                         justify-center
                                         cursor-pointer
                                         text-sm
+                                        dark:text-gray-900
                                     ">
 
                                         Browse Main Image
@@ -668,6 +669,7 @@ function EditRing() {
                                     justify-center
                                     cursor-pointer
                                     text-sm
+                                    dark:text-gray-900
                                 ">
 
                                     Browse Other Images
@@ -715,7 +717,7 @@ function EditRing() {
 
                     <div className="bg-white p-6 rounded-xl shadow">
 
-                        <label className="text-sm font-medium">
+                        <label className="text-sm font-medium dark:text-gray-900">
 
                             Price
 
@@ -734,7 +736,7 @@ function EditRing() {
 
                     <div className="bg-white p-6 rounded-xl shadow">
 
-                        <label className="text-sm font-medium">
+                        <label className="text-sm font-medium dark:text-gray-900">
 
                             Stock Quantity
 
@@ -755,7 +757,7 @@ function EditRing() {
 
                         <div>
 
-                            <label className="text-sm">
+                            <label className="text-sm dark:text-gray-900">
 
                                 Ring Size
 
@@ -774,7 +776,7 @@ function EditRing() {
 
                         <div>
 
-                            <label className="text-sm">
+                            <label className="text-sm dark:text-gray-900">
 
                                 Stone Weight
 
@@ -793,7 +795,7 @@ function EditRing() {
 
                         <div>
 
-                            <label className="text-sm">
+                            <label className="text-sm dark:text-gray-900">
 
                                 Metal
 
@@ -811,7 +813,7 @@ function EditRing() {
 
                         <div>
 
-                            <label className="text-sm">
+                            <label className="text-sm dark:text-gray-900">
 
                                 Weight Unit
 
@@ -821,7 +823,7 @@ function EditRing() {
                                 name="weightUnit"
                                 value={ring.weightUnit}
                                 onChange={handleChange}
-                                className="w-full border p-2 rounded mt-1"
+                                className="w-full border p-2 rounded mt-1 dark:text-gray-900"
                             >
 
                                 <option value="crt">
@@ -846,7 +848,7 @@ function EditRing() {
 
                         </div>
 
-                        <label className="flex gap-2">
+                        <label className="flex gap-2 dark:text-gray-900">
 
                             <input
                                 type="checkbox"

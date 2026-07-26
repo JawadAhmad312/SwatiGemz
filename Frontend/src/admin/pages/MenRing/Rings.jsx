@@ -261,6 +261,7 @@ mb-6
             py-2
             rounded-lg
            w-full md:w-64
+           dark:text-gray-900
           "
         />
 
@@ -294,6 +295,7 @@ items-center
               px-3
               py-2
               rounded-lg
+              dark:text-gray-900
             "
           >
 
@@ -323,6 +325,7 @@ items-center
               outline-none
               px-3
               py-2
+              dark:text-gray-900
             "
           >
 
@@ -360,6 +363,7 @@ items-center
               px-3
               py-2
               rounded-lg
+              dark:text-gray-900
             "
           >
 
@@ -419,6 +423,7 @@ items-center
         font-bold
         py-2
         px-4
+        dark:text-gray-900
       ">
 
         <div className="w-[30%]">
@@ -543,7 +548,7 @@ items-center
 
                   <div>
 
-                    <p className="text-[14px]">
+                    <p className="text-[14px] dark:text-gray-900">
                       {item.name}
                     </p>
 
@@ -557,7 +562,7 @@ items-center
 
                 {/* CATEGORY */}
 
-               <div className="w-full md:w-[10%] text-start">
+               <div className="w-full md:w-[10%] text-start dark:text-gray-900">
 
   <span className="md:hidden font-semibold">
     Category:
@@ -568,7 +573,7 @@ items-center
 </div>
 
                 {/* STOCK */}
-<div className="w-full md:w-[10%] text-start">
+<div className="w-full md:w-[10%] text-start dark:text-gray-900">
 
   <span className="md:hidden font-semibold">
     Stock:
@@ -580,7 +585,7 @@ items-center
 
                 {/* PRICE */}
 
-                <div className="w-full md:w-[10%] text-start">
+                <div className="w-full md:w-[10%] text-start dark:text-gray-900">
 
   <span className="md:hidden font-semibold">
     Price:
@@ -592,7 +597,7 @@ items-center
 
                 {/* ORDERS */}
 
-               <div className="w-full md:w-[10%] text-start">
+               <div className="w-full md:w-[10%] text-start dark:text-gray-900">
 
   <span className="md:hidden font-semibold">
     Orders:
@@ -753,6 +758,7 @@ items-center
                 py-1
                 rounded
                 disabled:opacity-50
+                dark:text-gray-900
               "
             >
 
@@ -782,7 +788,7 @@ items-center
 
                       ? "bg-blue-500 text-white"
 
-                      : "border"
+                      : "border dark:text-gray-900"
                     }
                   `}
                 >
@@ -810,6 +816,7 @@ items-center
                 py-1
                 rounded
                 disabled:opacity-50
+                dark:text-gray-900
               "
             >
 
