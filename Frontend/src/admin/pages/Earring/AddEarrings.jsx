@@ -136,7 +136,7 @@ setLoading(true);
   return (
     <div className="bg-gray-100 min-h-screen p-6">
 
-      <h1 className="text-2xl font-semibold mb-6">Add Earring</h1>
+      <h1 className="text-2xl font-semibold mb-6 dark:text-gray-900">Add Earring</h1>
 
       < form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
@@ -145,14 +145,14 @@ setLoading(true);
 
           {/* PRODUCT INFO */}
           <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-lg font-semibold mb-2">Product Information</h2>
+            <h2 className="text-lg font-semibold mb-2 dark:text-gray-900">Product Information</h2>
 
             <input
               name="name"
               placeholder="Product Name"
               value={earring.name}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2 dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.name}</p>
 
@@ -162,7 +162,7 @@ setLoading(true);
               value={earring.description}
               onChange={handleChange}
               rows={5}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.description}</p>
           </div>
@@ -172,7 +172,7 @@ setLoading(true);
 
 <div className="bg-white p-6 rounded-xl shadow">
 
-  <h2 className="font-semibold mb-3">
+  <h2 className="font-semibold mb-3 dark:text-gray-900">
 
     Main Image
 
@@ -251,6 +251,7 @@ setLoading(true);
           rounded
           text-sm
           text-gray-700
+          dark:text-gray-900
         "
       >
 
@@ -294,7 +295,7 @@ setLoading(true);
 
 <div className="bg-white p-6 rounded-xl shadow">
 
-  <h2 className="font-semibold mb-3">
+  <h2 className="font-semibold mb-3 dark:text-gray-900">
 
     Other Images
 
@@ -378,6 +379,7 @@ setLoading(true);
         bg-gray-200
         rounded
         text-gray-700
+        dark:text-gray-900
       "
     >
 
@@ -411,8 +413,8 @@ setLoading(true);
         <div className="space-y-6">
 
           {/* PRICE */}
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-lg font-semibold">Pricing</h2>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <h2 className="text-lg font-semibold dark:text-gray-900">Pricing</h2>
 
             <input
               type="number"
@@ -420,14 +422,14 @@ setLoading(true);
               placeholder="Price"
               value={earring.price}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.price}</p>
           </div>
 
           {/* STOCK */}
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-lg font-semibold">Inventory</h2>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <h2 className="text-lg font-semibold dark:text-gray-900">Inventory</h2>
 
             <input
               type="number"
@@ -435,21 +437,21 @@ setLoading(true);
               placeholder="Stock Quantity"
               value={earring.stockquantity}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.stockquantity}</p>
           </div>
 
           {/* DETAILS */}
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-lg font-semibold">Details</h2>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <h2 className="text-lg font-semibold dark:text-gray-900">Details</h2>
 
             <input
               name="stoneWeight"
               placeholder="Stone Weight"
               value={earring.stoneWeight}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2 dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.stoneWeight}</p>
 
@@ -458,7 +460,7 @@ setLoading(true);
               placeholder="Metal"
               value={earring.metal}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2 dark:text-gray-900"
             />
 
             <input
@@ -466,10 +468,10 @@ setLoading(true);
               placeholder="Availability"
               value={earring.availability}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2 dark:text-gray-900"
             />
 
-            <label className="flex gap-2">
+            <label className="flex gap-2 dark:text-gray-900">
               <input
                 type="checkbox"
                 name="isActive"

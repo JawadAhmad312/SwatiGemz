@@ -100,7 +100,7 @@ function EditEarring() {
   return (
     <div className="bg-gray-100 min-h-screen p-6">
 
-      <h1 className="text-2xl font-semibold mb-6">Edit Earring</h1>
+      <h1 className="text-2xl font-semibold mb-6 dark:text-gray-900">Edit Earring</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
@@ -108,23 +108,23 @@ function EditEarring() {
         <div className="lg:col-span-2 space-y-6">
 
           {/* PRODUCT INFO */}
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
 
-            <label className="block font-medium text-gray-500">Product Name</label>
+            <label className="block font-medium text-gray-500 dark:text-gray-900">Product Name</label>
             <input
               name="name"
               value={earring.name || ""}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-lg mt-1  outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mt-1  outline-none dark:text-gray-900"
             />
 
-            <label className="block mt-3 font-medium text-gray-500 ">Description</label>
+            <label className="block mt-3 font-medium text-gray-500 dark:text-gray-900">Description</label>
             <textarea
               name="description"
               value={earring.description || ""}
               onChange={handleChange}
               rows={4}
-              className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none dark:text-gray-900"
             />
 
           </div>
@@ -134,7 +134,7 @@ function EditEarring() {
 
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="font-semibold mb-3 text-gray-500">
+            <h2 className="font-semibold mb-3 text-gray-500 dark:text-gray-900">
 
               Main Image
 
@@ -234,6 +234,7 @@ function EditEarring() {
           rounded
           text-sm
           text-gray-700
+          dark:text-gray-900
         "
                   >
 
@@ -271,7 +272,7 @@ function EditEarring() {
 
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="font-semibold mb-3 text-gray-500">
+            <h2 className="font-semibold mb-3 text-gray-500 dark:text-gray-900">
 
               Other Images
 
@@ -413,6 +414,7 @@ function EditEarring() {
         bg-gray-200
         rounded
         text-gray-700
+        dark:text-gray-900
       "
               >
 
@@ -442,57 +444,57 @@ function EditEarring() {
         <div className="space-y-6">
 
           {/* PRICE */}
-          <div className="bg-white p-6 rounded-xl shadow text-gray-500">
-            <label className="font-semibold text-gray-500">Price</label>
+          <div className="bg-white p-6 rounded-xl shadow text-gray-500 dark:text-gray-900">
+            <label className="font-semibold text-gray-500 dark:text-gray-900">Price</label>
             <input
               type="number"
               name="price"
               value={earring.price || ""}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-lg "
+              className="w-full border border-gray-400 p-2 rounded-lg dark:text-gray-900 "
             />
           </div>
 
           {/* STOCK */}
-          <div className="bg-white p-6 rounded-xl shadow">
-            <label className="font-semibold text-gray-500">Stock Quantity</label>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <label className="font-semibold text-gray-500 dark:text-gray-900">Stock Quantity</label>
             <input
               type="number"
               name="stockquantity"
               value={earring.stockquantity || ""}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-lg outline-none" 
+              className="w-full border border-gray-400 p-2 rounded-lg outline-none dark:text-gray-900" 
             />
           </div>
 
           {/* DETAILS */}
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
 
-            <label className="font-semibold text-gray-500">Stone Weight</label>
+            <label className="font-semibold text-gray-500 dark:text-gray-900">Stone Weight</label>
             <input
               name="stoneWeight"
               value={earring.stoneWeight || ""}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none dark:text-gray-900"
             />
 
-            <label className="font-semibold text-gray-500">Metal</label>
+            <label className="font-semibold text-gray-500 dark:text-gray-900">Metal</label>
             <input
               name="metal"
               value={earring.metal || ""}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none dark:text-gray-900"
             />
  
-            <label className="font-semibold text-gray-500">Availability</label>
+            <label className="font-semibold text-gray-500 dark:text-gray-900">Availability</label>
             <input
               name="availability"
               value={earring.availability || ""}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none dark:text-gray-900"
             />
 
-            <label className="flex gap-2">
+            <label className="flex gap-2 dark:text-gray-900">
               <input
                 type="checkbox"
                 name="isActive"
