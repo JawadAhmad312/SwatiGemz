@@ -542,6 +542,48 @@ const MobileFilter = ({
   </div>
 
 )}
+
+{/* ===================================== */}
+{/* SORT SCREEN */}
+{/* ===================================== */}
+
+{screen === "sort" && (
+  <div className="divide-y">
+    {[
+      { label: "Best Selling", value: "default" },
+      { label: "A → Z", value: "az" },
+      { label: "Z → A", value: "za" },
+      { label: "Price Low → High", value: "low" },
+      { label: "Price High → Low", value: "high" },
+    ].map((item) => (
+      <button
+        key={item.value}
+        type="button"
+        onClick={() =>
+          setTempFilters({
+            ...tempFilters,
+            sort: item.value,
+          })
+        }
+        className="w-full px-5 py-5 flex justify-between items-center hover:bg-gray-50 transition"
+      >
+        <span className="text-gray-800">{item.label}</span>
+
+        <div
+          className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+            tempFilters.sort === item.value
+              ? "border-[#1D4F38]"
+              : "border-gray-300"
+          }`}
+        >
+          {tempFilters.sort === item.value && (
+            <div className="w-2.5 h-2.5 rounded-full bg-[#1D4F38]" />
+          )}
+        </div>
+      </button>
+    ))}
+  </div>
+)}
         </div>
 
         {/* ===================================== */}
