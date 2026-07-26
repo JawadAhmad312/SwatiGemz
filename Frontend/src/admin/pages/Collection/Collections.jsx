@@ -175,7 +175,7 @@ const Collections = () => {
           onChange={(e) =>
             setSearch(e.target.value)
           }
-          className="border border-gray-400 outline-none px-4 py-2 rounded-lg w-64"
+          className="border border-gray-400 outline-none px-4 py-2 rounded-lg w-64 dark:text-gray-900"
         />
 
         {/* FILTERS */}
@@ -195,7 +195,7 @@ const Collections = () => {
                 e.target.value
               )
             }
-            className="border rounded-lg border-gray-400 outline-none px-3 py-2"
+            className="border rounded-lg border-gray-400 dark:text-gray-900 outline-none px-3 py-2"
           >
 
             <option value="">
@@ -300,11 +300,11 @@ const Collections = () => {
 
                   <div>
 
-                    <p className="text-[14px]">
+                    <p className="text-[14px] dark:text-gray-900">
                       {item.name}
                     </p>
 
-                    <small className="text-gray-400">
+                    <small className="text-gray-400 sm:text-[8px]">
                       By Admin
                     </small>
 
@@ -450,7 +450,7 @@ const Collections = () => {
               disabled={
                 collectionPage === 1
               }
-              className="border px-3 py-1 rounded disabled:opacity-50"
+              className="border px-3 py-1 rounded disabled:opacity-50 dark:text-gray-900"
             >
               ‹
             </button>
@@ -472,7 +472,7 @@ const Collections = () => {
                   collectionPage ===
                   i + 1
                     ? "bg-blue-500 text-white"
-                    : "border"
+                    : "border dark:text-gray-900"
                 }`}
               >
                 {i + 1}
@@ -491,7 +491,7 @@ const Collections = () => {
                 collectionPage ===
                 totalCollectionPages
               }
-              className="border px-3 py-1 rounded disabled:opacity-50"
+              className="border px-3 py-1 rounded disabled:opacity-50 dark:text-gray-900"
             >
               ›
             </button>
