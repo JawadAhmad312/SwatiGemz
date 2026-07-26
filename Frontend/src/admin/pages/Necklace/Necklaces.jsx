@@ -201,6 +201,7 @@ py-2
 rounded-lg
 w-full
 md:w-64
+dark:text-gray-900
 "
         />
 
@@ -227,7 +228,7 @@ items-center
                 e.target.value
               )
             }
-            className="border rounded-lg border-gray-400 outline-none px-3 py-2"
+            className="border rounded-lg border-gray-400 outline-none px-3 py-2 dark:text-gray-900"
           >
 
             <option value="">
@@ -276,7 +277,7 @@ rounded-lg
 
       {/* TABLE HEADER */}
 
-      <div className="hidden md:flex  justify-between text-gray-600 text-[12px] bg-gray-100 border-b border-gray-300 cursor-pointer font-bold py-2 px-4">
+      <div className="hidden md:flex  justify-between text-gray-600 text-[12px] bg-gray-100 border-b border-gray-300 cursor-pointer font-bold py-2 px-4 dark:text-gray-900">
 
         <div className="w-[30%]">
           PRODUCT
@@ -383,7 +384,7 @@ md:w-[30%]
                     className="w-12 h-12 rounded"
                   />
 
-                  <div>
+                  <div className="dark:text-gray-900">
 
                     <p className="text-[14px]">
                       {item.name}
@@ -399,7 +400,7 @@ md:w-[30%]
 
                 {/* CATEGORY */}
 
-                <div className="w-full md:w-[15%] text-start">
+                <div className="w-full md:w-[15%] text-start dark:text-gray-900">
 
   <span className="md:hidden font-semibold">
     Category:
@@ -411,7 +412,7 @@ md:w-[30%]
 
                 {/* PRICE */}
 
-              <div className="w-full md:w-[15%] text-start">
+              <div className="w-full md:w-[15%] text-start dark:text-gray-900">
 
   <span className="md:hidden font-semibold">
     Price:
@@ -423,7 +424,7 @@ md:w-[30%]
 
                 {/* STOCK */}
 
-                <div className="w-full md:w-[10%] text-start">
+                <div className="w-full md:w-[10%] text-start dark:text-gray-900">
 
   <span className="md:hidden font-semibold">
     Stock:
@@ -544,7 +545,7 @@ gap-2
               disabled={
                 necklacePage === 1
               }
-              className="border px-3 py-1 rounded disabled:opacity-50"
+              className="border px-3 py-1 rounded disabled:opacity-50 dark:text-gray-900"
             >
               ‹
             </button>
@@ -565,7 +566,7 @@ gap-2
                 className={`px-3 py-1 rounded ${necklacePage ===
                   i + 1
                   ? "bg-blue-500 text-white"
-                  : "border"
+                  : "border dark:text-gray-900"
                   }`}
               >
                 {i + 1}
@@ -584,7 +585,7 @@ gap-2
                 necklacePage ===
                 totalNecklacePages
               }
-              className="border px-3 py-1 rounded disabled:opacity-50"
+              className="border px-3 py-1 rounded disabled:opacity-50 dark:text-gray-900"
             >
               ›
             </button>

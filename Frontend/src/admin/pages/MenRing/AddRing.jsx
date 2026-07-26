@@ -277,6 +277,7 @@ function AddRing() {
       py-2
       bg-gray-200
       rounded
+      dark:text-gray-900
     "
                   >
 
@@ -413,6 +414,7 @@ function AddRing() {
     py-2
     bg-gray-200
     rounded
+    dark:text-gray-900
   "
                   >
 

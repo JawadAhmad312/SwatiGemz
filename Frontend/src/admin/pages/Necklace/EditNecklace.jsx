@@ -101,7 +101,7 @@ function EditNecklace() {
   return (
     <div className="bg-gray-100 min-h-screen p-6">
 
-      <h1 className="text-2xl font-semibold mb-6">Edit Necklace</h1>
+      <h1 className="text-2xl font-semibold mb-6 dark:text-gray-900">Edit Necklace</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
@@ -109,9 +109,9 @@ function EditNecklace() {
         <div className="lg:col-span-2 space-y-6">
 
           {/* PRODUCT INFO */}
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
 
-            <label className="block font-medium ">Product Name </label>
+            <label className="block font-medium dark:text-gray-900">Product Name </label>
             <input
               name="name"
               value={necklace.name || ""}
@@ -119,7 +119,7 @@ function EditNecklace() {
               className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none"
             />
 
-            <label className="block mt-3 font-medium ">Description </label>
+            <label className="block mt-3 font-medium dark:text-gray-900">Description </label>
             <textarea
               name="description"
               value={necklace.description || ""}
@@ -135,7 +135,7 @@ function EditNecklace() {
 
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="font-semibold mb-3">
+            <h2 className="font-semibold mb-3 dark:text-gray-900">
 
               Main Image
 
@@ -236,6 +236,7 @@ function EditNecklace() {
           rounded
           text-sm
           text-gray-700
+          dark:text-gray-900
         "
                   >
 
@@ -271,7 +272,7 @@ function EditNecklace() {
           {/* OTHER IMAGES */}
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="font-semibold mb-3">Other Images</h2>
+            <h2 className="font-semibold mb-3 dark:text-gray-900">Other Images</h2>
 
             {/* OLD IMAGES */}
             <div className="flex flex-wrap gap-3 mb-4">
@@ -343,6 +344,7 @@ function EditNecklace() {
       bg-gray-200
       rounded
       text-gray-700
+      dark:text-gray-900
     "
               >
 
@@ -372,62 +374,62 @@ function EditNecklace() {
         <div className="space-y-6">
 
           {/* PRICE */}
-          <div className="bg-white p-6 rounded-xl shadow">
-            <label className="font-semibold">Price </label>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <label className="font-semibold dark:text-gray-900">Price </label>
             <input
               type="number"
               name="price"
               value={necklace.price || ""}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-lg outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg outline-none dark:text-gray-900"
             />
           </div>
 
           {/* STOCK */}
-          <div className="bg-white p-6 rounded-xl  shadow">
-            <label className="font-semibold">Stock Quantity </label>
+          <div className="bg-white p-6 rounded-xl  shadow dark:text-gray-900">
+            <label className="font-semibold dark:text-gray-900">Stock Quantity </label>
             <input
               type="number"
               name="stockquantity"
               value={necklace.stockquantity || ""}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-lg outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg outline-none dark:text-gray-900"
             />
           </div>
 
           {/* DETAILS */}
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
 
-            <label className="font-semibold">Stone Weight </label>
+            <label className="font-semibold dark:text-gray-900">Stone Weight </label>
             <input
               type="number"
               name="stoneWeight"
               value={necklace.stoneWeight || ""}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none dark:text-gray-900"
             />
 
-            <label className="font-semibold">Bead Size</label>
+            <label className="font-semibold dark:text-gray-900">Bead Size</label>
             <input
               name="beadSize"
               value={necklace.beadSize || ""}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none dark:text-gray-900"
             />
 
-            <label className="font-semibold">Weight Unit</label>
+            <label className="font-semibold dark:text-gray-900">Weight Unit</label>
             <select
               name="weightUnit"
               value={necklace.weightUnit || "crt"}
               onChange={handleChange}
               className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
-            >
+            > 
               <option value="crt">Carat</option>
               <option value="gram">Gram</option>
               <option value="ratti">Ratti</option>
             </select>
 
-            <label className="font-semibold">Note</label>
+            <label className="font-semibold dark:text-gray-900">Note</label>
             <textarea
               name="note"
               value={necklace.note || ""}
@@ -435,7 +437,7 @@ function EditNecklace() {
               className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
             />
 
-            <label className="flex gap-2">
+            <label className="flex gap-2 dark:text-gray-900">
               <input
                 type="checkbox"
                 name="isFeatured"

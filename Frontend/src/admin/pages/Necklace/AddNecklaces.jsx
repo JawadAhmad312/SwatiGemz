@@ -133,7 +133,7 @@ function AddNecklace() {
   return (
     <div className="bg-gray-100 min-h-screen p-6">
 
-      <h1 className="text-2xl font-semibold mb-6">Add Necklace</h1>
+      <h1 className="text-2xl font-semibold mb-6 dark:text-gray-900">Add Necklace</h1>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
@@ -141,15 +141,15 @@ function AddNecklace() {
         <div className="lg:col-span-2 space-y-6">
 
           {/* PRODUCT INFO */}
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-lg font-semibold mb-2">Product Information</h2>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <h2 className="text-lg font-semibold mb-2 dark:text-gray-900">Product Information</h2>
             <p className="text-gray-400 mb-2">To add a new product, please provide the necessary details in the fields below.</p>
             <input
               name="name"
               placeholder="Product Name"
               value={necklace.name}
               onChange={handleChange}
-              className="w-full  border border-gray-400 outline-none p-2 rounded-md mb-2"
+              className="w-full  border border-gray-400 outline-none p-2 rounded-md mb-2 dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.name}</p>
 
@@ -159,7 +159,7 @@ function AddNecklace() {
               value={necklace.description}
               onChange={handleChange}
               rows={5}
-              className="w-full border border-gray-400 mt-3 mb-2 p-2 rounded-md outline-none"
+              className="w-full border border-gray-400 mt-3 mb-2 p-2 rounded-md outline-none dark:text-gray-900"
             />
             <p className="text-red-500  text-sm">{errors.description}</p>
           </div>
@@ -167,7 +167,7 @@ function AddNecklace() {
           {/* MAIN IMAGE */}
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="font-semibold mb-2">
+            <h2 className="font-semibold mb-2 dark:text-gray-900">
 
               Main Image
 
@@ -248,6 +248,7 @@ function AddNecklace() {
           rounded
           text-sm
           text-gray-700
+          dark:text-gray-900
         "
                 >
 
@@ -283,11 +284,11 @@ function AddNecklace() {
           {/* OTHER IMAGES */}
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="font-semibold mb-2">Other Images</h2>
+            <h2 className="font-semibold mb-2 dark:text-gray-900">Other Images</h2>
 
             <div
               onClick={() => inputRef.current.click()}
-              className="border-2 border-dashed border-gray-400 rounded-md outline-none p-10 text-center cursor-pointer"
+              className="border-2 border-dashed border-gray-400 rounded-md outline-none p-10 text-center cursor-pointer dark:text-gray-900"
             >
               Upload Images
               <input
@@ -341,34 +342,34 @@ function AddNecklace() {
         {/* RIGHT */}
         <div className="space-y-6">
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-lg font-semibold ">Pricing</h2>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <h2 className="text-lg font-semibold dark:text-gray-900 ">Pricing</h2>
             <input
               type="number"
               name="price"
               placeholder="Price"
               value={necklace.price}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none dark:text-gray-900"
             />
             <p className="text-red-500 mt-2 text-sm">{errors.price}</p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-lg font-semibold mb-1">Inventory</h2>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+            <h2 className="text-lg font-semibold mb-1 dark:text-gray-900">Inventory</h2>
             <input
               type="number"
               name="stockquantity"
               placeholder="Stock Quantity"
               value={necklace.stockquantity}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none dark:text-gray-900"
             />
             <p className="text-red-500 mt-2 text-sm">{errors.stockquantity}</p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-lg font-semibold mb-2">Details</h2>
+          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900 ">
+            <h2 className="text-lg font-semibold mb-2 dark:text-gray-900">Details</h2>
 
             <input
               type="number"
@@ -376,7 +377,7 @@ function AddNecklace() {
               placeholder="Stone Weight"
               value={necklace.stoneWeight}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2 dark:text-gray-900"
             />
             <p className="text-red-500 text-sm">{errors.stoneWeight}</p>
 
@@ -385,7 +386,7 @@ function AddNecklace() {
               placeholder="Bead Size (e.g 2mm)"
               value={necklace.beadSize}
               onChange={handleChange}
-              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2"
+              className="w-full border border-gray-400 p-2 rounded-md outline-none mb-2 dark:text-gray-900"
             />
 
             <select
@@ -399,7 +400,7 @@ function AddNecklace() {
               <option value="ratti">Ratti</option>
             </select>
 
-            <label className="flex gap-2">
+            <label className="flex gap-2 dark:text-gray-900">
               <input
                 type="checkbox"
                 name="isFeatured"
