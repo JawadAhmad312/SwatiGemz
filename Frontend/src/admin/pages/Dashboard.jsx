@@ -605,7 +605,7 @@ socket.on(
                 <WorldMap />
                 <Activity />
                 <div className="bg-white p-6 rounded-xl shadow lg:col-span-2">
-                  <h2 className="font-semibold mb-4">Top Selling Products</h2>
+                  <h2 className="font-semibold mb-4 dark:text-gray-900">Top Selling Products</h2>
 
                   {topProducts.length === 0 ? (
                     <p className="text-gray-400 text-sm">No data available</p>
@@ -662,7 +662,7 @@ socket.on(
           {activePage === "products" && (
             <div className="bg-white p-6 rounded-xl shadow">
 
-              <h2 className="text-xl font-semibold mb-4">Top Selling Products</h2>
+              <h2 className="text-xl font-semibold mb-4 dark:text-gray-900">Top Selling Products</h2>
 
               {products.map((p) => {
 
@@ -742,7 +742,7 @@ socket.on(
           {/* ================= ORDERS ================= */}
           {activePage === "orders" && (
             <div className="bg-white p-6 rounded-xl shadow">
-              <h2 className="text-xl font-semibold mb-4">Recent Orders</h2>
+              <h2 className="text-xl font-semibold mb-4 dark:text-gray-900">Recent Orders</h2>
 
               <Orders/>
             </div>
@@ -768,7 +768,7 @@ p-5
                     🛡️
                   </div>
                   <div>
-                   <h3 className="font-semibold">
+                   <h3 className="font-semibold dark:text-gray-900">
 Role Management
 </h3>
                     <p className="text-xs text-gray-400">
@@ -786,17 +786,17 @@ Manage user roles and permissions.
 Manage Users
 </p>
 
-<p className="flex items-center gap-2">
+<p className="flex items-center gap-2 dark:text-gray-900">
 <span className="text-green-600">✔</span>
 Manage Roles
 </p>
 
-<p className="flex items-center gap-2">
+<p className="flex items-center gap-2 dark:text-gray-900">
 <span className="text-green-600">✔</span>
 Suspend Accounts
 </p>
 
-<p className="flex items-center gap-2">
+<p className="flex items-center gap-2 dark:text-gray-900">
 <span className="text-green-600">✔</span>
 Delete Accounts
 </p>
@@ -841,32 +841,32 @@ font-semibold
 <div className="space-y-2 text-sm border-t pt-4">
 
 <div className="flex justify-between">
-<span>Admins</span>
+<span className="dark:text-gray-900">Admins</span>
 <b>{roleStats.Admin}</b>
 </div>
 
 <div className="flex justify-between">
-<span>Managers</span>
+<span className="dark:text-gray-900">Managers</span>
 <b>{roleStats.Manager}</b>
 </div>
 
 <div className="flex justify-between">
-<span>Moderators</span>
+<span className="dark:text-gray-900">Moderators</span>
 <b>{roleStats.Moderator}</b>
 </div>
 
 <div className="flex justify-between">
-<span>Support</span>
+<span className="dark:text-gray-900">Support</span>
 <b>{roleStats.Support}</b>
 </div>
 
 <div className="flex justify-between">
-<span>Security</span>
+<span className="dark:text-gray-900">Security</span>
 <b>{roleStats.Security}</b>
 </div>
 
 <div className="flex justify-between">
-<span>Customers</span>
+<span className="dark:text-gray-900">Customers</span>
 <b>{roleStats.Customer}</b>
 </div>
 
@@ -903,7 +903,7 @@ overflow-hidden
                 <div className="flex justify-between items-center mb-6 px-3 py-2">
 
                   <div>
-                    <h2 className="text-xl font-semibold">Role Details</h2>
+                    <h2 className="text-xl font-semibold dark:text-gray-900">Role Details</h2>
                     <p className="text-sm text-gray-400">
                       Define and manage roles to streamline operations
                     </p>
@@ -934,6 +934,7 @@ border
 border-gray-400
 px-4
 py-2
+dark:text-gray-900
 rounded-lg
 outline-none
 w-full
@@ -1006,14 +1007,14 @@ transition
                           </div>
 
                           <div>
-                            <p className="font-medium text-sm">{user.username}</p>
+                            <p className="font-medium text-sm dark:text-gray-900">{user.username}</p>
                             <p className="text-xs text-gray-400">{user.email}</p>
                           </div>
 
                         </div>
 
                         {/* DATE */}
-                        <div className="w-[10%] text-start text-sm text-gray-500">
+                        <div className="w-[10%] text-start text-sm text-gray-500 dark:text-gray-900">
                        {
 user.createdAt
 ? new Date(user.createdAt).toLocaleDateString()
@@ -1086,7 +1087,7 @@ className="bg-white rounded-xl shadow border p-4"
 
 <div className="mt-4 space-y-2">
 
-<p>
+<p className=" dark:text-gray-900">
 
 <strong>ID:</strong>
 
@@ -1094,7 +1095,7 @@ className="bg-white rounded-xl shadow border p-4"
 
 </p>
 
-<p>
+<p className="dark:text-gray-900">
 
 <strong>Joined:</strong>
 
@@ -1106,7 +1107,7 @@ user.createdAt
 
 </p>
 
-<p>
+<p className="dark:text-gray-900">
 
 <strong>Status:</strong>
 
