@@ -401,7 +401,7 @@ function AddStone() {
         <div className="space-y-6">
 
           {/* PRICE */}
-          <div className="bg-white p-6 rounded-xl shadow dark:text-gray-900">
+          <div className="bg-white p-6 rounded-xl shadow ">
             <h2 className="font-semibold dark:text-gray-900">Pricing</h2>
 
             <input
