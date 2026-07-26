@@ -8,7 +8,7 @@ export default function Activity() {
 
   return (
     <div className="bg-white p-6 rounded-xl shadow">
-      <h2 className="font-semibold mb-4">Recent Activity</h2>
+      <h2 className="font-semibold mb-4 dark:text-gray-900">Recent Activity</h2>
 
       {activities.map((item, i) => (
         <div key={i} className="flex gap-3 mb-3">

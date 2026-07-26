@@ -169,11 +169,11 @@ const totalOrders = safeData.reduce(
 
         {/* LEGEND */}
         <div className="flex justify-center gap-6 mt-4 text-sm">
-          <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
+          <div className="flex items-center gap-2 dark:text-gray-900">
+            <span className="w-3 h-3 bg-purple-500 rounded-full "></span>
             Total Revenue
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 dark:text-gray-900">
             <span className="w-3 h-3 bg-green-500 rounded-full"></span>
             Orders
           </div>

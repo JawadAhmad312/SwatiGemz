@@ -81,7 +81,7 @@ export default function DonutChart({
 
       <div className="flex justify-between items-center mb-4">
 
-        <h2 className="text-lg font-bold">
+        <h2 className="text-lg font-bold dark:text-gray-900">
           Product Distribution
         </h2>
 
@@ -136,7 +136,7 @@ export default function DonutChart({
         "
         >
 
-          <h3 className="text-3xl font-bold">
+          <h3 className="text-3xl font-bold dark:text-gray-900">
             {total}
           </h3>
 

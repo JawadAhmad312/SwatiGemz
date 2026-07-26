@@ -8,7 +8,7 @@ export default function OrdersTable({
 
       <div className="flex justify-between items-center mb-4">
 
-        <h2 className="font-semibold text-lg">
+        <h2 className="font-semibold text-lg dark:text-gray-900">
           Recent Orders
         </h2>
 
@@ -18,7 +18,7 @@ export default function OrdersTable({
 
       </div>
 
-      <div className="grid grid-cols-4 text-gray-400 text-sm border-b pb-3">
+      <div className="grid grid-cols-4 text-gray-500 text-sm border-b pb-3">
 
         <span>Customer</span>
 
@@ -32,7 +32,7 @@ export default function OrdersTable({
 
       {orders.length === 0 ? (
 
-        <div className="py-8 text-center text-gray-400">
+        <div className="py-8 text-center text-gray-400 dark:text-gray-900">
 
           No Orders Found
 
@@ -54,14 +54,14 @@ export default function OrdersTable({
             "
           >
 
-            <span className="font-medium">
+            <span className="font-medium dark:text-gray-900">
 
               {order.shippingAddress?.firstName ||
                 "Customer"}
 
             </span>
 
-            <span>
+            <span className="dark:text-gray-900">
 
               {new Date(
                 order.createdAt
@@ -69,7 +69,7 @@ export default function OrdersTable({
 
             </span>
 
-            <span className="font-semibold">
+            <span className="font-semibold dark:text-gray-900">
 
               Rs {order.total}
 

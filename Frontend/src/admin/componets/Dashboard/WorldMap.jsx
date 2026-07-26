@@ -1,7 +1,7 @@
 export default function WorldMap() {
   return (
     <div className="bg-white p-6 rounded-xl shadow">
-      <h2 className="font-semibold mb-4">Revenue by Location</h2>
+      <h2 className="font-semibold mb-4 dark:text-gray-900">Revenue by Location</h2>
 
       <div className="relative">
         <img
