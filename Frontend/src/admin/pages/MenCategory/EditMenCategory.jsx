@@ -490,7 +490,7 @@ function EditMenCategory() {
             <h1 className="
         text-2xl
         font-bold
-        mb-6
+        mb-6 dark:text-black
       ">
                 Edit Men Category
             </h1>
@@ -515,10 +515,10 @@ function EditMenCategory() {
             bg-white
             p-6
             rounded-xl
-            shadow
+            shadow dark:text-black
           ">
 
-                        <label>
+                        <label className=" dark:text-black">
                             Product Title
                         </label>
 
@@ -531,7 +531,7 @@ function EditMenCategory() {
                         />
 
                         <label className="
-              block
+              block dark:text-black
               mt-4
             ">
                             Description
@@ -554,13 +554,13 @@ function EditMenCategory() {
             bg-white
             p-6
             rounded-xl
-            shadow
+            shadow dark:text-black
           ">
 
                         <h3 className="
               font-semibold
               mb-3
-              text-gray-500
+              text-gray-500 dark:text-black
             ">
 
                             Main Image
@@ -677,7 +677,7 @@ function EditMenCategory() {
                       bg-gray-200
                       rounded
                       text-sm
-                      text-gray-700
+                      text-gray-700 dark:text-black
                     "
                                     >
 
@@ -724,7 +724,7 @@ function EditMenCategory() {
                         <h3 className="
               font-semibold
               mb-3
-              text-gray-500
+              text-gray-500 dark:text-black
             ">
 
                             Other Images
@@ -871,7 +871,7 @@ function EditMenCategory() {
                   text-xs
                   bg-gray-200
                   rounded
-                  text-gray-700
+                  text-gray-700 dark:text-black
                 "
                             >
 
@@ -907,10 +907,10 @@ function EditMenCategory() {
             bg-white
             p-6
             rounded-xl
-            shadow
+            shadow dark:text-black
           ">
 
-                        <label>
+                        <label className=" dark:text-black">
                             Price
                         </label>
 
@@ -929,10 +929,10 @@ function EditMenCategory() {
             bg-white
             p-6
             rounded-xl
-            shadow
+            shadow dark:text-black
           ">
 
-                        <label>
+                        <label className=" dark:text-black">
                             Stock Quantity
                         </label>
 
@@ -956,11 +956,11 @@ function EditMenCategory() {
             p-6
             rounded-xl
             shadow
-            space-y-3
+            space-y-3 dark:text-black
           ">
 
                         <h2 className="
-              font-semibold
+              font-semibold dark:text-black
             ">
                             Details
                         </h2>
@@ -979,7 +979,7 @@ function EditMenCategory() {
                 w-full
                 border
                 p-2
-                rounded
+                rounded dark:text-black
               "
                         />
 
@@ -997,7 +997,7 @@ function EditMenCategory() {
                 w-full
                 border
                 p-2
-                rounded
+                rounded dark:text-black
               "
                         />
 
@@ -1015,7 +1015,7 @@ function EditMenCategory() {
                 w-full
                 border
                 p-2
-                rounded
+                rounded dark:text-black
               "
                         />
 
@@ -1033,7 +1033,7 @@ function EditMenCategory() {
                 w-full
                 border
                 p-2
-                rounded
+                rounded dark:text-black
               "
                         />
 
@@ -1051,7 +1051,7 @@ function EditMenCategory() {
                 w-full
                 border
                 p-2
-                rounded
+                rounded dark:text-black
               "
                         />
 
@@ -1069,7 +1069,7 @@ function EditMenCategory() {
                 w-full
                 border
                 p-2
-                rounded
+                rounded dark:text-black
               "
                         />
 
@@ -1087,7 +1087,7 @@ function EditMenCategory() {
                 w-full
                 border
                 p-2
-                rounded
+                rounded dark:text-black
               "
                         />
 
@@ -1105,7 +1105,7 @@ function EditMenCategory() {
                 w-full
                 border
                 p-2
-                rounded
+                rounded dark:text-black
               "
                         />
 

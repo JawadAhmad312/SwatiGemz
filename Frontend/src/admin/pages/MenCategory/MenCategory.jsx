@@ -223,7 +223,7 @@ mb-6
               px-4
               py-2
               rounded-lg
-             w-full md:w-64
+             w-full md:w-64 dark:text-black
             "
           />
 
@@ -256,7 +256,7 @@ items-center
                 outline-none
                 px-3
                 py-2
-                rounded-lg
+                rounded-lg dark:text-black
               "
             >
 
@@ -293,7 +293,7 @@ items-center
                 outline-none
                 px-3
                 py-2
-                rounded-lg
+                rounded-lg dark:text-black
               "
             >
 
@@ -354,7 +354,7 @@ justify-between
           border-gray-300
           font-bold
           py-2
-          px-4
+          px-4 dark:text-black
         ">
 
           <div className="w-[30%]">
@@ -459,7 +459,7 @@ gap-3
                     flex
                     items-center
                     gap-4
-                   w-full md:w-[30%]
+                   w-full md:w-[30%] dark:text-black
                   ">
 
                     <img
@@ -474,7 +474,7 @@ gap-3
 
                     <div>
 
-                      <p className="text-[14px]">
+                      <p className="text-[14px] dark:text-black">
                         {item.title}
                       </p>
 
@@ -488,7 +488,7 @@ gap-3
 
                   {/* STOCK */}
 
-                  <div className="w-full md:w-[10%]">
+                  <div className="w-full md:w-[10%]  dark:text-black">
 
 <span className="md:hidden font-semibold">
 Stock:
@@ -500,7 +500,7 @@ Stock:
 
                   {/* PRICE */}
 
-                 <div className="w-full md:w-[10%]">
+                 <div className="w-full md:w-[10%]  dark:text-black">
 
 <span className="md:hidden font-semibold">
 Price:
@@ -512,7 +512,7 @@ PKR {Number(item.price).toLocaleString()}
 
                   {/* ORDERS */}
 
-                  <div className="w-full md:w-[10%]">
+                  <div className="w-full md:w-[10%] dark:text-black">
 
 <span className="md:hidden font-semibold">
 Orders:
@@ -670,7 +670,7 @@ gap-2
                   px-3
                   py-1
                   rounded
-                  disabled:opacity-50
+                  disabled:opacity-50 dark:text-black
                 "
               >
 
@@ -700,7 +700,7 @@ gap-2
 
                         ? "bg-blue-500 text-white"
 
-                        : "border"
+                        : "border dark:text-black"
                       }
                     `}
                   >
@@ -727,7 +727,7 @@ gap-2
                   px-3
                   py-1
                   rounded
-                  disabled:opacity-50
+                  disabled:opacity-50 dark:text-black
                 "
               >
 

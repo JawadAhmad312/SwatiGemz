@@ -336,7 +336,7 @@ function AddMenCategory() {
 
         <div className="bg-gray-100 min-h-screen p-6">
 
-            <h1 className="text-2xl font-semibold mb-6">
+            <h1 className="text-2xl font-semibold mb-6 dark:text-black">
                 Add Men Category
             </h1>
 
@@ -369,7 +369,7 @@ function AddMenCategory() {
                         <h2 className="
               text-lg
               font-semibold
-              mb-2
+              mb-2 dark:text-black
             ">
                             Product Information
                         </h2>
@@ -386,7 +386,7 @@ function AddMenCategory() {
                 p-2
                 rounded-md
                 mt-3
-                outline-none
+                outline-none dark:text-black
               "
                         />
 
@@ -411,7 +411,7 @@ function AddMenCategory() {
                 mt-3
                 border-gray-400
                 p-2
-                outline-none
+                outline-none dark:text-black
               "
                         />
 
@@ -441,7 +441,7 @@ function AddMenCategory() {
                             className="
       text-lg
       font-semibold
-      mb-4
+      mb-4 dark:text-black
     "
                         >
                             Main Image
@@ -524,7 +524,7 @@ function AddMenCategory() {
       "
                             >
 
-                                <p className="text-gray-500">
+                                <p className="text-gray-500  dark:text-black">
                                     Click to Upload Main Image
                                 </p>
 
@@ -566,7 +566,7 @@ function AddMenCategory() {
                         <h2 className="
               text-lg
               font-semibold
-              mb-2
+              mb-2 dark:text-black
             ">
                             Other Images
                         </h2>
@@ -586,7 +586,7 @@ function AddMenCategory() {
                 rounded-xl
                 p-10
                 text-center
-                cursor-pointer
+                cursor-pointer dark:text-black
               "
                         >
 
@@ -687,13 +687,13 @@ function AddMenCategory() {
             bg-white
             p-6
             rounded-xl
-            shadow
+            shadow dark:text-black
           ">
 
                         <h2 className="
               text-lg
               font-semibold
-              mb-2
+              mb-2 dark:text-black
             ">
                             Pricing
                         </h2>
@@ -710,7 +710,7 @@ function AddMenCategory() {
                 border-gray-400
                 outline-none
                 p-2
-                rounded-lg
+                rounded-lg dark:text-black
               "
                         />
 
@@ -730,13 +730,13 @@ function AddMenCategory() {
             bg-white
             p-6
             rounded-xl
-            shadow
+            shadow dark:text-black
           ">
 
                         <h2 className="
               text-lg
               font-semibold
-              mb-2
+              mb-2 dark:text-black
             ">
                             Inventory
                         </h2>
@@ -755,7 +755,7 @@ function AddMenCategory() {
                 border-gray-400
                 outline-none
                 rounded-lg
-                p-2
+                p-2 dark:text-black
               "
                         />
 
@@ -776,13 +776,13 @@ function AddMenCategory() {
             p-6
             rounded-xl
             shadow
-            space-y-3
+            space-y-3 dark:text-black
           ">
 
                         <h2 className="
               text-lg
               font-semibold
-              mb-2
+              mb-2 dark:text-black
             ">
                             Details
                         </h2>
@@ -803,7 +803,7 @@ function AddMenCategory() {
                 p-2
                 rounded-lg
                 outline-none
-                border-gray-400
+                border-gray-400 dark:text-black
               "
                         />
 
@@ -823,7 +823,7 @@ function AddMenCategory() {
                 p-2
                 rounded-lg
                 outline-none
-                border-gray-400
+                border-gray-400 dark:text-black
               "
                         />
 
@@ -843,7 +843,7 @@ function AddMenCategory() {
                 p-2
                 rounded-lg
                 outline-none
-                border-gray-400
+                border-gray-400 dark:text-black
               "
                         />
 
@@ -863,7 +863,7 @@ function AddMenCategory() {
                 p-2
                 rounded-lg
                 outline-none
-                border-gray-400
+                border-gray-400 dark:text-black
               "
                         />
 
@@ -883,7 +883,7 @@ function AddMenCategory() {
                 p-2
                 rounded-lg
                 outline-none
-                border-gray-400
+                border-gray-400 dark:text-black
               "
                         />
 
@@ -903,7 +903,7 @@ function AddMenCategory() {
                 p-2
                 rounded-lg
                 outline-none
-                border-gray-400
+                border-gray-400 dark:text-black
               "
                         />
 
@@ -923,7 +923,7 @@ function AddMenCategory() {
                 p-2
                 rounded-lg
                 outline-none
-                border-gray-400
+                border-gray-400 dark:text-black
               "
                         />
 
@@ -943,7 +943,7 @@ function AddMenCategory() {
                 p-2
                 rounded-lg
                 outline-none
-                border-gray-400
+                border-gray-400 dark:text-black
               "
                         />
 
