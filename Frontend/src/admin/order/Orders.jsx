@@ -409,11 +409,11 @@ border-gray-400 dark:text-black
 
           <thead
             className="
-              bg-gray-100
+              bg-gray-100 dark:text-black
             "
           >
 
-            <tr>
+            <tr className="dark:text-black"> 
 
               <th className="p-4 text-start">
                 Customer
@@ -561,7 +561,7 @@ border-gray-400 dark:text-black
 
                   </td>
 
-                  <td className="p-4">
+                  <td className="p-4 dark:text-black">
 
                     {
                       new Date(
