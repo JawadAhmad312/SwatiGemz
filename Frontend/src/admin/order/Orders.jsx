@@ -405,7 +405,7 @@ border-gray-400 dark:text-black
 
      <div className="hidden md:block bg-white rounded-xl shadow overflow-x-auto">
 
-        <table className="w-full">
+        <table className="w-full dark:text-black">
 
           <thead
             className="
