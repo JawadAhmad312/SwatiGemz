@@ -376,7 +376,7 @@ setLoading(true);
 
     <div className="bg-gray-100 min-h-screen p-6">
 
-      <h1 className="text-2xl font-semibold mb-6">
+      <h1 className="text-2xl font-semibold mb-6 dark:text-black">
         Add Gemstone
       </h1>
 
@@ -400,11 +400,11 @@ setLoading(true);
 
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="text-lg font-semibold mb-2">
+            <h2 className="text-lg font-semibold mb-2 dark:text-black">
               Product Information
             </h2>
 
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-400 mb-4 dark:text-black">
               Add gemstone
               details below.
             </p>
@@ -427,7 +427,7 @@ setLoading(true);
                 outline-none
                 p-2
                 rounded-md
-                mb-2
+                mb-2 dark:text-black
               "
             />
 
@@ -451,7 +451,7 @@ setLoading(true);
                 p-2
                 rounded-md
                 mb-2
-                bg-gray-100
+                bg-gray-100 dark:text-black
               "
             />
 
@@ -470,7 +470,7 @@ setLoading(true);
                 p-2
                 rounded-md
                 mb-2
-                bg-gray-100
+                bg-gray-100 dark:text-black
               "
             />
 
@@ -491,7 +491,7 @@ setLoading(true);
                 outline-none
                 p-2
                 rounded-md
-                mb-2
+                mb-2 dark:text-black
               "
             >
 
@@ -545,7 +545,7 @@ setLoading(true);
                 mb-2
                 p-2
                 rounded-md
-                outline-none
+                outline-none dark:text-black
               "
             />
 
@@ -575,7 +575,7 @@ setLoading(true);
                 mb-2
                 p-2
                 rounded-md
-                outline-none
+                outline-none dark:text-black
               "
             />
 
@@ -585,7 +585,7 @@ setLoading(true);
 
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="font-semibold mb-2">
+            <h2 className="font-semibold mb-2 dark:text-black">
               Main Image
             </h2>
 
@@ -646,7 +646,7 @@ setLoading(true);
 
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="font-semibold mb-2">
+            <h2 className="font-semibold mb-2 dark:text-black">
               Other Images
             </h2>
 
@@ -662,7 +662,7 @@ setLoading(true);
                 outline-none
                 p-10
                 text-center
-                cursor-pointer
+                cursor-pointer dark:text-black
               "
             >
 
@@ -753,9 +753,9 @@ setLoading(true);
 
           {/* PRICING */}
 
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
-            <h2 className="text-lg font-semibold">
+            <h2 className="text-lg font-semibold dark:text-black">
               Pricing
             </h2>
 
@@ -775,7 +775,7 @@ setLoading(true);
                 border-gray-400
                 p-2
                 rounded-md
-                outline-none
+                outline-none dark:text-black
               "
             />
 
@@ -787,9 +787,9 @@ setLoading(true);
 
           {/* INVENTORY */}
 
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
-            <h2 className="text-lg font-semibold mb-1">
+            <h2 className="text-lg font-semibold mb-1 dark:text-black">
               Inventory
             </h2>
 
@@ -809,7 +809,7 @@ setLoading(true);
                 border-gray-400
                 p-2
                 rounded-md
-                outline-none
+                outline-none dark:text-black
               "
             />
 
@@ -823,9 +823,9 @@ setLoading(true);
 
           {/* DETAILS */}
 
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
-            <h2 className="text-lg font-semibold mb-2">
+            <h2 className="text-lg font-semibold mb-2 dark:text-black">
               Details
             </h2>
 
@@ -848,7 +848,7 @@ setLoading(true);
                 p-2
                 rounded-md
                 outline-none
-                mb-2
+                mb-2 dark:text-black
               "
             />
 
@@ -874,7 +874,7 @@ setLoading(true);
                 p-2
                 rounded-md
                 outline-none
-                mb-2
+                mb-2 dark:text-black
               "
             />
 
@@ -896,7 +896,7 @@ setLoading(true);
                 p-2
                 rounded-md
                 outline-none
-                mb-2
+                mb-2 dark:text-black
               "
             />
 
@@ -908,7 +908,7 @@ setLoading(true);
 
             {/* FEATURED */}
 
-            <label className="flex gap-2 mb-2">
+            <label className="flex gap-2 mb-2 dark:text-black">
 
               <input
                 type="checkbox"
@@ -927,7 +927,7 @@ setLoading(true);
 
             {/* ACTIVE */}
 
-            <label className="flex gap-2">
+            <label className="flex gap-2 dark:text-black">
 
               <input
                 type="checkbox"
@@ -948,9 +948,9 @@ setLoading(true);
 
           {/* SEO */}
 
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
-            <h2 className="text-lg font-semibold mb-2">
+            <h2 className="text-lg font-semibold mb-2 dark:text-black">
               SEO
             </h2>
 
@@ -970,7 +970,7 @@ setLoading(true);
                 p-2
                 rounded-md
                 outline-none
-                mb-2
+                mb-2 dark:text-black
               "
             />
 
@@ -990,7 +990,7 @@ setLoading(true);
                 border-gray-400
                 p-2
                 rounded-md
-                outline-none
+                outline-none dark:text-black
               "
             />
 

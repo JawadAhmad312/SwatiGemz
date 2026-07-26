@@ -308,7 +308,7 @@ function EditGemstone() {
 
     <div className="bg-gray-100 min-h-screen p-6">
 
-      <h1 className="text-2xl font-semibold mb-6">
+      <h1 className="text-2xl font-semibold mb-6 dark:text-black">
         Edit Gemstone
       </h1>
 
@@ -320,11 +320,11 @@ function EditGemstone() {
 
           {/* PRODUCT INFO */}
 
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
             {/* NAME */}
 
-            <label className="block font-medium text-gray-500">
+            <label className="block font-medium text-gray-500 dark:text-black">
               Product Name
             </label>
 
@@ -336,12 +336,12 @@ function EditGemstone() {
               onChange={
                 handleChange
               }
-              className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none dark:text-black"
             />
 
             {/* PRODUCT CODE */}
 
-            <label className="block mt-3 font-medium text-gray-500">
+            <label className="block mt-3 font-medium text-gray-500 dark:text-black">
               Product Code
             </label>
 
@@ -351,12 +351,12 @@ function EditGemstone() {
                 product.productCode || ""
               }
               readOnly
-              className="w-full border border-gray-400 p-2 rounded-lg mt-1 bg-gray-100 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mt-1 bg-gray-100 outline-none dark:text-black"
             />
 
             {/* SLUG */}
 
-            <label className="block mt-3 font-medium text-gray-500">
+            <label className="block mt-3 font-medium text-gray-500 dark:text-black">
               Slug
             </label>
 
@@ -366,12 +366,12 @@ function EditGemstone() {
                 product.slug || ""
               }
               readOnly
-              className="w-full border border-gray-400 p-2 rounded-lg mt-1 bg-gray-100 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mt-1 bg-gray-100 outline-none dark:text-black"
             />
 
             {/* COLLECTION */}
 
-            <label className="block mt-3 font-medium text-gray-500">
+            <label className="block mt-3 font-medium text-gray-500 dark:text-black">
               Collection
             </label>
 
@@ -383,7 +383,7 @@ function EditGemstone() {
               onChange={
                 handleChange
               }
-              className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none dark:text-black"
             >
 
               <option value="">
@@ -406,7 +406,7 @@ function EditGemstone() {
 
             {/* DESCRIPTION */}
 
-            <label className="block mt-3 font-medium text-gray-500">
+            <label className="block mt-3 font-medium text-gray-500 dark:text-black">
               Description
             </label>
 
@@ -419,12 +419,12 @@ function EditGemstone() {
                 handleChange
               }
               rows={5}
-              className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none dark:text-black"
             />
 
             {/* SHORT DESCRIPTION */}
 
-            <label className="block mt-3 font-medium text-gray-500">
+            <label className="block mt-3 font-medium text-gray-500 dark:text-black">
               Short Description
             </label>
 
@@ -437,7 +437,7 @@ function EditGemstone() {
                 handleChange
               }
               rows={3}
-              className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mt-1 outline-none dark:text-black"
             />
 
           </div>
@@ -448,7 +448,7 @@ function EditGemstone() {
 
 <div className="bg-white p-6 rounded-xl shadow">
 
-  <h2 className="font-semibold mb-3">
+  <h2 className="font-semibold mb-3 dark:text-black">
     Main Image
   </h2>
 
@@ -573,7 +573,7 @@ function EditGemstone() {
 
           <div className="bg-white p-6 rounded-xl shadow">
 
-            <h2 className="font-semibold mb-3 text-gray-500">
+            <h2 className="font-semibold mb-3 text-gray-500 dark:text-black">
               Other Images
             </h2>
 
@@ -663,9 +663,9 @@ function EditGemstone() {
 
           {/* PRICE */}
 
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
-            <label className="font-semibold text-gray-500">
+            <label className="font-semibold text-gray-500 dark:text-black">
               Price
             </label>
 
@@ -678,16 +678,16 @@ function EditGemstone() {
               onChange={
                 handleChange
               }
-              className="w-full border border-gray-400 p-2 rounded-lg outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg outline-none dark:text-black"
             />
 
           </div>
 
           {/* STOCK */}
 
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
-            <label className="font-semibold text-gray-500">
+            <label className="font-semibold text-gray-500 dark:text-black">
               Stock Quantity
             </label>
 
@@ -700,18 +700,18 @@ function EditGemstone() {
               onChange={
                 handleChange
               }
-              className="w-full border border-gray-400 p-2 rounded-lg outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg outline-none dark:text-black"
             />
 
           </div>
 
           {/* DETAILS */}
 
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 rounded-xl shadow dark:text-black">
 
             {/* WEIGHT */}
 
-            <label className="font-semibold text-gray-500">
+            <label className="font-semibold text-gray-500 dark:text-black">
               Weight
             </label>
 
@@ -724,12 +724,12 @@ function EditGemstone() {
               onChange={
                 handleChange
               }
-              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none dark:text-black"
             />
 
             {/* SHAPE */}
 
-            <label className="font-semibold text-gray-500">
+            <label className="font-semibold text-gray-500 dark:text-black">
               Shape
             </label>
 
@@ -741,12 +741,12 @@ function EditGemstone() {
               onChange={
                 handleChange
               }
-              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none dark:text-black"
             />
 
             {/* CATEGORY */}
 
-            <label className="font-semibold text-gray-500">
+            <label className="font-semibold text-gray-500 dark:text-black">
               Category
             </label>
 
@@ -758,12 +758,12 @@ function EditGemstone() {
               onChange={
                 handleChange
               }
-              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none dark:text-black"
             />
 
             {/* META TITLE */}
 
-            <label className="font-semibold text-gray-500">
+            <label className="font-semibold text-gray-500 dark:text-black">
               Meta Title
             </label>
 
@@ -775,12 +775,12 @@ function EditGemstone() {
               onChange={
                 handleChange
               }
-              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none dark:text-black"
             />
 
             {/* META DESCRIPTION */}
 
-            <label className="font-semibold text-gray-500">
+            <label className="font-semibold text-gray-500 dark:text-black">
               Meta Description
             </label>
 
@@ -792,12 +792,12 @@ function EditGemstone() {
               onChange={
                 handleChange
               }
-              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none"
+              className="w-full border border-gray-400 p-2 rounded-lg mb-2 outline-none dark:text-black"
             />
 
             {/* FEATURED */}
 
-            <label className="flex gap-2 mt-3 ">
+            <label className="flex gap-2 mt-3 dark:text-black ">
 
               <input
                 type="checkbox"
@@ -816,7 +816,7 @@ function EditGemstone() {
 
             {/* ACTIVE */}
 
-            <label className="flex gap-2 mt-2">
+            <label className="flex gap-2 mt-2 dark:text-black">
 
               <input
                 type="checkbox"

@@ -196,7 +196,7 @@ px-4
 py-2
 rounded-lg
 w-full
-md:w-64
+md:w-64 dark:text-black
 "
         />
 
@@ -223,7 +223,7 @@ items-center
                 e.target.value
               )
             }
-            className="border rounded-lg border-gray-400 outline-none px-3 py-2"
+            className="border rounded-lg border-gray-400 outline-none px-3 py-2  dark:text-black"
           >
 
             <option value="">
@@ -268,7 +268,7 @@ rounded-lg
 
       {/* TABLE HEADER */}
 
-     <div className="hidden md:flex justify-between text-gray-600 text-[12px] bg-gray-100 border-b border-gray-300 cursor-pointer font-bold py-2 px-4">
+     <div className="hidden md:flex justify-between text-gray-600 text-[12px] bg-gray-100 border-b border-gray-300 cursor-pointer font-bold py-2 px-4 dark:text-black">
 
         <div className="w-[30%]">
           PRODUCT
@@ -347,7 +347,7 @@ flex
 items-center
 gap-4
 w-full
-md:w-[30%]
+md:w-[30%] dark:text-black
 ">
 
                   <img
@@ -357,11 +357,11 @@ md:w-[30%]
 
                   <div>
 
-                    <p className="text-[14px]">
+                    <p className="text-[14px] dark:text-black">
                       {item.name}
                     </p>
 
-                    <small className="text-gray-400">
+                    <small className="text-gray-400  dark:text-black">
                       {item.weight} ct
                     </small>
 
@@ -371,7 +371,7 @@ md:w-[30%]
 
                 {/* COLLECTION */}
 
-               <div className="w-full md:w-[15%] text-start">
+               <div className="w-full md:w-[15%] text-start dark:text-black">
 
 <span className="md:hidden font-semibold">
 Collection:
@@ -387,7 +387,7 @@ Collection:
 
                 {/* PRICE */}
 
-               <div className="w-full md:w-[15%] text-start">
+               <div className="w-full md:w-[15%] text-start dark:text-black">
 
 <span className="md:hidden font-semibold">
 Price:
@@ -398,7 +398,7 @@ PKR {Number(item.price).toLocaleString()}
 </div>
 
                 {/* STOCK */}
-<div className="w-full md:w-[10%] text-start">
+<div className="w-full md:w-[10%] text-start dark:text-black">
 
 <span className="md:hidden font-semibold">
 Stock:
@@ -520,7 +520,7 @@ gap-2
               disabled={
                 gemstonePage === 1
               }
-              className="border px-3 py-1 rounded disabled:opacity-50"
+              className="border px-3 py-1 rounded disabled:opacity-50 dark:text-black"
             >
               ‹
             </button>
@@ -541,7 +541,7 @@ gap-2
                 className={`px-3 py-1 rounded ${gemstonePage ===
                     i + 1
                     ? "bg-blue-500 text-white"
-                    : "border"
+                    : "border dark:text-black"
                   }`}
               >
                 {i + 1}
@@ -560,7 +560,7 @@ gap-2
                 gemstonePage ===
                 totalGemstonePages
               }
-              className="border px-3 py-1 rounded disabled:opacity-50"
+              className="border px-3 py-1 rounded disabled:opacity-50 dark:text-black"
             >
               ›
             </button>
