@@ -62,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex gap-3">
                 <FaMapMarkerAlt className="text-blue-400 text-lg" />
-                Lahore, Pakistan
+               Main Bazar Raiz Market Kathera,<br></br> Mingora Swat, Pakistan.
               </li>
 
               <li className="flex gap-3">
