@@ -138,7 +138,7 @@ export default function Footer() {
 
       {/* 💚 WhatsApp Button (Adjusted for Mobile) */}
       <a
-        href="https://wa.me/+923417112368"
+        href="https://wa.me/+923475236461"
         target="_blank"
         rel="noopener noreferrer"
         className="
