@@ -26,6 +26,7 @@ import Stones from "./Stone/Stones.jsx";
 import MenCategory from "./MenCategory/MenCategory.jsx";
 import WomenCategory from "./WomenCategory/WomenCategory.jsx";
 import Orders from "../order/Orders";
+import LiveChatAdmin from "./LiveChatAdmin.jsx";
 import axios from "axios";
 
 
@@ -546,6 +547,12 @@ socket.on(
             Orders
           </p>
           <p
+            onClick={() => setActivePage("livechat")}
+            className={menuClass("livechat")}
+          >
+            Live Chat
+          </p>
+          <p
             onClick={() => setActivePage("users")}
             className={menuClass("users")}
           >
@@ -747,6 +754,8 @@ socket.on(
               <Orders/>
             </div>
           )}
+
+          {activePage === "livechat" && <LiveChatAdmin />}
 
           {/* ================= USERS ================= */}
           {activePage === "users" && (

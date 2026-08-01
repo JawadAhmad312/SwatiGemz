@@ -37,6 +37,7 @@ import womenCategoryRoutes from "./routes/womenCategoryRoutes.js";
 import gemstoneRoutes from "./routes/gemstoneRoutes.js";
 import collectionRoutes from "./routes/collectionRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
+import chatRoutes from "./routes/chatRoutes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -309,6 +310,7 @@ app.use("/api/men", menCategoryRoutes);
 app.use("/api/gemstones", gemstoneRoutes);
 app.use("/api/gem-collections", collectionRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/chat", chatRoutes);
 
 app.post("/api/cart", async (req, res) => {
   const product = await Stone.findById(req.body.id);

@@ -49,6 +49,12 @@ export const connectSocket = (server, options = {}) => {
       socket.join("admins");
       console.log("Admin Joined Room");
     });
+
+    socket.on("joinChat", (conversationId) => {
+      if (typeof conversationId === "string" && conversationId.trim()) {
+        socket.join(`chat:${conversationId.trim()}`);
+      }
+    });
   });
 
   console.log("Socket Initialized");

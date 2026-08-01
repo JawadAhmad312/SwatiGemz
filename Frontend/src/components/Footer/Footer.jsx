@@ -1,9 +1,10 @@
 import React from "react";
 import {
   FaFacebookF, FaInstagram, FaTiktok, FaYoutube,
-  FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaComments
+  FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import LiveChat from "../LiveChat/LiveChat";
 
 
 
@@ -157,22 +158,7 @@ export default function Footer() {
       </a>
 
       {/* 💬 Live Chat Button */}
-      <button
-        className="
-          fixed 
-          bottom-36 right-4 
-          sm:bottom-36 sm:right-6 
-          bg-blue-600 text-white 
-          p-3 sm:p-4 
-          rounded-full shadow-xl 
-          hover:bg-blue-700 
-          transition z-50 
-          text-xl sm:text-2xl
-        "
-        onClick={() => alert('Live Chat Coming Soon!')}
-      >
-        <FaComments />
-      </button>
+      <LiveChat />
     </div>
   );
 }
