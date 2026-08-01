@@ -54,69 +54,41 @@ router.get("/", async (req, res) => {
 
   try {
 
-    /* COLLECTIONS */
-
-    const collections =
-      await GemCollection.find()
-
-        .sort({
-          createdAt: -1
-        });
-
-    /* GEMSTONES */
-
-    const gemstones =
-      await Gemstone.find({})
-
-        .populate(
-          "gemCollection"
-        );
-
-    /* FINAL COLLECTIONS */
-
-    const updatedCollections =
-
-      collections.map(
-        (collection) => {
-
-          /* COUNT PRODUCTS */
-
-          const totalProducts =
-
-            gemstones.filter(
-
-              (item) =>
-
-                item.gemCollection &&
-
-                item.gemCollection._id
-                  .toString()
-
-                ===
-
-                collection._id
-                  .toString()
-
-            ).length;
-
-          return {
-
-            ...collection._doc,
-
-            totalProducts
-          };
-        }
-      );
+    const collections = await GemCollection.aggregate([
+      {
+        $lookup: {
+          from: "gemstones",
+          localField: "_id",
+          foreignField: "gemCollection",
+          as: "products",
+        },
+      },
+      {
+        $addFields: {
+          totalProducts: { $size: "$products" },
+        },
+      },
+      {
+        $project: {
+          products: 0,
+        },
+      },
+      {
+        $sort: {
+          createdAt: -1,
+        },
+      },
+    ]);
 
     res.status(200).json({
 
       success: true,
 
       total:
-        updatedCollections.length,
+        collections.length,
 
       collections:
-        updatedCollections
+        collections
     });
 
   } catch (err) {

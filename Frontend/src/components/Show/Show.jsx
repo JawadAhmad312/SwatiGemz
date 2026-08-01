@@ -20,6 +20,8 @@ function Show() {
   const [comment, setComment] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [relatedProducts, setRelatedProducts] = useState([]);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
   const navigate = useNavigate();
   const currentType = resolvedType || type || state?.item?.type || "";
   const displayType = currentType;
@@ -27,6 +29,44 @@ function Show() {
   item?.image || item?.mainimages,
   ...(item?.images || item?.otherImages || [])
 ].filter(Boolean);
+
+  const showNextImage = () => {
+    if (images.length <= 1) return;
+    setActiveIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const showPreviousImage = () => {
+    if (images.length <= 1) return;
+    setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStart === null || touchEnd === null) return;
+
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+
+    if (distance > minSwipeDistance) {
+      showNextImage();
+    }
+
+    if (distance < -minSwipeDistance) {
+      showPreviousImage();
+    }
+
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
+
   /* ---------------- ADD TO CART ---------------- */
   const addToCart = (product, quantity = 1) => {
     if (!product || !product._id) {
@@ -259,13 +299,34 @@ alert("Added to cart 🛒");
         <div className="w-full lg:w-[550px] text-center 
                 lg:sticky lg:top-10 h-fit">
           <div className="w-full h-[450px] md:h-[520px] flex items-center justify-center 
-                          border border-gray-200 shadow-sm mb-6 bg-white">
+                          border border-gray-200 shadow-sm mb-6 bg-white overflow-hidden touch-pan-y"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <img
+             key={activeIndex}
              src={images[activeIndex] || item.mainimages}
               alt={item.title}
-              className="max-h-[95%] max-w-[50%] object-contain"
+              className="max-h-[95%] max-w-[50%] object-contain animate-[slideImage_0.28s_ease]"
             />
           </div>
+
+          <style>
+            {`
+              @keyframes slideImage {
+                from {
+                  opacity: 0.75;
+                  transform: translateX(18px);
+                }
+
+                to {
+                  opacity: 1;
+                  transform: translateX(0);
+                }
+              }
+            `}
+          </style>
 
           <div className="flex justify-center gap-4">
             {images.map((src, idx) => (

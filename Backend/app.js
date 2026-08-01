@@ -381,14 +381,14 @@ app.get("/api/gemstones/collection/:slug", async (req, res) => {
     }
 
     if (minPrice || maxPrice) {
-      query.salePrice = {};
+      query.price = {};
 
       if (minPrice) {
-        query.salePrice.$gte = Number(minPrice);
+        query.price.$gte = Number(minPrice);
       }
 
       if (maxPrice) {
-        query.salePrice.$lte = Number(maxPrice);
+        query.price.$lte = Number(maxPrice);
       }
     }
 
@@ -396,10 +396,10 @@ app.get("/api/gemstones/collection/:slug", async (req, res) => {
 
     switch (sort) {
       case "price-low-high":
-        sortOption.salePrice = 1;
+        sortOption.price = 1;
         break;
       case "price-high-low":
-        sortOption.salePrice = -1;
+        sortOption.price = -1;
         break;
       case "a-z":
         sortOption.name = 1;
@@ -411,20 +411,24 @@ app.get("/api/gemstones/collection/:slug", async (req, res) => {
         sortOption.createdAt = -1;
     }
 
-    const skip = (page - 1) * limit;
+    const safeLimit = Math.min(Math.max(Number(limit) || 12, 1), 100);
+    const safePage = Math.max(Number(page) || 1, 1);
+    const skip = (safePage - 1) * safeLimit;
 
-    const gemstones = await Gemstone.find(query)
-      .populate("gemCollection")
+    const [gemstones, totalProducts] = await Promise.all([
+      Gemstone.find(query)
+      .populate("gemCollection", "name slug image active")
       .sort(sortOption)
       .skip(skip)
-      .limit(Number(limit));
-
-    const totalProducts = await Gemstone.countDocuments(query);
+      .limit(safeLimit)
+      .lean(),
+      Gemstone.countDocuments(query),
+    ]);
 
     res.status(200).json({
       success: true,
-      currentPage: Number(page),
-      totalPages: Math.ceil(totalProducts / limit),
+      currentPage: safePage,
+      totalPages: Math.ceil(totalProducts / safeLimit),
       totalProducts,
       gemstones,
     });

@@ -108,6 +108,20 @@ const gemstoneSchema = new Schema(
   }
 );
 
+gemstoneSchema.index({
+  gemCollection: 1,
+  createdAt: -1,
+});
+
+gemstoneSchema.index({
+  gemCollection: 1,
+  price: 1,
+});
+
+gemstoneSchema.index({
+  name: 1,
+});
+
 
 
 

@@ -32,6 +32,12 @@ const collectionSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+collectionSchema.index({
+  active: 1,
+  createdAt: -1,
+});
+
 collectionSchema.pre("validate", function () {
 
   if (this.name) {

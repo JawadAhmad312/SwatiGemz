@@ -50,23 +50,59 @@ router.get("/", async (req, res) => {
 
   try {
 
-    const gemstones =
-      await Gemstone.find()
+    const page =
+      Math.max(Number(req.query.page) || 1, 1);
+
+    const limit =
+      Math.min(Math.max(Number(req.query.limit) || 0, 0), 100);
+
+    const query =
+      req.query.active === "true"
+        ? { active: true }
+        : {};
+
+    const request =
+      Gemstone.find(query)
 
         .populate(
-          "gemCollection"
+          "gemCollection",
+          "name slug image active"
         )
 
         .sort({
           createdAt: -1,
-        });
+        })
+
+        .lean();
+
+    if (limit > 0) {
+      request
+        .skip((page - 1) * limit)
+        .limit(limit);
+    }
+
+    const gemstones =
+      await request;
+
+    const total =
+      limit > 0
+        ? await Gemstone.countDocuments(query)
+        : gemstones.length;
 
     res.status(200).json({
 
       success: true,
 
       total:
-        gemstones.length,
+        total,
+
+      currentPage:
+        page,
+
+      totalPages:
+        limit > 0
+          ? Math.ceil(total / limit)
+          : 1,
 
       gemstones,
     });
@@ -99,8 +135,11 @@ router.get("/:slug", async (req, res) => {
       })
 
         .populate(
-          "gemCollection"
-        );
+          "gemCollection",
+          "name slug image active"
+        )
+
+        .lean();
 
     if (!gemstone) {
 
